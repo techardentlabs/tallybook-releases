@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Users, roles and passwords in TallyBook</title>
+<meta name="description" content="Set up security in TallyBook from the Company menu (Alt+K): users and passwords, user roles, password policy, Security Control, TallyVault password, edit log.">
+<link rel="canonical" href="https://tallybook.online/blog/users-roles-and-passwords/">
+<meta property="og:title" content="Users, roles and passwords in TallyBook: securing your company data">
+<meta property="og:description" content="Set up security in TallyBook from the Company menu (Alt+K): users and passwords, user roles, password policy, Security Control, TallyVault password, edit log.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/users-roles-and-passwords/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/gateway.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Users, roles and passwords in TallyBook: securing your company data", "description": "Set up security in TallyBook from the Company menu (Alt+K): users and passwords, user roles, password policy, Security Control, TallyVault password, edit log.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/gateway.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/users-roles-and-passwords/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Users, roles and passwords in TallyBook: securing your company data", "item": "https://tallybook.online/blog/users-roles-and-passwords/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can two people work in TallyBook at the same time?", "acceptedAnswer": {"@type": "Answer", "text": "Not on the same company over a network. TallyBook is a single-user desktop app. Users and roles let several people take turns on the same computer, each with their own login and rights."}}, {"@type": "Question", "name": "Does the TallyVault password encrypt my data file?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. In this preview the TallyVault password is asked for whenever the company is opened, but the data file on disk is not encrypted. Protect the computer itself with an operating-system login and disk encryption."}}, {"@type": "Question", "name": "What happens if I forget the administrator password?", "acceptedAnswer": {"@type": "Answer", "text": "There is no recovery in the app. Keep the administrator password somewhere safe, and keep a recent backup made from Data (Alt+Y) › Backup."}}, {"@type": "Question", "name": "What does the Data Entry role allow?", "acceptedAnswer": {"@type": "Answer", "text": "By default, creating and altering vouchers and viewing some reports such as the Day Book. It cannot create ledgers or open the Balance Sheet, P&L or Trial Balance, and cannot delete vouchers."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Set up users and passwords in TallyBook", "step": [{"@type": "HowToStep", "position": 1, "name": "Press Alt + K › Company Security ", "text": "Press Alt + K › Company Security . Set Use Security Control to Yes, enter the Name of Administrator , a Password and Repeat Password , and press Ctrl + A ."}, {"@type": "HowToStep", "position": 2, "name": "Open Password Policy if you want rules: set Activate password policy to Yes, the", "text": "Open Password Policy if you want rules: set Activate password policy to Yes, then minimum length, optional counts of letters, numbers and special characters, expiry days, and whether old passwords may be reused."}, {"@type": "HowToStep", "position": 3, "name": "Open Users and Passwords ", "text": "Open Users and Passwords . Press Alt + C to create a user: choose the User Role , type the Username and Password , and accept."}, {"@type": "HowToStep", "position": 4, "name": "Review Security Control to confirm what each role can reach.", "text": "Review Security Control to confirm what each role can reach."}, {"@type": "HowToStep", "position": 5, "name": "Close and reopen the company", "text": "Close and reopen the company. TallyBook now asks for a username and password before showing the Gateway."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · Security</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Users, roles and passwords in TallyBook: securing your company data</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 6 min read</div>
+  <div class="note"><b>Quick answer:</b> Press Alt+K to open the Company menu. Turn on Security Control in Company Security with an administrator name and password, then add people in Users and Passwords and give each a role such as Owner or Data Entry. Password Policy sets strength and expiry, Security Control shows who can do what, and Data (Alt+Y) › Edit Log records changes.</div>
+
+<p>When a staff member, a part-time accountant or a family member helps with the books, you may not want everyone to see the Balance Sheet, alter old vouchers or change company settings. TallyBook includes TallyPrime-style security: named users, roles that control what each user can do, a password policy and an edit log. This guide walks through each screen and is clear about what the current preview does and does not enforce.</p>
+
+  <div class="note">TallyBook is a single-user app: one person works on a company at a time, on one computer. Users and roles decide <i>who</i> is at the keyboard and <i>what</i> they may do, not how many people can work at once.</div>
+
+  <h2>The Company menu (Alt+K)</h2>
+  <p>Press <kbd>Alt</kbd>+<kbd>K</kbd>, or click <b>K: Company</b> in the top bar. The menu has three sections:</p>
+  <table>
+    <tr><th>Section</th><th>Option (key)</th><th>What it does</th></tr>
+    <tr><td>Company</td><td>Alter (<kbd>A</kbd>)</td><td>Change the company name, address, state, PAN and contact details</td></tr>
+    <tr><td rowspan="5">Security</td><td>Users and Passwords (<kbd>U</kbd>)</td><td>Create, alter and remove users</td></tr>
+    <tr><td>User Roles (<kbd>R</kbd>)</td><td>Adjust what each role, or security level, may do</td></tr>
+    <tr><td>Password Policy (<kbd>P</kbd>)</td><td>Password length, strength and expiry rules</td></tr>
+    <tr><td>Security Control (<kbd>S</kbd>)</td><td>A read-only table of every facility and each role's access</td></tr>
+    <tr><td>Company Security (<kbd>C</kbd>)</td><td>Switch security on or off and set the TallyVault password</td></tr>
+    <tr><td rowspan="2">User</td><td>Change User (<kbd>H</kbd>)</td><td>Log out and log in as someone else</td></tr>
+    <tr><td>Change Password (<kbd>W</kbd>)</td><td>Change your own password</td></tr>
+  </table>
+  <figure style="margin:22px 0"><img src="/assets/shots/gateway.png" alt="TallyBook Gateway of Tally with the Manage bar showing K: Company and Y: Data at the top" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The top bar of every screen shows K: Company and Y: Data.</figcaption></figure>
+
+  <h2>Step-by-step setup</h2>
+  <ol class="steps">
+    <li>Press <kbd>Alt</kbd>+<kbd>K</kbd> › <b>Company Security</b>. Set <b>Use Security Control</b> to Yes, enter the <b>Name of Administrator</b>, a <b>Password</b> and <b>Repeat Password</b>, and press <kbd>Ctrl</kbd>+<kbd>A</kbd>.</li>
+    <li>Open <b>Password Policy</b> if you want rules: set <b>Activate password policy</b> to Yes, then minimum length, optional counts of letters, numbers and special characters, expiry days, and whether old passwords may be reused.</li>
+    <li>Open <b>Users and Passwords</b>. Press <kbd>Alt</kbd>+<kbd>C</kbd> to create a user: choose the <b>User Role</b>, type the <b>Username</b> and <b>Password</b>, and accept.</li>
+    <li>Review <b>Security Control</b> to confirm what each role can reach.</li>
+    <li>Close and reopen the company. TallyBook now asks for a username and password before showing the Gateway.</li>
+  </ol>
+  <p>To change a user later, highlight them in Users and Passwords and press <kbd>Enter</kbd>; leave the password blank to keep the current one. <kbd>F12</kbd> on the user form shows two more switches: Status (Active) and Password Policy applicable. <kbd>Alt</kbd>+<kbd>D</kbd> removes a user.</p>
+
+  <h2>Roles and what they allow</h2>
+  <p>Every user has a role. TallyBook ships with the role names TallyPrime users know. The ones that matter for a desktop-only setup are Owner, Data Entry and the read-only Auditor role (named Tally.NET Auditor for compatibility):</p>
+
+  <svg role="img" aria-label="Access matrix of default roles. Owner has full access to vouchers, masters, final reports, Day Book and company features. Data Entry can create and alter vouchers and view the Day Book, with no access to masters, final reports or company features. Auditor can display and print everything except company features" viewBox="0 0 720 270" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>Default access by role</title>
+    <rect width="720" height="270" fill="white"/>
+    <g font-size="14">
+      <rect x="10" y="10" width="700" height="40" fill="#10212b"/>
+      <text x="20" y="36" fill="white" font-weight="bold">Facility</text>
+      <text x="330" y="36" fill="#ffc32b" font-weight="bold" text-anchor="middle">Owner</text>
+      <text x="480" y="36" fill="#ffc32b" font-weight="bold" text-anchor="middle">Data Entry</text>
+      <text x="630" y="36" fill="#ffc32b" font-weight="bold" text-anchor="middle">Auditor</text>
+      <text x="20" y="80" fill="#10212b">Accounting vouchers</text>
+      <rect x="270" y="62" width="120" height="26" rx="4" fill="#2a62ad"/><text x="330" y="80" fill="white" text-anchor="middle">Full Access</text>
+      <rect x="420" y="62" width="120" height="26" rx="4" fill="#8bb9e0"/><text x="480" y="80" fill="#10212b" text-anchor="middle">Create/Alter</text>
+      <rect x="570" y="62" width="120" height="26" rx="4" fill="#dfeefa"/><text x="630" y="80" fill="#10212b" text-anchor="middle">Display/Print</text>
+      <text x="20" y="122" fill="#10212b">Accounts masters</text>
+      <rect x="270" y="104" width="120" height="26" rx="4" fill="#2a62ad"/><text x="330" y="122" fill="white" text-anchor="middle">Full Access</text>
+      <rect x="420" y="104" width="120" height="26" rx="4" fill="white" stroke="#10212b"/><text x="480" y="122" fill="#10212b" text-anchor="middle">None</text>
+      <rect x="570" y="104" width="120" height="26" rx="4" fill="#dfeefa"/><text x="630" y="122" fill="#10212b" text-anchor="middle">Display/Print</text>
+      <text x="20" y="164" fill="#10212b">Balance Sheet, P&amp;L, TB</text>
+      <rect x="270" y="146" width="120" height="26" rx="4" fill="#2a62ad"/><text x="330" y="164" fill="white" text-anchor="middle">Full Access</text>
+      <rect x="420" y="146" width="120" height="26" rx="4" fill="white" stroke="#10212b"/><text x="480" y="164" fill="#10212b" text-anchor="middle">None</text>
+      <rect x="570" y="146" width="120" height="26" rx="4" fill="#dfeefa"/><text x="630" y="164" fill="#10212b" text-anchor="middle">Display/Print</text>
+      <text x="20" y="206" fill="#10212b">Day Book</text>
+      <rect x="270" y="188" width="120" height="26" rx="4" fill="#2a62ad"/><text x="330" y="206" fill="white" text-anchor="middle">Full Access</text>
+      <rect x="420" y="188" width="120" height="26" rx="4" fill="#dfeefa"/><text x="480" y="206" fill="#10212b" text-anchor="middle">Display/Print</text>
+      <rect x="570" y="188" width="120" height="26" rx="4" fill="#dfeefa"/><text x="630" y="206" fill="#10212b" text-anchor="middle">Display/Print</text>
+      <text x="20" y="248" fill="#10212b">Company features (F11)</text>
+      <rect x="270" y="230" width="120" height="26" rx="4" fill="#2a62ad"/><text x="330" y="248" fill="white" text-anchor="middle">Full Access</text>
+      <rect x="420" y="230" width="120" height="26" rx="4" fill="white" stroke="#10212b"/><text x="480" y="248" fill="#10212b" text-anchor="middle">None</text>
+      <rect x="570" y="230" width="120" height="26" rx="4" fill="white" stroke="#10212b"/><text x="630" y="248" fill="#10212b" text-anchor="middle">None</text>
+    </g>
+  </svg>
+  <p>In <b>User Roles</b>, press <kbd>Enter</kbd> on a role to adjust it: base it on another role's facilities, then list facilities to disallow or allow, with the access level for each. When a user tries something their role does not permit, TallyBook shows “You do not have access to this action” or “You do not have access to this report”.</p>
+  <div class="warn">What is enforced in this preview: creating, altering and deleting vouchers and accounting masters, and opening the main reports (Balance Sheet, P&amp;L, Trial Balance, Group Summary, Day Book, Stock Summary, Cash Flow and Funds Flow). Some fields are stored for TallyPrime compatibility but have no effect yet, because TallyBook has no browser, remote or TDL features: Allow Browser Access, Allow Remote Access, Allow Local TDL Files, and the Tally.NET options. The back-dated voucher limits in a role are saved but not yet checked during entry.</div>
+
+  <h2>Password Policy</h2>
+  <table>
+    <tr><th>Setting</th><th>Effect</th></tr>
+    <tr><td>Minimum password length</td><td>Shorter passwords are refused</td></tr>
+    <tr><td>Advanced parameters</td><td>Minimum number of letters, numbers and special characters</td></tr>
+    <tr><td>Password expires after (days)</td><td>Users must change it after this many days; 0 disables expiry</td></tr>
+    <tr><td>Restrict the use of old passwords</td><td>“This password was used earlier” is shown for a reused password</td></tr>
+    <tr><td>Change password on first login</td><td>New users set their own password the first time</td></tr>
+    <tr><td>Allow users to change password</td><td>Whether non-owners may use Change Password</td></tr>
+  </table>
+  <p>Passwords are never stored as plain text. TallyBook keeps only a salted, slow hash (PBKDF2-SHA256), so even someone who copies the data file cannot read them.</p>
+
+  <h2>TallyVault password</h2>
+  <p>In Company Security, the TallyVault section asks for a password and a confirmation. Once set, TallyBook asks for it every time the company is opened, before the user login. Be aware of the current limit: the data file itself is <b>not yet encrypted</b>. Treat the TallyVault password as an extra lock on the app, and protect the computer with its own login and disk encryption (BitLocker, FileVault or LUKS).</p>
+
+  <h2>Edit log</h2>
+  <p>Press <kbd>Alt</kbd>+<kbd>Y</kbd> for the Data menu and choose <b>Edit Log</b> (<kbd>E</kbd>). It lists, latest first, every create, alter, delete and cancel of vouchers, ledgers and groups, with the date and time, the type, the voucher number or master name, and the user who did it. Press <kbd>Ctrl</kbd>+<kbd>F</kbd> to filter, for example by a username. The log shows that a change happened and who made it; it does not keep the old and new values side by side.</p>
+  <figure style="margin:22px 0"><img src="/assets/shots/data-menu.png" alt="TallyBook Data menu with Backup, Restore and Edit Log options" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Data (Alt+Y) holds Backup, Restore and the Edit Log.</figcaption></figure>
+  <p>Keep regular backups whatever your security settings: see <a href="/blog/backup-restore-and-data-safety/">backup, restore and data safety</a>. For the full list of keys, read <a href="/blog/tallybook-keyboard-shortcuts/">TallyBook keyboard shortcuts</a>, and for how TallyBook compares on multi-user work, <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Can two people work in TallyBook at the same time?</h3>
+  <p>Not on the same company over a network. TallyBook is a single-user desktop app. Users and roles let several people take turns on the same computer, each with their own login and rights.</p>
+  <h3>Does the TallyVault password encrypt my data file?</h3>
+  <p>Not yet. In this preview the TallyVault password is asked for whenever the company is opened, but the data file on disk is not encrypted. Protect the computer itself with an operating-system login and disk encryption.</p>
+  <h3>What happens if I forget the administrator password?</h3>
+  <p>There is no recovery in the app. Keep the administrator password somewhere safe, and keep a recent backup made from Data (Alt+Y) › Backup.</p>
+  <h3>What does the Data Entry role allow?</h3>
+  <p>By default, creating and altering vouchers and viewing some reports such as the Day Book. It cannot create ledgers or open the Balance Sheet, P&amp;L or Trial Balance, and cannot delete vouchers.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

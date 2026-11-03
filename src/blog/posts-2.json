@@ -54,5 +54,40 @@
   "description": "Activate interest on a party ledger, choose the parameters, and read the Group and Ledger Interest Calculation reports.",
   "date": "2026-11-03",
   "tag": "How-to"
+ },
+ {
+  "slug": "stock-journal-delivery-note-receipt-note",
+  "title": "Stock Journal, Delivery Note, Receipt Note and orders: inventory vouchers explained",
+  "description": "Stock Journal, Physical Stock, Delivery and Receipt Notes, rejections and orders: the keys, what each does to stock, and when to use it.",
+  "date": "2026-11-03",
+  "tag": "Inventory"
+ },
+ {
+  "slug": "gst-basics-for-small-business",
+  "title": "GST basics for small businesses: CGST, SGST, IGST and place of supply",
+  "description": "CGST and SGST vs IGST, place of supply, the GSTIN format, and how TallyBook decides which taxes go on an invoice.",
+  "date": "2026-11-03",
+  "tag": "GST"
+ },
+ {
+  "slug": "import-from-excel-into-tallybook",
+  "title": "Import from Excel into TallyBook: masters and transactions from .xlsx or CSV",
+  "description": "Bring ledgers, items and vouchers in from Excel or CSV with Alt+O: sample templates, import behaviours, preview and the exceptions report.",
+  "date": "2026-11-03",
+  "tag": "How-to"
+ },
+ {
+  "slug": "users-roles-and-passwords",
+  "title": "Users, roles and passwords in TallyBook: securing your company data",
+  "description": "Company menu (Alt+K): users, roles, password policy, Security Control and the TallyVault password, plus the edit log, with honest limits.",
+  "date": "2026-11-03",
+  "tag": "Security"
+ },
+ {
+  "slug": "print-email-whatsapp-reports",
+  "title": "Print, export, e-mail and WhatsApp reports from TallyBook",
+  "description": "Alt+P to print or save as PDF, Ctrl+E for CSV, Alt+M for e-mail and WhatsApp, with exactly what each one does.",
+  "date": "2026-11-03",
+  "tag": "How-to"
  }
 ]

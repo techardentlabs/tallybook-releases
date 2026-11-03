@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stock Journal, Delivery Note, Receipt Note explained</title>
+<meta name="description" content="What each inventory voucher does to stock: Stock Journal, Physical Stock, Delivery Note, Receipt Note, Rejections and orders, with keys and when to use them.">
+<link rel="canonical" href="https://tallybook.online/blog/stock-journal-delivery-note-receipt-note/">
+<meta property="og:title" content="Stock Journal, Delivery Note, Receipt Note and orders: inventory vouchers explained">
+<meta property="og:description" content="What each inventory voucher does to stock: Stock Journal, Physical Stock, Delivery Note, Receipt Note, Rejections and orders, with keys and when to use them.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/stock-journal-delivery-note-receipt-note/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/stock-summary.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Stock Journal, Delivery Note, Receipt Note and orders: inventory vouchers explained", "description": "What each inventory voucher does to stock: Stock Journal, Physical Stock, Delivery Note, Receipt Note, Rejections and orders, with keys and when to use them.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/stock-summary.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/stock-journal-delivery-note-receipt-note/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Stock Journal, Delivery Note, Receipt Note and orders: inventory vouchers explained", "item": "https://tallybook.online/blog/stock-journal-delivery-note-receipt-note/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do inventory vouchers affect my Profit & Loss?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. They post no ledger entries, so they do not touch any account. They change quantities, and through quantities the closing stock value that appears in the P&L and Balance Sheet."}}, {"@type": "Question", "name": "Why does pressing Alt+F7 show an error?", "acceptedAnswer": {"@type": "Answer", "text": "Inventory vouchers need inventory turned on. Press F11 and set Maintain inventory to Yes. Until then TallyBook shows “Enable inventory in F11 (Features) to use this voucher”."}}, {"@type": "Question", "name": "How do I move stock from my shop to my godown?", "acceptedAnswer": {"@type": "Answer", "text": "Use a Stock Journal. Add the item twice: once as Out from the shop, once as In to the godown, with the same quantity. The total stock is unchanged, but each godown's balance moves."}}, {"@type": "Question", "name": "Will a Sales Order reduce my stock?", "acceptedAnswer": {"@type": "Answer", "text": "No. Orders are excluded from every stock balance. They appear in the order reports under Inventory Books › Orders and Bills until you deliver or invoice."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Check stock after inventory vouchers in TallyBook", "step": [{"@type": "HowToStep", "position": 1, "name": "Press S at the Gateway to open the Stock Summary ", "text": "Press S at the Gateway to open the Stock Summary . Quantities include every inventory voucher except orders."}, {"@type": "HowToStep", "position": 2, "name": "Press Enter on an item to see its movements.", "text": "Press Enter on an item to see its movements."}, {"@type": "HowToStep", "position": 3, "name": "For godown-wise balances, open Display More Reports › Inventory Books › Godown S", "text": "For godown-wise balances, open Display More Reports › Inventory Books › Godown Summary ."}, {"@type": "HowToStep", "position": 4, "name": "Use Alt + F2 to see stock as on an earlier date.", "text": "Use Alt + F2 to see stock as on an earlier date."}]}</script>
+</head>
+<body>
+@@HEADER:Blog · Inventory@@
+<section><div class="wrap narrow"><article>
+  <h1>Stock Journal, Delivery Note, Receipt Note and orders: inventory vouchers explained</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 6 min read</div>
+  <div class="note"><b>Quick answer:</b> Inventory vouchers change quantities, not money. Stock Journal (Alt+F7) moves or converts stock, Physical Stock (Ctrl+F7) sets the counted quantity, Delivery Note (Alt+F8) sends goods out, Receipt Note (Alt+F9) brings goods in, and Rejection In and Out record returns. Sales Orders (Ctrl+F8) and Purchase Orders (Ctrl+F9) only record commitments: they do not move stock.</div>
+
+<p>Accounting vouchers move money between ledgers. <b>Inventory vouchers</b> move goods: between godowns, out to customers before an invoice, in from suppliers before their bill arrives, or back after a stock count. TallyBook includes the same inventory vouchers as TallyPrime, on the same keys.</p>
+
+  <h2>Before you start</h2>
+  <ul>
+    <li>Press <kbd>F11</kbd> and set <b>Maintain inventory</b> to Yes. Without it, the keys below show “Enable inventory in F11 (Features) to use this voucher”.</li>
+    <li>Create stock items (Gateway › Create › Stock Item), and godowns if you keep goods in more than one place. With a single godown, TallyBook does not ask for one.</li>
+  </ul>
+  <figure style="margin:22px 0"><img src="/assets/shots/stock-item-creation.png" alt="TallyBook Stock Item Creation form with name, group, unit, HSN and opening quantity fields" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Create stock items first. Inventory vouchers pick from this list.</figcaption></figure>
+
+  <h2>The inventory vouchers and their keys</h2>
+  <table>
+    <tr><th>Key</th><th>Voucher</th><th>Effect on stock</th><th>Party needed?</th></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F7</kbd></td><td>Stock Journal</td><td>Out on some lines, In on others</td><td>No</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F7</kbd></td><td>Physical Stock</td><td>Sets the quantity to what you counted</td><td>No</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F8</kbd></td><td>Delivery Note</td><td>Out (goods sent to a customer)</td><td>Yes</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F9</kbd></td><td>Receipt Note</td><td>In (goods received from a supplier)</td><td>Yes</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F6</kbd></td><td>Rejection In</td><td>In (customer returns rejected goods)</td><td>Yes</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F5</kbd></td><td>Rejection Out</td><td>Out (you return goods to a supplier)</td><td>Yes</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F8</kbd></td><td>Sales Order</td><td><b>None</b>: records a customer's order</td><td>Yes</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F9</kbd></td><td>Purchase Order</td><td><b>None</b>: records your order to a supplier</td><td>Yes</td></tr>
+  </table>
+  <p>None of these vouchers posts a ledger entry. If you try to add ledger lines, TallyBook refuses with a message such as “Delivery Note vouchers do not post ledger entries”. Each line has an item, a godown (when you have more than one), a quantity and a rate.</p>
+
+  <svg role="img" aria-label="Diagram of stock movement: Receipt Note and Rejection In add stock; Delivery Note and Rejection Out remove stock; Stock Journal moves stock between godowns or items; Physical Stock resets to the counted quantity; Sales and Purchase Orders do not touch stock" viewBox="0 0 720 300" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>What each inventory voucher does to stock</title>
+    <rect width="720" height="300" fill="white"/>
+    <rect x="260" y="95" width="200" height="90" rx="10" fill="#10212b"/>
+    <text x="360" y="132" fill="white" font-size="16" font-weight="bold" text-anchor="middle">Stock on hand</text>
+    <text x="360" y="158" fill="#ffc32b" font-size="14" text-anchor="middle">by item and godown</text>
+    <rect x="20" y="40" width="190" height="44" rx="6" fill="#2a62ad"/><text x="115" y="67" fill="white" font-size="14" text-anchor="middle">Receipt Note  Alt+F9</text>
+    <rect x="20" y="100" width="190" height="44" rx="6" fill="#2a62ad"/><text x="115" y="127" fill="white" font-size="14" text-anchor="middle">Rejection In  Ctrl+F6</text>
+    <path d="M210 62 L258 120 M210 122 L258 130" stroke="#2a62ad" stroke-width="3"/>
+    <text x="115" y="30" fill="#10212b" font-size="13" font-weight="bold" text-anchor="middle">IN</text>
+    <rect x="510" y="40" width="190" height="44" rx="6" fill="#8bb9e0"/><text x="605" y="67" fill="#10212b" font-size="14" text-anchor="middle">Delivery Note  Alt+F8</text>
+    <rect x="510" y="100" width="190" height="44" rx="6" fill="#8bb9e0"/><text x="605" y="127" fill="#10212b" font-size="14" text-anchor="middle">Rejection Out  Ctrl+F5</text>
+    <path d="M462 120 L508 62 M462 130 L508 122" stroke="#8bb9e0" stroke-width="3"/>
+    <text x="605" y="30" fill="#10212b" font-size="13" font-weight="bold" text-anchor="middle">OUT</text>
+    <rect x="20" y="200" width="190" height="44" rx="6" fill="#dfeefa" stroke="#2a62ad"/><text x="115" y="221" fill="#10212b" font-size="14" text-anchor="middle">Stock Journal  Alt+F7</text><text x="115" y="238" fill="#10212b" font-size="11" text-anchor="middle">move or convert</text>
+    <rect x="265" y="200" width="190" height="44" rx="6" fill="#dfeefa" stroke="#2a62ad"/><text x="360" y="221" fill="#10212b" font-size="14" text-anchor="middle">Physical Stock  Ctrl+F7</text><text x="360" y="238" fill="#10212b" font-size="11" text-anchor="middle">reset to counted qty</text>
+    <path d="M115 200 L300 186 M360 200 L360 186" stroke="#2a62ad" stroke-width="2.5" stroke-dasharray="5 4"/>
+    <rect x="510" y="200" width="190" height="60" rx="6" fill="white" stroke="#10212b" stroke-dasharray="5 4"/><text x="605" y="222" fill="#10212b" font-size="14" text-anchor="middle">Sales Order  Ctrl+F8</text><text x="605" y="240" fill="#10212b" font-size="14" text-anchor="middle">Purchase Order  Ctrl+F9</text>
+    <text x="605" y="282" fill="#2a62ad" font-size="13" font-weight="bold" text-anchor="middle">No effect on stock</text>
+  </svg>
+
+  <h2>Stock Journal (Alt+F7)</h2>
+  <p>Use it when goods change place or form without a sale or purchase. Every line has a <b>Source / Dest.</b> column: Out for goods leaving, In for goods arriving.</p>
+  <ul>
+    <li><b>Godown transfer:</b> 20 cartons of tea Out from “Shop”, 20 cartons In to “Warehouse”.</li>
+    <li><b>Repacking or conversion:</b> 50 kg loose sugar Out, 50 packets of 1 kg In.</li>
+  </ul>
+  <p>Transfers appear in Inventory Books › Godown Transfers and Stock Transfer Analysis. Manufacturing with a bill of materials is not available yet, so record simple conversions this way.</p>
+
+  <h2>Physical Stock (Ctrl+F7)</h2>
+  <p>After counting the shelves, enter each item's <b>actual</b> quantity, not the difference. If the books say 120 and you counted 114, enter 114; TallyBook adjusts the balance from that date. Physical Stock entries are left out of movement analysis so they do not look like sales or purchases.</p>
+
+  <h2>Delivery Note (Alt+F8) and Receipt Note (Alt+F9)</h2>
+  <p>A <b>Delivery Note</b> records goods sent to a customer before you raise the invoice, for example goods sent on approval. A <b>Receipt Note</b> records goods received from a supplier before their bill arrives. Both need a party (a Sundry Debtor, Sundry Creditor or Cash) and immediately change stock.</p>
+  <div class="warn"><b>Avoid double counting.</b> Order and delivery tracking is not connected to voucher entry yet in this preview, so a Sales invoice with items does not know about an earlier Delivery Note for the same goods. If you enter both, stock reduces twice. The same applies to a Receipt Note followed by a Purchase invoice with items. Until tracking arrives, use either the note or the item invoice for the stock movement, not both.</div>
+
+  <h2>Rejection In (Ctrl+F6) and Rejection Out (Ctrl+F5)</h2>
+  <p>Use these for goods rejected on quality grounds that come back from a customer (In) or go back to a supplier (Out) before any Credit Note or Debit Note. The same caution applies: a Credit Note or Debit Note with items also moves stock.</p>
+
+  <h2>Sales Order (Ctrl+F8) and Purchase Order (Ctrl+F9)</h2>
+  <p>Orders record a promise, not a movement. TallyBook leaves them out of every stock balance and valuation. Track them in Gateway › Display More Reports › <b>Inventory Books</b> › <b>Orders and Bills</b>:</p>
+  <ul>
+    <li>Sales Orders (Due Only) and Purchase Orders (Due Only)</li>
+    <li>Sales Order Stock Group Outstandings, Sales Order Ledger Outstandings and Purchase Order Ledger Outstandings</li>
+    <li>Sales Bills Pending and Purchase Bills Pending</li>
+  </ul>
+
+  <h2>Checking the result</h2>
+  <ol class="steps">
+    <li>Press <kbd>S</kbd> at the Gateway to open the <b>Stock Summary</b>. Quantities include every inventory voucher except orders.</li>
+    <li>Press <kbd>Enter</kbd> on an item to see its movements.</li>
+    <li>For godown-wise balances, open Display More Reports › Inventory Books › <b>Godown Summary</b>.</li>
+    <li>Use <kbd>Alt</kbd>+<kbd>F2</kbd> to see stock as on an earlier date.</li>
+  </ol>
+  <figure style="margin:22px 0"><img src="/assets/shots/stock-summary.png" alt="TallyBook Stock Summary with item quantities, rates and values" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The Stock Summary reflects Receipt Notes, Delivery Notes, Stock Journals and Physical Stock, but not orders.</figcaption></figure>
+  <div class="note">Also not connected to voucher entry yet: batch allocation and price-list rates. Batches and price lists can be set up and reported on, but voucher entry does not yet pick batches or fill rates from a price list; type the rate yourself.</div>
+  <p>How stock is valued is explained in <a href="/blog/inventory-costing-fifo-lifo-average/">FIFO, LIFO and average costing</a>. For the money side of sales and purchases, see <a href="/blog/voucher-types-explained/">accounting voucher types</a> and <a href="/blog/create-gst-invoice-in-tallybook/">GST invoices</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Do inventory vouchers affect my Profit &amp; Loss?</h3>
+  <p>Not directly. They post no ledger entries, so they do not touch any account. They change quantities, and through quantities the closing stock value that appears in the P&amp;L and Balance Sheet.</p>
+  <h3>Why does pressing Alt+F7 show an error?</h3>
+  <p>Inventory vouchers need inventory turned on. Press F11 and set Maintain inventory to Yes. Until then TallyBook shows “Enable inventory in F11 (Features) to use this voucher”.</p>
+  <h3>How do I move stock from my shop to my godown?</h3>
+  <p>Use a Stock Journal. Add the item twice: once as Out from the shop, once as In to the godown, with the same quantity. The total stock is unchanged, but each godown's balance moves.</p>
+  <h3>Will a Sales Order reduce my stock?</h3>
+  <p>No. Orders are excluded from every stock balance. They appear in the order reports under Inventory Books › Orders and Bills until you deliver or invoice.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>

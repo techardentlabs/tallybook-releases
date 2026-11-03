@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GST basics: CGST, SGST, IGST and place of supply</title>
+<meta name="description" content="CGST and SGST vs IGST, what place of supply means, how to read a GSTIN, and how TallyBook decides the tax split on every invoice. Plain language for owners.">
+<link rel="canonical" href="https://tallybook.online/blog/gst-basics-for-small-business/">
+<meta property="og:title" content="GST basics for small businesses: CGST, SGST, IGST and place of supply">
+<meta property="og:description" content="CGST and SGST vs IGST, what place of supply means, how to read a GSTIN, and how TallyBook decides the tax split on every invoice. Plain language for owners.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/gst-basics-for-small-business/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/sales-invoice.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "GST basics for small businesses: CGST, SGST, IGST and place of supply", "description": "CGST and SGST vs IGST, what place of supply means, how to read a GSTIN, and how TallyBook decides the tax split on every invoice. Plain language for owners.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/sales-invoice.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/gst-basics-for-small-business/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "GST basics for small businesses: CGST, SGST, IGST and place of supply", "item": "https://tallybook.online/blog/gst-basics-for-small-business/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the total tax higher on an interstate sale?", "acceptedAnswer": {"@type": "Answer", "text": "No. For the same goods at the same rate, IGST equals CGST plus SGST. Only the split, and which government receives the tax, changes."}}, {"@type": "Question", "name": "What place of supply does TallyBook use if I leave it blank?", "acceptedAnswer": {"@type": "Answer", "text": "It uses the state in the party's GSTIN, then the State on the party ledger, then your company's own state. If none is available you see “Place of supply could not be determined; set the party state”."}}, {"@type": "Question", "name": "Can I sell to an unregistered customer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Set the party's Registration type to Unregistered/Consumer and leave GSTIN blank. Set the party's State so the place of supply is right."}}, {"@type": "Question", "name": "Which GST rates can I select in TallyBook?", "acceptedAnswer": {"@type": "Answer", "text": "The rate list currently has 0, 0.25, 3, 5, 12, 18 and 28%. Rates are revised from time to time, so check the current rate for your goods or services on the official portals before invoicing."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Set up GST in TallyBook so the tax split is decided automatically", "step": [{"@type": "HowToStep", "position": 1, "name": "Press F11 , set Enable Goods and Services Tax (GST) to Yes and enter your compan", "text": "Press F11 , set Enable Goods and Services Tax (GST) to Yes and enter your company's GSTIN/UIN . Its first two digits become your company state."}, {"@type": "HowToStep", "position": 2, "name": "For each customer and supplier, set the State , the Registration type (Regular, ", "text": "For each customer and supplier, set the State , the Registration type (Regular, Composition, Unregistered/Consumer and so on) and, if registered, the GSTIN ."}, {"@type": "HowToStep", "position": 3, "name": "On a Sales or Purchase invoice, TallyBook takes the Place of supply you choose o", "text": "On a Sales or Purchase invoice, TallyBook takes the Place of supply you choose on the invoice; if you leave it, it uses the party's GSTIN state, then the party's State."}, {"@type": "HowToStep", "position": 4, "name": "If the place of supply equals your company state, TallyBook posts half the tax t", "text": "If the place of supply equals your company state, TallyBook posts half the tax to CGST and half to SGST. Otherwise it posts the full tax to IGST."}, {"@type": "HowToStep", "position": 5, "name": "It creates the tax ledgers under Duties & Taxes the first time they are needed, ", "text": "It creates the tax ledgers under Duties & Taxes the first time they are needed, named by direction, head and rate, such as “Output CGST” or “Input IGST” followed by the rate."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · GST</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>GST basics for small businesses: CGST, SGST, IGST and place of supply</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> When the supplier and the place of supply are in the same state, GST is split equally into CGST and SGST. When they are in different states, the whole tax is IGST. TallyBook compares your company's state with the invoice's place of supply and posts CGST + SGST or IGST automatically. Confirm the rules that apply to you on gst.gov.in or with your CA.</div>
+
+<p>Goods and Services Tax (GST) replaced most indirect taxes in India in 2017. For a small business owner, three things matter day to day: which tax heads to charge, how to read a GSTIN, and how “place of supply” decides between them. This guide covers those basics and shows how TallyBook applies them. It is an overview, not legal advice: rules change and have exceptions, so confirm anything that affects your filing on <a href="https://www.gst.gov.in/">gst.gov.in</a>, <a href="https://cbic-gst.gov.in/">cbic-gst.gov.in</a> or with your CA.</p>
+
+  <h2>CGST, SGST and IGST</h2>
+  <table>
+    <tr><th>Tax</th><th>Full name</th><th>Charged when</th><th>Goes to</th></tr>
+    <tr><td>CGST</td><td>Central GST</td><td>Supply within one state</td><td>Central government</td></tr>
+    <tr><td>SGST</td><td>State GST</td><td>Supply within one state (with CGST)</td><td>That state's government</td></tr>
+    <tr><td>IGST</td><td>Integrated GST</td><td>Supply from one state to another, and imports</td><td>Centre, later shared with the destination state</td></tr>
+  </table>
+  <p>Within a state, the rate is split in half: half CGST, half SGST. Between states the full rate is charged as IGST. In some union territories, UTGST takes the place of SGST.</p>
+
+  <svg role="img" aria-label="Decision chart with an example: taxable value 10,000 rupees at an example 18 percent rate. If supplier state equals place of supply, charge CGST 900 and SGST 900. If they differ, charge IGST 1,800. Total tax is 1,800 either way" viewBox="0 0 720 280" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>Same state or different state? (example rate 18%)</title>
+    <rect width="720" height="280" fill="white"/>
+    <rect x="180" y="12" width="360" height="56" rx="10" fill="#10212b"/>
+    <text x="360" y="36" fill="white" font-size="15" text-anchor="middle">Is the place of supply in the</text>
+    <text x="360" y="56" fill="white" font-size="15" text-anchor="middle">same state as your GSTIN?</text>
+    <path d="M260 68 L150 110" stroke="#2a62ad" stroke-width="3"/>
+    <path d="M460 68 L570 110" stroke="#2a62ad" stroke-width="3"/>
+    <text x="180" y="96" fill="#10212b" font-size="14" font-weight="bold">YES</text>
+    <text x="510" y="96" fill="#10212b" font-size="14" font-weight="bold">NO</text>
+    <rect x="20" y="110" width="300" height="130" rx="10" fill="#dfeefa" stroke="#2a62ad" stroke-width="2"/>
+    <text x="170" y="138" fill="#10212b" font-size="15" font-weight="bold" text-anchor="middle">Intra-state</text>
+    <text x="40" y="166" fill="#10212b" font-size="14">Taxable value</text><text x="300" y="166" fill="#10212b" font-size="14" text-anchor="end">10,000</text>
+    <text x="40" y="190" fill="#10212b" font-size="14">CGST 9%</text><text x="300" y="190" fill="#2a62ad" font-size="14" font-weight="bold" text-anchor="end">900</text>
+    <text x="40" y="214" fill="#10212b" font-size="14">SGST 9%</text><text x="300" y="214" fill="#2a62ad" font-size="14" font-weight="bold" text-anchor="end">900</text>
+    <rect x="400" y="110" width="300" height="130" rx="10" fill="#dfeefa" stroke="#2a62ad" stroke-width="2"/>
+    <text x="550" y="138" fill="#10212b" font-size="15" font-weight="bold" text-anchor="middle">Inter-state</text>
+    <text x="420" y="166" fill="#10212b" font-size="14">Taxable value</text><text x="680" y="166" fill="#10212b" font-size="14" text-anchor="end">10,000</text>
+    <text x="420" y="190" fill="#10212b" font-size="14">IGST 18%</text><text x="680" y="190" fill="#2a62ad" font-size="14" font-weight="bold" text-anchor="end">1,800</text>
+    <rect x="250" y="248" width="220" height="26" rx="13" fill="#ffc32b"/>
+    <text x="360" y="266" fill="#10212b" font-size="13" font-weight="bold" text-anchor="middle">Total tax ₹1,800 either way</text>
+  </svg>
+  <p style="font-size:14px;color:var(--muted)">The 18% rate above is only to show the arithmetic. Check the current rate for your goods or services on the official portals.</p>
+
+  <h2>Place of supply in plain words</h2>
+  <p>Place of supply is the state where the law treats a supply as happening. It is not always where the customer's office is, and not always where you are. As broad starting points:</p>
+  <ul>
+    <li><b>Goods</b> that you send to a customer: usually where the movement of goods ends.</li>
+    <li><b>Goods</b> sold over the counter: usually your shop's location.</li>
+    <li><b>Services</b> to a registered business: usually the customer's registered location.</li>
+  </ul>
+  <p>There are many special rules, for example for property-related services, events, transport, “bill to, ship to” deliveries and supplies to SEZ units. If a case is not obvious, check the place-of-supply provisions on the portal or ask your CA before you invoice. A wrong head (CGST + SGST instead of IGST) is a common and avoidable mistake.</p>
+
+  <h2>How to read a GSTIN</h2>
+  <p>A GSTIN has 15 characters. Using a made-up example, <b>27ABCDE1234F1Z0</b>:</p>
+  <table>
+    <tr><th>Characters</th><th>Example</th><th>Meaning</th></tr>
+    <tr><td>1–2</td><td>27</td><td>State code (27 is Maharashtra)</td></tr>
+    <tr><td>3–12</td><td>ABCDE1234F</td><td>PAN of the business</td></tr>
+    <tr><td>13</td><td>1</td><td>Registration number for that PAN in that state</td></tr>
+    <tr><td>14</td><td>Z</td><td>Fixed letter Z in normal registrations</td></tr>
+    <tr><td>15</td><td>0</td><td>Check character calculated from the first 14</td></tr>
+  </table>
+  <p>TallyBook checks every GSTIN you type: the pattern, that the state code exists, and the check character. On a party ledger it also checks that the first two digits match the State you selected, so “GSTIN state code does not match the State” warns you of a typo before it reaches your returns. This is an offline check; it does not confirm that the GSTIN is active, which you can do with the search tool on gst.gov.in.</p>
+
+  <h2>How TallyBook decides the split</h2>
+  <ol class="steps">
+    <li>Press <kbd>F11</kbd>, set <b>Enable Goods and Services Tax (GST)</b> to Yes and enter your company's <b>GSTIN/UIN</b>. Its first two digits become your company state.</li>
+    <li>For each customer and supplier, set the <b>State</b>, the <b>Registration type</b> (Regular, Composition, Unregistered/Consumer and so on) and, if registered, the <b>GSTIN</b>.</li>
+    <li>On a Sales or Purchase invoice, TallyBook takes the <b>Place of supply</b> you choose on the invoice; if you leave it, it uses the party's GSTIN state, then the party's State.</li>
+    <li>If the place of supply equals your company state, TallyBook posts half the tax to CGST and half to SGST. Otherwise it posts the full tax to IGST.</li>
+    <li>It creates the tax ledgers under Duties &amp; Taxes the first time they are needed, named by direction, head and rate, such as “Output CGST” or “Input IGST” followed by the rate.</li>
+  </ol>
+  <figure style="margin:22px 0"><img src="/assets/shots/features-f11.png" alt="TallyBook Company Features screen with Enable Goods and Services Tax set to Yes and the company GSTIN field" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">F11 Company Features: enable GST and enter your GSTIN.</figcaption></figure>
+  <figure style="margin:22px 0"><img src="/assets/shots/sales-invoice.png" alt="TallyBook Sales invoice showing place of supply and the CGST and SGST lines calculated on the taxable value" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">On the invoice, the place of supply decides whether CGST and SGST or IGST is charged.</figcaption></figure>
+  <div class="warn">TallyBook decides the head only by comparing states. It does not apply special cases such as supplies to SEZ units automatically. In those cases, check the tax lines on the invoice before you save it, and confirm the treatment with your CA.</div>
+
+  <h2>What else TallyBook does with GST</h2>
+  <p>The same invoice data feeds the statutory reports under Display More Reports › Statutory Reports: GSTR-1, GSTR-3B, GSTR-2B reconciliation, HSN/SAC Summary and Tax Analysis. TallyBook prepares these for you to review and upload on the GST portal; it does not file returns itself. Read <a href="/blog/create-gst-invoice-in-tallybook/">creating a GST invoice</a> and <a href="/blog/gstr-1-and-gstr-3b-with-tallybook/">GSTR-1 and GSTR-3B with TallyBook</a> next, and see <a href="/blog/groups-and-ledgers-explained/">groups and ledgers</a> for where tax ledgers belong.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Is the total tax higher on an interstate sale?</h3>
+  <p>No. For the same goods at the same rate, IGST equals CGST plus SGST. Only the split, and which government receives the tax, changes.</p>
+  <h3>What place of supply does TallyBook use if I leave it blank?</h3>
+  <p>It uses the state in the party's GSTIN, then the State on the party ledger, then your company's own state. If none is available you see “Place of supply could not be determined; set the party state”.</p>
+  <h3>Can I sell to an unregistered customer?</h3>
+  <p>Yes. Set the party's Registration type to Unregistered/Consumer and leave GSTIN blank. Set the party's State so the place of supply is right.</p>
+  <h3>Which GST rates can I select in TallyBook?</h3>
+  <p>The rate list currently has 0, 0.25, 3, 5, 12, 18 and 28%. Rates are revised from time to time, so check the current rate for your goods or services on the official portals before invoicing.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

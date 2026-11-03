@@ -23,7 +23,8 @@ nav.bar .links a.cta { background:var(--sel); color:#1d1500; padding:6px 12px; f
 .btn.big { font-size:18px; padding:16px 26px; }
 .btn.alt { background:#fff; border-color:var(--line); color:var(--blue) !important; }
 .btn small { font-weight:400; opacity:.85; }
-.row { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+.row { display:flex; flex-wrap:wrap; gap:12px; align-items:stretch; }
+.row .btn { align-items:center; }
 .meta { margin-top:14px; font-size:14px; opacity:.9; }
 section { padding:48px 0; }
 section.alt { background:var(--card); }

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Import from Excel or CSV into TallyBook</title>
+<meta name="description" content="Import ledgers, stock items and vouchers from Excel or CSV with Alt+O, using Tally-style sample templates, the three import behaviours and exceptions report.">
+<link rel="canonical" href="https://tallybook.online/blog/import-from-excel-into-tallybook/">
+<meta property="og:title" content="Import from Excel into TallyBook: masters and transactions from .xlsx or CSV">
+<meta property="og:description" content="Import ledgers, stock items and vouchers from Excel or CSV with Alt+O, using Tally-style sample templates, the three import behaviours and exceptions report.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/import-from-excel-into-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/import-menu.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Import from Excel into TallyBook: masters and transactions from .xlsx or CSV", "description": "Import ledgers, stock items and vouchers from Excel or CSV with Alt+O, using Tally-style sample templates, the three import behaviours and exceptions report.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/import-menu.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/import-from-excel-into-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Import from Excel into TallyBook: masters and transactions from .xlsx or CSV", "item": "https://tallybook.online/blog/import-from-excel-into-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I import an old .xls file?", "acceptedAnswer": {"@type": "Answer", "text": "No. TallyBook reads .xlsx workbooks and .csv files. Open the .xls file in Excel or LibreOffice and save it as .xlsx first."}}, {"@type": "Question", "name": "Do the column headings have to match exactly?", "acceptedAnswer": {"@type": "Answer", "text": "They have to match the field names, but TallyBook ignores case, spaces and punctuation and accepts common alternatives, such as Group or Under for the parent group. The safest start is the sample file from Alt+O › Manage › Sample Excel File."}}, {"@type": "Question", "name": "Can I import vouchers for ledgers that do not exist yet?", "acceptedAnswer": {"@type": "Answer", "text": "Import the ledgers first as masters. A voucher that names an unknown ledger is reported in Import Exceptions as “Referenced master is missing” instead of being imported."}}, {"@type": "Question", "name": "Can I undo an import?", "acceptedAnswer": {"@type": "Answer", "text": "There is no undo button, which is why Backup Company Data before Import is on by default. If an import goes wrong, restore that backup from the Data menu (Alt+Y)."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Export a sample Excel file from TallyBook", "step": [{"@type": "HowToStep", "position": 1, "name": "Press Alt + O to open the Import menu.", "text": "Press Alt + O to open the Import menu."}, {"@type": "HowToStep", "position": 2, "name": "Choose Manage ( A ) › Sample Excel File ( S ), then Masters or Transactions .", "text": "Choose Manage ( A ) › Sample Excel File ( S ), then Masters or Transactions ."}, {"@type": "HowToStep", "position": 3, "name": "Press C to choose which master type the sample is for, then E to export it.", "text": "Press C to choose which master type the sample is for, then E to export it."}, {"@type": "HowToStep", "position": 4, "name": "Open the file in Excel or LibreOffice and paste your data under the headings.", "text": "Open the file in Excel or LibreOffice and paste your data under the headings."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Import masters from Excel into TallyBook", "step": [{"@type": "HowToStep", "position": 1, "name": "Press Alt + O › Masters ( M ).", "text": "Press Alt + O › Masters ( M )."}, {"@type": "HowToStep", "position": 2, "name": "Press Ctrl + O and select your .xlsx or .csv file", "text": "Press Ctrl + O and select your .xlsx or .csv file. File Format is set from the extension."}, {"@type": "HowToStep", "position": 3, "name": "Pick the Worksheet Name and keep Mapping Template as Default Template, which mat", "text": "Pick the Worksheet Name and keep Mapping Template as Default Template, which matches columns by heading."}, {"@type": "HowToStep", "position": 4, "name": "Check Type of Master ; TallyBook guesses it from the sheet but you can change it", "text": "Check Type of Master ; TallyBook guesses it from the sheet but you can change it."}, {"@type": "HowToStep", "position": 5, "name": "Choose the Behaviour of Import if master already exists (see below).", "text": "Choose the Behaviour of Import if master already exists (see below)."}, {"@type": "HowToStep", "position": 6, "name": "Leave Preview Import Summary and Backup Company Data before Import on, and press", "text": "Leave Preview Import Summary and Backup Company Data before Import on, and press Ctrl + A ."}, {"@type": "HowToStep", "position": 7, "name": "Review the summary (rows read, to create, to alter, ignored, exceptions) and pre", "text": "Review the summary (rows read, to create, to alter, ignored, exceptions) and press I to import."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · How-to</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Import from Excel into TallyBook: masters and transactions from .xlsx or CSV</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> Press Alt+O, choose Masters or Transactions, press Ctrl+O to pick an .xlsx or .csv file laid out like Tally's sample Excel files, choose what happens to masters that already exist, and accept. TallyBook shows a preview summary, imports when you press I, and lists any rows it could not import in an Import Exceptions report.</div>
+
+<p>Typing hundreds of customers, items or opening balances by hand is slow and error-prone. If the data already lives in a spreadsheet, or in another program that can export to Excel, TallyBook can import it. The process follows TallyPrime's Excel import closely, including its sample file layouts, so files prepared for Tally usually work as they are.</p>
+
+  <h2>What you can import</h2>
+  <table>
+    <tr><th>Import</th><th>What it covers</th></tr>
+    <tr><td>Masters</td><td>Group, Ledger, Stock Group, Stock Category, Stock Item, Unit, Godown, Cost Centre</td></tr>
+    <tr><td>Transactions</td><td>Vouchers: date, voucher type, number, ledger lines with Dr/Cr amounts, narration</td></tr>
+  </table>
+  <p>Files can be Excel workbooks (<b>.xlsx</b>) or <b>.csv</b>. The same screen also imports Tally XML exports; JSON is listed but not supported yet.</p>
+
+  <svg role="img" aria-label="Import flow: press Alt+O, choose Masters or Transactions, select the file with Ctrl+O, set options and accept with Ctrl+A, review the preview summary, press I to import, then check the Import Exceptions report" viewBox="0 0 720 200" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>The import flow in six steps</title>
+    <rect width="720" height="200" fill="white"/>
+    <g font-size="13" text-anchor="middle">
+      <rect x="10" y="40" width="105" height="70" rx="8" fill="#10212b"/><text x="62" y="70" fill="#ffc32b" font-weight="bold">Alt+O</text><text x="62" y="92" fill="white">Import</text>
+      <rect x="128" y="40" width="105" height="70" rx="8" fill="#2a62ad"/><text x="180" y="70" fill="white">Masters or</text><text x="180" y="90" fill="white">Transactions</text>
+      <rect x="246" y="40" width="105" height="70" rx="8" fill="#2a62ad"/><text x="298" y="70" fill="#ffc32b" font-weight="bold">Ctrl+O</text><text x="298" y="92" fill="white">pick file</text>
+      <rect x="364" y="40" width="105" height="70" rx="8" fill="#2a62ad"/><text x="416" y="70" fill="white">Options</text><text x="416" y="92" fill="#ffc32b" font-weight="bold">Ctrl+A</text>
+      <rect x="482" y="40" width="105" height="70" rx="8" fill="#8bb9e0"/><text x="534" y="70" fill="#10212b">Preview</text><text x="534" y="92" fill="#10212b" font-weight="bold">I: Import</text>
+      <rect x="600" y="40" width="110" height="70" rx="8" fill="#ffc32b"/><text x="655" y="70" fill="#10212b">Import</text><text x="655" y="90" fill="#10212b">Exceptions</text>
+    </g>
+    <g stroke="#10212b" stroke-width="2" fill="none">
+      <path d="M115 75 H126"/><path d="M233 75 H244"/><path d="M351 75 H362"/><path d="M469 75 H480"/><path d="M587 75 H598"/>
+    </g>
+    <text x="360" y="150" fill="#10212b" font-size="14" text-anchor="middle">A backup of the company is saved first unless you switch it off.</text>
+    <text x="360" y="174" fill="#2a62ad" font-size="14" text-anchor="middle">Nothing is written until you press I on the preview.</text>
+  </svg>
+
+  <h2>Step 1: start from a sample file</h2>
+  <p>Column names matter, so begin with TallyBook's own sample, which follows Tally's sample Excel layout.</p>
+  <ol class="steps">
+    <li>Press <kbd>Alt</kbd>+<kbd>O</kbd> to open the Import menu.</li>
+    <li>Choose <b>Manage</b> (<kbd>A</kbd>) › <b>Sample Excel File</b> (<kbd>S</kbd>), then <b>Masters</b> or <b>Transactions</b>.</li>
+    <li>Press <kbd>C</kbd> to choose which master type the sample is for, then <kbd>E</kbd> to export it.</li>
+    <li>Open the file in Excel or LibreOffice and paste your data under the headings.</li>
+  </ol>
+  <figure style="margin:22px 0"><img src="/assets/shots/import-menu.png" alt="TallyBook Import menu with Masters, Transactions and Manage options opened with Alt+O" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The Import menu (Alt+O). Manage leads to Mapping Templates and Sample Excel File.</figcaption></figure>
+  <p>Typical headings are:</p>
+  <table>
+    <tr><th>Sheet</th><th>Columns</th></tr>
+    <tr><td>Ledgers</td><td>Name, Group Name, Ledger - Opening Balance, Ledger Opening Balance - Dr/Cr, Bill - Date, Bill - Name, Bill - Amount, Bill Amount - Dr/Cr, Address, State, Country, Pincode (plus optional GSTIN, PAN, Credit Period and contact fields)</td></tr>
+    <tr><td>Vouchers</td><td>Voucher Date, Voucher Type Name, Voucher Number, Ledger Name, Ledger Amount, Ledger Amount Dr/Cr, Narration</td></tr>
+  </table>
+  <p>In a voucher sheet, a row with a date starts a new voucher; the rows below it without a date add more ledger lines to the same voucher. Each voucher must balance, exactly as in manual entry.</p>
+
+  <h2>Step 2: import masters</h2>
+  <ol class="steps">
+    <li>Press <kbd>Alt</kbd>+<kbd>O</kbd> › <b>Masters</b> (<kbd>M</kbd>).</li>
+    <li>Press <kbd>Ctrl</kbd>+<kbd>O</kbd> and select your .xlsx or .csv file. File Format is set from the extension.</li>
+    <li>Pick the <b>Worksheet Name</b> and keep <b>Mapping Template</b> as Default Template, which matches columns by heading.</li>
+    <li>Check <b>Type of Master</b>; TallyBook guesses it from the sheet but you can change it.</li>
+    <li>Choose the <b>Behaviour of Import if master already exists</b> (see below).</li>
+    <li>Leave <b>Preview Import Summary</b> and <b>Backup Company Data before Import</b> on, and press <kbd>Ctrl</kbd>+<kbd>A</kbd>.</li>
+    <li>Review the summary (rows read, to create, to alter, ignored, exceptions) and press <kbd>I</kbd> to import.</li>
+  </ol>
+
+  <h3>The three behaviours</h3>
+  <table>
+    <tr><th>Behaviour</th><th>When a master with the same name exists</th><th>Use it when</th></tr>
+    <tr><td><b>Ignore Duplicates</b> (default)</td><td>It is left untouched and counted as ignored</td><td>Adding new masters to an existing company</td></tr>
+    <tr><td><b>Modify with New Data</b></td><td>Its fields are updated from the file</td><td>Correcting addresses, GSTINs or opening balances in bulk</td></tr>
+    <tr><td><b>Combine Opening Balance</b></td><td>The file's opening balance is added to the existing one, and opening bills are appended</td><td>Merging balances from two sources into one ledger</td></tr>
+  </table>
+  <div class="warn">Run Combine Opening Balance only once per file. Importing the same file twice adds the openings twice, and your <a href="/blog/trial-balance-explained/">Trial Balance</a> will no longer tally.</div>
+
+  <h2>Step 3: import transactions</h2>
+  <p>Choose <kbd>Alt</kbd>+<kbd>O</kbd> › <b>Transactions</b> (<kbd>T</kbd>) and follow the same steps. TallyBook first checks that the sheet looks like a voucher sheet; if Voucher Date, Ledger Name and Ledger Amount Dr/Cr columns are missing, it says so before reading anything. Import masters before transactions so every ledger named in the vouchers already exists.</p>
+
+  <h2>Step 4: read the exceptions report</h2>
+  <p>When the import ends you see either “Import completed successfully” or “Import completed with N exception(s)”. The <b>Import Exceptions</b> report groups problems by message and lists the row number of each, for example an unknown group, an invalid date or a voucher whose debits and credits differ. Fix those rows in the spreadsheet and import again with Ignore Duplicates, so rows that went in the first time are not doubled.</p>
+
+  <h2>Limits in this preview</h2>
+  <ul>
+    <li>Only the Default Template is available; you cannot create your own column mappings yet.</li>
+    <li>Old .xls files and JSON are not supported.</li>
+    <li>Rejected rows are fixed in the spreadsheet, not inside TallyBook; test with a few rows first.</li>
+  </ul>
+  <figure style="margin:22px 0"><img src="/assets/shots/data-menu.png" alt="TallyBook Data menu opened with Alt+Y showing Backup, Restore and Edit Log" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">If an import goes wrong, restore the automatic pre-import backup from the Data menu (Alt+Y).</figcaption></figure>
+  <p>Moving from TallyPrime? You can also import its XML export directly; see <a href="/blog/switch-from-tally-to-tallybook/">switching from Tally</a>. For keeping your data safe, read <a href="/blog/backup-restore-and-data-safety/">backup and restore</a>, and for where each master belongs, <a href="/blog/groups-and-ledgers-explained/">groups and ledgers</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Can I import an old .xls file?</h3>
+  <p>No. TallyBook reads .xlsx workbooks and .csv files. Open the .xls file in Excel or LibreOffice and save it as .xlsx first.</p>
+  <h3>Do the column headings have to match exactly?</h3>
+  <p>They have to match the field names, but TallyBook ignores case, spaces and punctuation and accepts common alternatives, such as Group or Under for the parent group. The safest start is the sample file from Alt+O › Manage › Sample Excel File.</p>
+  <h3>Can I import vouchers for ledgers that do not exist yet?</h3>
+  <p>Import the ledgers first as masters. A voucher that names an unknown ledger is reported in Import Exceptions as “Referenced master is missing” instead of being imported.</p>
+  <h3>Can I undo an import?</h3>
+  <p>There is no undo button, which is why Backup Company Data before Import is on by default. If an import goes wrong, restore that backup from the Data menu (Alt+Y).</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>
