@@ -63,8 +63,9 @@
     <li>Click <b>Download for Mac</b> above. A file named like <code data-fname="mac">TallyBook_universal.dmg</code> appears in <b>Downloads</b>.</li>
     <li>Double-click it. A window opens showing the TallyBook icon and an <b>Applications</b> folder.</li>
     <li>Drag the <b>TallyBook</b> icon onto the <b>Applications</b> folder.</li>
-    <li>Open <b>Applications</b>, <b>right-click</b> (or Control-click) TallyBook and choose <b>Open</b>. Click <b>Open</b> again in the message. You only need to do this the first time.</li>
-    <li>If macOS still refuses, open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b> next to TallyBook.</li>
+    <li>Open <b>Applications</b> and double-click <b>TallyBook</b>. The first time, macOS shows <b>"TallyBook" Not Opened</b> because the app is not yet notarised by Apple. Click <b>Done</b> (do not click Move to Bin).</li>
+    <li>Open <b>System Settings → Privacy &amp; Security</b>. Scroll down to <b>Security</b> and click <b>Open Anyway</b> next to "TallyBook was blocked to protect your Mac".</li>
+    <li>Enter your Mac password, then click <b>Open</b>. From now on TallyBook opens normally.</li>
   </ol>
   <h2 id="install-linux" style="margin-top:36px">How to install on Linux</h2>
   <ol class="steps">
@@ -98,7 +99,7 @@
   <details><summary>Is TallyBook really free?</summary><p>Yes. There is no licence fee, no yearly renewal and no feature locked behind payment.</p></details>
   <details><summary>Where is my data stored? Is it uploaded anywhere?</summary><p>Your company data stays on your own computer. Nothing is uploaded. Use <kbd>Alt</kbd>+<kbd>Y</kbd> → <b>Backup</b> to save a copy to a pen drive or cloud folder of your choice.</p></details>
   <details><summary>Windows says "Windows protected your PC". Is it a virus?</summary><p>No. Windows shows this for new programs that are not yet signed with a paid code-signing certificate. Click <b>More info</b> then <b>Run anyway</b>. Signed installers are planned.</p></details>
-  <details><summary>Mac says the app "cannot be opened because the developer cannot be verified".</summary><p>Right-click TallyBook in Applications and choose <b>Open</b>, or use <b>System Settings → Privacy &amp; Security → Open Anyway</b>. Apple notarisation is planned.</p></details>
+  <details><summary>Mac says "TallyBook" Not Opened, or "Apple could not verify TallyBook is free of malware".</summary><p>This appears because TallyBook is not yet notarised by Apple. Click <b>Done</b>, then open <b>System Settings → Privacy &amp; Security</b>, scroll to <b>Security</b> and click <b>Open Anyway</b> next to TallyBook. On macOS 15 (Sequoia) and later, right-click → Open no longer skips this step. Advanced users can run <code>xattr -dr com.apple.quarantine /Applications/TallyBook.app</code> in Terminal instead. Apple notarisation is planned.</p></details>
   <details><summary>Can I move my data from Tally?</summary><p>Yes. Export masters and vouchers from Tally as XML and import them with <kbd>Alt</kbd>+<kbd>O</kbd>. See the <a href="/blog/switch-from-tally-to-tallybook/">step-by-step guide</a>.</p></details>
   <details><summary>Can several people use one company at the same time?</summary><p>Not yet. TallyBook is single-user per computer today. You can create users and passwords to control who may do what.</p></details>
   <details><summary>Download didn't start or the link is broken.</summary><p>Try the <a href="https://github.com/techardentlabs/tallybook/releases/latest">full list of files</a> and pick the one for your computer from the table below.</p></details>
