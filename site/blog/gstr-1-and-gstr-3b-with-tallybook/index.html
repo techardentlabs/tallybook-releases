@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preparing GSTR-1 and GSTR-3B with TallyBook</title>
+<meta name="description" content="How TallyBook builds GSTR-1 and GSTR-3B from your vouchers, exports GSTR-1 JSON, reconciles purchases with GSTR-2B and gives you an HSN summary.">
+<link rel="canonical" href="https://tallybook.online/blog/gstr-1-and-gstr-3b-with-tallybook/">
+<meta property="og:title" content="Preparing GSTR-1 and GSTR-3B with TallyBook">
+<meta property="og:description" content="How TallyBook builds GSTR-1 and GSTR-3B from your vouchers, exports GSTR-1 JSON, reconciles purchases with GSTR-2B and gives you an HSN summary.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/gstr-1-and-gstr-3b-with-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/gstr1.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Preparing GSTR-1 and GSTR-3B with TallyBook">
+<meta name="twitter:description" content="How TallyBook builds GSTR-1 and GSTR-3B from your vouchers, exports GSTR-1 JSON, reconciles purchases with GSTR-2B and gives you an HSN summary.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/gstr1.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Preparing GSTR-1 and GSTR-3B with TallyBook", "description": "How TallyBook builds GSTR-1 and GSTR-3B from your vouchers, exports GSTR-1 JSON, reconciles purchases with GSTR-2B and gives you an HSN summary.", "image": "https://tallybook.online/assets/shots/gstr1.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/gstr-1-and-gstr-3b-with-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Preparing GSTR-1 and GSTR-3B with TallyBook", "item": "https://tallybook.online/blog/gstr-1-and-gstr-3b-with-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can TallyBook file GST returns directly on the portal?", "acceptedAnswer": {"@type": "Answer", "text": "No. TallyBook prepares the reports and the GSTR-1 JSON file. You upload, verify and file on the GST portal yourself."}}, {"@type": "Question", "name": "Will the GSTR-1 JSON be accepted by the portal?", "acceptedAnswer": {"@type": "Answer", "text": "It is built in the portal's JSON layout, but formats change. Upload it, check the portal summary and any errors, and match totals with TallyBook before you submit."}}, {"@type": "Question", "name": "Can I prepare a quarterly GSTR-1?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Set any period with Alt+F2, such as a full quarter, and the report and export cover that period."}}, {"@type": "Question", "name": "Where do I check GST due dates and rates?", "acceptedAnswer": {"@type": "Answer", "text": "On gst.gov.in or with your CA. TallyBook does not show due dates."}}, {"@type": "Question", "name": "Why is my ITC in GSTR-3B different from GSTR-2B?", "acceptedAnswer": {"@type": "Answer", "text": "GSTR-3B in TallyBook shows ITC from your purchase entries. Use GSTR-2B Reconciliation to find invoices missing on either side."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Prepare monthly GST returns with TallyBook", "description": "How TallyBook builds GSTR-1 and GSTR-3B from your vouchers, exports GSTR-1 JSON, reconciles purchases with GSTR-2B and gives you an HSN summary.", "step": [{"@type": "HowToStep", "position": 1, "name": "Finish the month's entries", "text": "Enter all sales, purchases, credit notes and debit notes for the month."}, {"@type": "HowToStep", "position": 2, "name": "Reconcile purchases with GSTR-2B", "text": "Download GSTR-2B JSON from the GST portal, import it in GSTR-2B Reconciliation with Alt+I and resolve mismatches."}, {"@type": "HowToStep", "position": 3, "name": "Review GSTR-1", "text": "Open GSTR-1, set the period with Alt+F2 and check each section, HSN summary and documents issued."}, {"@type": "HowToStep", "position": 4, "name": "Export GSTR-1 JSON", "text": "Press Alt+E, save the JSON and upload it on the GST portal, then check the portal summary before filing."}, {"@type": "HowToStep", "position": 5, "name": "Review GSTR-3B", "text": "Open GSTR-3B for the same period and enter the figures on the portal."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · GST</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Preparing GSTR-1 and GSTR-3B with TallyBook</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 4 min read</div>
+  <div class="note"><b>Quick answer:</b> TallyBook builds GSTR-1 and GSTR-3B from the vouchers you enter. Open them from Display More Reports → Statutory Reports, set the month with <kbd>Alt</kbd>+<kbd>F2</kbd>, review each section and export GSTR-1 as JSON with <kbd>Alt</kbd>+<kbd>E</kbd>. You upload and file on the GST portal yourself; TallyBook does not connect to it.</div>
+
+  <p>Every sales and purchase voucher you enter in TallyBook carries its GST details: party, GSTIN, place of supply, rate and tax heads. The GST reports simply read those vouchers for the period you choose. There is no separate data entry for returns, which also means a wrong invoice shows up wrong in the return, so it pays to review before you upload.</p>
+  <figure style="margin:24px 0"><svg role="img" aria-label="Enter vouchers, reconcile GSTR-2B, review GSTR-1, export JSON and upload, review GSTR-3B and file on portal" viewBox="0 0 640 412" width="640" height="412" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>A monthly GST routine</title><rect x="0" y="0" width="640" height="412" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320.0" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">A monthly GST routine</text><rect x="40" y="50" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="75.0" r="15" fill="#2a62ad"/><text x="70" y="80.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">1</text><text x="98" y="80.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Enter the month&#x27;s sales and purchases</text><path d="M320.0 102 L320.0 118" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 112 L320.0 119 L326.0 112" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="122" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="147.0" r="15" fill="#2a62ad"/><text x="70" y="152.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">2</text><text x="98" y="152.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">GSTR-2B Reconciliation: import portal JSON (Alt+I)</text><path d="M320.0 174 L320.0 190" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 184 L320.0 191 L326.0 184" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="194" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="219.0" r="15" fill="#2a62ad"/><text x="70" y="224.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">3</text><text x="98" y="224.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Review GSTR-1 for the month (Alt+F2)</text><path d="M320.0 246 L320.0 262" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 256 L320.0 263 L326.0 256" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="266" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="291.0" r="15" fill="#2a62ad"/><text x="70" y="296.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">4</text><text x="98" y="296.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Export GSTR-1 JSON (Alt+E), upload on the portal</text><path d="M320.0 318 L320.0 334" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 328 L320.0 335 L326.0 328" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="338" width="560" height="50" rx="8" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="363.0" r="15" fill="#2a62ad"/><text x="70" y="368.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">5</text><text x="98" y="368.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Review GSTR-3B, enter figures and file on the portal</text></svg></figure>
+
+  <h2>Where to find the reports</h2>
+  <p>With GST on, go to Gateway → <b>Display More Reports</b> → <b>Statutory Reports</b>. You will see GSTR-1, GSTR-3B, GSTR-2B Reconciliation, HSN/SAC Summary and Tax Analysis (and e-Invoice and e-Way Bill if they are enabled in <kbd>F11</kbd>). GSTR-1 and GSTR-3B are also in <kbd>Alt</kbd>+<kbd>G</kbd> Go To.</p>
+
+  <h2>GSTR-1: outward supplies</h2>
+  <p>Press <kbd>Alt</kbd>+<kbd>F2</kbd> to pick the month (or a quarter). The summary is grouped the way the return is:</p>
+  <table>
+    <tr><th>Section in TallyBook</th><th>What goes there</th></tr>
+    <tr><td>4A, 4B, 4C, 6B, 6C – B2B Invoices</td><td>Sales to registered customers</td></tr>
+    <tr><td>5 – B2C (Large) Invoices</td><td>Large inter-state sales to unregistered customers</td></tr>
+    <tr><td>7 – B2C (Small) Supplies</td><td>Other sales to unregistered customers</td></tr>
+    <tr><td>9B – Credit/Debit Notes</td><td>Registered and unregistered notes, shown separately</td></tr>
+    <tr><td>8 – Nil rated / Exempted</td><td>Nil, exempt and zero-rated supplies</td></tr>
+    <tr><td>12 – HSN/SAC Summary</td><td>Taxable value and tax by HSN and rate</td></tr>
+    <tr><td>13 – Documents issued</td><td>Number ranges, totals and cancelled vouchers</td></tr>
+  </table>
+  <p>If any line in the HSN table shows "(not set)", add the HSN/SAC on the sales ledger or stock item and the report updates at once. When everything looks right, press <kbd>Alt</kbd>+<kbd>E</kbd>. TallyBook saves a file named like <code>GSTR1_2026-10.json</code>.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/gstr1.png" alt="TallyBook GSTR-1 summary with B2B, B2C, credit note, HSN and documents issued sections" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">GSTR-1 summary for a month, with the HSN table below.</figcaption></figure>
+  <div class="warn">Before your first real upload, compare the JSON against the GST portal's current format: upload it, read the portal's summary and errors, and match the totals with TallyBook before you submit. Portal formats change from time to time.</div>
+
+  <h2>GSTR-3B: the monthly summary</h2>
+  <p>GSTR-3B shows <b>3.1</b> outward supplies (taxable, nil/exempt) and inward supplies liable to reverse charge, <b>4</b> eligible input tax credit from your purchase entries, and <b>6.1</b> payment of tax: tax payable, how much is paid through each kind of ITC, tax payable in cash and ITC carried forward. TallyBook applies the set-off order shown on screen (IGST credit first, then CGST and SGST credit). There is no file export for GSTR-3B; you type the figures on the portal.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/gstr3b.png" alt="TallyBook GSTR-3B report showing outward supplies, eligible ITC and payment of tax tables" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">GSTR-3B with the ITC set-off worked out.</figcaption></figure>
+  <p>The ITC shown is what your books say. Whether every rupee is claimable depends on the rules for your business, so compare it with GSTR-2B and discuss any doubt with your CA.</p>
+
+  <h2>GSTR-2B reconciliation</h2>
+  <ol class="steps">
+    <li>Download your GSTR-2B for the month as JSON from <a href="https://www.gst.gov.in/">gst.gov.in</a>.</li>
+    <li>Open <b>GSTR-2B Reconciliation</b>, set the period and press <kbd>Alt</kbd>+<kbd>I</kbd> to import the file.</li>
+    <li>Each document gets a status: <b>Reconciled</b>, <b>Mismatched</b>, <b>Potential Match</b>, <b>Available Only in Books</b> or <b>Available Only in Portal</b>. <kbd>Ctrl</kbd>+<kbd>B</kbd> cycles through the statuses, <kbd>Ctrl</kbd>+<kbd>F</kbd> filters by party or number.</li>
+    <li>Press <kbd>Enter</kbd> on a row to open the purchase voucher and correct it, or follow up with the supplier for invoices only in the portal.</li>
+  </ol>
+
+  <h2>HSN/SAC Summary and Tax Analysis</h2>
+  <p>The separate <b>HSN/SAC Summary</b> report gives the same HSN breakdown for any period, with an <kbd>F12</kbd> option to show inward supplies too. <b>Tax Analysis</b> shows voucher count, taxable value and each tax head by GST rate, which helps when a figure in the return looks off.</p>
+
+  <h2>Before you file: a quick checklist</h2>
+  <ol class="steps">
+    <li>Day Book for the month shows every invoice, with no missing numbers (check Documents issued).</li>
+    <li>Every customer with a GSTIN has Registration type Regular (or SEZ and so on), not Unregistered.</li>
+    <li>No "(not set)" lines in the HSN summary.</li>
+    <li>GSTR-2B reconciliation has no unexplained mismatches.</li>
+    <li>Take a backup with <kbd>Alt</kbd>+<kbd>Y</kbd> → Backup, so you can always go back to the filed position.</li>
+  </ol>
+
+<h2>Frequently asked questions</h2><h3>Can TallyBook file GST returns directly on the portal?</h3><p>No. TallyBook prepares the reports and the GSTR-1 JSON file. You upload, verify and file on the GST portal yourself.</p><h3>Will the GSTR-1 JSON be accepted by the portal?</h3><p>It is built in the portal's JSON layout, but formats change. Upload it, check the portal summary and any errors, and match totals with TallyBook before you submit.</p><h3>Can I prepare a quarterly GSTR-1?</h3><p>Yes. Set any period with Alt+F2, such as a full quarter, and the report and export cover that period.</p><h3>Where do I check GST due dates and rates?</h3><p>On gst.gov.in or with your CA. TallyBook does not show due dates.</p><h3>Why is my ITC in GSTR-3B different from GSTR-2B?</h3><p>GSTR-3B in TallyBook shows ITC from your purchase entries. Use GSTR-2B Reconciliation to find invoices missing on either side.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/create-gst-invoice-in-tallybook/">Create a GST invoice</a> · <a href="/blog/e-invoice-and-e-way-bill-in-tallybook/">e-Invoice and e-Way Bill</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

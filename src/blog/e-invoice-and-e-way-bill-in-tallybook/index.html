@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e-Invoice and e-Way Bill in TallyBook: offline JSON, IRN and e-way bill details</title>
+<meta name="description" content="What TallyBook does for e-invoicing and e-way bills: checks invoices, exports JSON for offline upload, and records the IRN, acknowledgement and e-way bill numbers you get back.">
+<link rel="canonical" href="https://tallybook.online/blog/e-invoice-and-e-way-bill-in-tallybook/">
+<meta property="og:title" content="e-Invoice and e-Way Bill in TallyBook: offline JSON, IRN and e-way bill details">
+<meta property="og:description" content="What TallyBook does for e-invoicing and e-way bills: checks invoices, exports JSON for offline upload, and records the IRN, acknowledgement and e-way bill numbers you get back.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/e-invoice-and-e-way-bill-in-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/sales-invoice.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="e-Invoice and e-Way Bill in TallyBook: offline JSON, IRN and e-way bill details">
+<meta name="twitter:description" content="What TallyBook does for e-invoicing and e-way bills: checks invoices, exports JSON for offline upload, and records the IRN, acknowledgement and e-way bill numbers you get back.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/sales-invoice.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "e-Invoice and e-Way Bill in TallyBook: offline JSON, IRN and e-way bill details", "description": "What TallyBook does for e-invoicing and e-way bills: checks invoices, exports JSON for offline upload, and records the IRN, acknowledgement and e-way bill numbers you get back.", "image": "https://tallybook.online/assets/shots/sales-invoice.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/e-invoice-and-e-way-bill-in-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "e-Invoice and e-Way Bill in TallyBook: offline JSON, IRN and e-way bill details", "item": "https://tallybook.online/blog/e-invoice-and-e-way-bill-in-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can TallyBook generate an IRN directly?", "acceptedAnswer": {"@type": "Answer", "text": "No. It exports a JSON file for offline upload on the e-invoice portal and stores the IRN that the portal returns."}}, {"@type": "Question", "name": "How do I get the IRN back into TallyBook?", "acceptedAnswer": {"@type": "Answer", "text": "Import the portal's response JSON with Alt+I in the e-Invoice voucher list, or type the IRN, acknowledgement number and date with Alt+R."}}, {"@type": "Question", "name": "Why is an invoice not included in the export?", "acceptedAnswer": {"@type": "Answer", "text": "It is probably missing a required detail such as buyer pincode or HSN. The list shows \"Missing:\" with the exact fields."}}, {"@type": "Question", "name": "Does it handle e-way bill cancellation?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Record the cancellation with Alt+N and export the cancellation JSON with Alt+J for upload."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Generate e-invoices with TallyBook offline JSON", "description": "What TallyBook does for e-invoicing and e-way bills: checks invoices, exports JSON for offline upload, and records the IRN, acknowledgement and e-way bill numbers you get back.", "step": [{"@type": "HowToStep", "position": 1, "name": "Enable e-invoicing", "text": "Press F11 and set Enable e-Invoicing (and Enable e-Way Bill if needed) to Yes."}, {"@type": "HowToStep", "position": 2, "name": "Complete missing details", "text": "Open Statutory Reports → e-Invoice and fix any invoice listed with missing information."}, {"@type": "HowToStep", "position": 3, "name": "Export the JSON", "text": "Open the pending list and press Alt+X (Offline Export) to save the JSON file."}, {"@type": "HowToStep", "position": 4, "name": "Upload on the portal", "text": "Upload the JSON on the e-invoice portal and download the response file."}, {"@type": "HowToStep", "position": 5, "name": "Import the response", "text": "Press Alt+I (Import Response) to store the IRN, acknowledgement and signed QR code."}]}</script>
+</head>
+<body>
+@@HEADER:Blog · GST@@
+<section><div class="wrap narrow"><article>
+  <h1>e-Invoice and e-Way Bill in TallyBook: offline JSON, IRN and e-way bill details</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 4 min read</div>
+  <div class="note"><b>Quick answer:</b> TallyBook does not connect to the government portals. It checks your invoices for the required details, creates a JSON file that you upload on the e-invoice or e-way bill portal, and then lets you import the portal's response or type the IRN and e-way bill number into the voucher.</div>
+
+  <p>If your business is covered by e-invoicing, each B2B invoice has to be reported to the Invoice Registration Portal (IRP), which returns an IRN and a signed QR code. Goods movements above the e-way bill limit need an e-way bill. TallyBook prepares the data for both and keeps the numbers you get back, but the upload itself happens on the portal. Whether e-invoicing applies to you depends on your turnover and business type; check the current rules on <a href="https://www.gst.gov.in/">gst.gov.in</a> or the e-invoice portal.</p>
+  <figure style="margin:24px 0"><svg role="img" aria-label="TallyBook exports a JSON file which you upload to the portal; the response JSON with IRN or e-way bill number is imported back" viewBox="0 0 640 220" width="640" height="220" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>e-Invoice offline round trip</title><rect x="0" y="0" width="640" height="220" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">The offline round trip</text><rect x="30" y="70" width="200" height="90" rx="10" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><text x="130.0" y="112.0" font-size="16" fill="#10212b" text-anchor="middle" font-weight="bold">TallyBook</text><text x="130.0" y="134.0" font-size="13" fill="#10212b" text-anchor="middle" font-weight="normal">invoices checked</text><rect x="410" y="70" width="200" height="90" rx="10" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><text x="510.0" y="112.0" font-size="16" fill="#10212b" text-anchor="middle" font-weight="bold">Government portal</text><text x="510.0" y="134.0" font-size="13" fill="#10212b" text-anchor="middle" font-weight="normal">IRN / e-way bill no.</text><path d="M232 100 L404 100" stroke="#2a62ad" stroke-width="2.5"/><path d="M396 93 L406 100 L396 107" fill="none" stroke="#2a62ad" stroke-width="2.5"/><text x="320" y="90" font-size="13" fill="#10212b" text-anchor="middle" font-weight="normal">1. Alt+X: export JSON, upload</text><path d="M408 132 L236 132" stroke="#8bb9e0" stroke-width="2.5"/><path d="M244 125 L234 132 L244 139" fill="none" stroke="#8bb9e0" stroke-width="2.5"/><text x="320" y="152" font-size="13" fill="#10212b" text-anchor="middle" font-weight="normal">2. Alt+I: import response</text><text x="320" y="196" font-size="14" fill="#10212b" text-anchor="middle" font-weight="normal">Or type the IRN / e-way bill number into the voucher by hand</text></svg></figure>
+
+  <h2>Switch it on</h2>
+  <p>Press <kbd>F11</kbd> and set <b>Enable e-Invoicing</b> and/or <b>Enable e-Way Bill</b> to Yes (GST must be on). New entries appear under Display More Reports → <b>Statutory Reports</b>.</p>
+  <p>Before an invoice can be exported, TallyBook checks for:</p>
+  <table>
+    <tr><th>Detail</th><th>Where to fix it</th></tr>
+    <tr><td>Your GSTIN, address and 6-digit pincode</td><td><kbd>F11</kbd> and <kbd>Alt</kbd>+<kbd>K</kbd> → Alter</td></tr>
+    <tr><td>Buyer GSTIN, address, pincode and state</td><td>The customer's ledger</td></tr>
+    <tr><td>HSN/SAC of 4 to 8 digits on every line</td><td>The sales ledger or stock item</td></tr>
+  </table>
+  <p>Invoices missing anything show "Missing: …" in the list with the exact fields.</p>
+
+  <h2>e-Invoice step by step</h2>
+  <ol class="steps">
+    <li>Open <b>e-Invoice</b>. It counts invoices by status for the period (<kbd>Alt</kbd>+<kbd>F2</kbd> to change it). Press <kbd>Enter</kbd> on a line to see its vouchers.</li>
+    <li>In the pending list, press <kbd>Alt</kbd>+<kbd>X</kbd> (<b>Offline Export</b>). TallyBook saves one JSON file with every ready invoice and marks them as exported.</li>
+    <li>Upload that file on the e-invoice portal using its bulk or offline upload facility, and download the response.</li>
+    <li>Back in TallyBook press <kbd>Alt</kbd>+<kbd>I</kbd> (<b>Import Response</b>). Invoices are matched by number, and the <b>IRN</b>, <b>Acknowledgement number</b>, <b>Acknowledgement date</b> and <b>Signed QR code</b> are stored.</li>
+    <li>No response file? Select the invoice and press <kbd>Alt</kbd>+<kbd>R</kbd> (<b>Update IRN</b>) to type the details.</li>
+  </ol>
+  <p>Other keys in the list: <kbd>Alt</kbd>+<kbd>N</kbd> records an IRN cancellation (reason, remarks, date), <kbd>Alt</kbd>+<kbd>O</kbd> excludes an invoice, and <kbd>Alt</kbd>+<kbd>T</kbd> opens its transport details.</p>
+
+  <h2>e-Way Bill step by step</h2>
+  <ol class="steps">
+    <li>Open <b>e-Way Bill</b>. Invoices below the e-way bill value limit are hidden by default; <kbd>F12</kbd> shows them. Confirm the limit that applies to your movement, as some states set their own.</li>
+    <li>Press <kbd>Enter</kbd> on an invoice to fill <b>e-Way Bill Details</b>: Supply sub type, Transporter ID and name, Mode, Doc/LR No. and date, Vehicle number and type, and Approximate distance (in km).</li>
+    <li>Press <kbd>Alt</kbd>+<kbd>X</kbd> to export the JSON for pending bills and upload it on the e-way bill portal.</li>
+    <li>Import the portal's response with <kbd>Alt</kbd>+<kbd>I</kbd>. The e-way bill number, date and validity are saved.</li>
+    <li>To cancel, <kbd>Alt</kbd>+<kbd>N</kbd> records the cancellation and <kbd>Alt</kbd>+<kbd>J</kbd> exports the cancellation JSON.</li>
+  </ol>
+  <p>You can also reach both forms from the invoice itself: open a saved sales invoice and use the <b>e-Invoice Details</b> or <b>e-Way Bill Details</b> button in the right-hand panel.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/sales-invoice.png" alt="TallyBook sales invoice; once saved, its e-invoice and e-way bill details can be opened from the side panel" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">A saved sales invoice. e-Invoice and e-Way Bill details are recorded against it.</figcaption></figure>
+
+  <h2>Test before you rely on it</h2>
+  <div class="warn">Portal schemas are updated from time to time. Before your first real upload, compare one exported file with the current sample JSON published on the e-invoice and e-way bill portals, or upload a single invoice first and read any errors. If something is rejected, fix the invoice, export again and import the response.</div>
+  <p>What TallyBook does not do: it does not log in to the portals or generate IRNs itself. It stores the signed QR code text from the response, but printing that QR code on the invoice is not available yet.</p>
+
+<h2>Frequently asked questions</h2><h3>Can TallyBook generate an IRN directly?</h3><p>No. It exports a JSON file for offline upload on the e-invoice portal and stores the IRN that the portal returns.</p><h3>How do I get the IRN back into TallyBook?</h3><p>Import the portal's response JSON with Alt+I in the e-Invoice voucher list, or type the IRN, acknowledgement number and date with Alt+R.</p><h3>Why is an invoice not included in the export?</h3><p>It is probably missing a required detail such as buyer pincode or HSN. The list shows "Missing:" with the exact fields.</p><h3>Does it handle e-way bill cancellation?</h3><p>Yes. Record the cancellation with Alt+N and export the cancellation JSON with Alt+J for upload.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/create-gst-invoice-in-tallybook/">Create a GST invoice</a> · <a href="/blog/gstr-1-and-gstr-3b-with-tallybook/">GSTR-1 and GSTR-3B</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>

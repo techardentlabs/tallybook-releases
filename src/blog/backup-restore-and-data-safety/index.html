@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backup, restore and data safety in TallyBook</title>
+<meta name="description" content="Where TallyBook keeps your data, how to back up and restore with Alt+Y, the edit log, users and passwords, and what the TallyVault password does today.">
+<link rel="canonical" href="https://tallybook.online/blog/backup-restore-and-data-safety/">
+<meta property="og:title" content="Backup, restore and data safety in TallyBook">
+<meta property="og:description" content="Where TallyBook keeps your data, how to back up and restore with Alt+Y, the edit log, users and passwords, and what the TallyVault password does today.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/backup-restore-and-data-safety/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/data-menu.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Backup, restore and data safety in TallyBook">
+<meta name="twitter:description" content="Where TallyBook keeps your data, how to back up and restore with Alt+Y, the edit log, users and passwords, and what the TallyVault password does today.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/data-menu.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Backup, restore and data safety in TallyBook", "description": "Where TallyBook keeps your data, how to back up and restore with Alt+Y, the edit log, users and passwords, and what the TallyVault password does today.", "image": "https://tallybook.online/assets/shots/data-menu.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/backup-restore-and-data-safety/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Backup, restore and data safety in TallyBook", "item": "https://tallybook.online/blog/backup-restore-and-data-safety/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is my TallyBook data uploaded anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. It stays on your computer. The app goes online only to check for updates."}}, {"@type": "Question", "name": "Where should I keep backups?", "acceptedAnswer": {"@type": "Answer", "text": "In at least two places besides the computer, for example a pen drive and a cloud folder, with one copy away from the office."}}, {"@type": "Question", "name": "Does restoring merge data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Restore replaces all data in the company with the backup. Take a fresh backup first if you may need today's entries."}}, {"@type": "Question", "name": "Does the TallyVault password encrypt my data?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. In the current version it asks for a password before the company opens. Use your operating system's disk encryption for protection at rest."}}, {"@type": "Question", "name": "Can I set up automatic backups?", "acceptedAnswer": {"@type": "Answer", "text": "Not in the current version. Take a backup with Alt+Y → B at the end of each day."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Back up and restore TallyBook data", "description": "Where TallyBook keeps your data, how to back up and restore with Alt+Y, the edit log, users and passwords, and what the TallyVault password does today.", "step": [{"@type": "HowToStep", "position": 1, "name": "Open the Data menu", "text": "Press Alt+Y from the Gateway."}, {"@type": "HowToStep", "position": 2, "name": "Take a backup", "text": "Press B (Backup), choose a folder such as a pen drive, and save the file."}, {"@type": "HowToStep", "position": 3, "name": "Keep a second copy", "text": "Copy the backup file to a cloud folder or another location."}, {"@type": "HowToStep", "position": 4, "name": "Restore when needed", "text": "Press Alt+Y then R (Restore), choose the backup file and confirm."}]}</script>
+</head>
+<body>
+@@HEADER:Blog · Data@@
+<section><div class="wrap narrow"><article>
+  <h1>Backup, restore and data safety in TallyBook</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 4 min read</div>
+  <div class="note"><b>Quick answer:</b> Your TallyBook data stays on your own computer and is never uploaded. Press <kbd>Alt</kbd>+<kbd>Y</kbd> → <b>Backup</b> to save a copy as one file, keep copies on a pen drive and in a cloud folder, and use <kbd>Alt</kbd>+<kbd>Y</kbd> → <b>Restore</b> to bring one back. Add users and passwords from <kbd>Alt</kbd>+<kbd>K</kbd> if others use the computer.</div>
+
+  <p>Accounting data is the one thing on a business computer you cannot download again. TallyBook keeps it local and makes backups a two-key job. This page explains where the data is, how to protect it, and the honest limits of the current version.</p>
+
+  <h2>Where your data lives</h2>
+  <p>TallyBook stores the company in a database file inside its application data folder on your computer. Nothing is sent to us or to any cloud service. The internet is used only to check for app updates, and updating keeps your data.</p>
+
+  <h2>Backup</h2>
+  <ol class="steps">
+    <li>From the Gateway press <kbd>Alt</kbd>+<kbd>Y</kbd> to open <b>Data</b>.</li>
+    <li>Press <kbd>B</kbd> (<b>Backup</b>). A save window opens with a name like <code>Sharma Traders 2026-11-03.tbbackup.json</code>.</li>
+    <li>Choose a pen drive, external disk or a synced cloud folder and save. TallyBook confirms "Backup saved".</li>
+  </ol>
+  <p>Imports also offer <b>Backup Company Data before Import</b>, which is on by default.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/data-menu.png" alt="TallyBook Data menu with Backup, Restore and Edit Log options" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Alt+Y opens the Data menu: Backup, Restore and Edit Log.</figcaption></figure>
+  <figure style="margin:24px 0"><svg role="img" aria-label="Live data on the computer, one backup on a pen drive, one backup in a cloud folder or another site" viewBox="0 0 640 182" width="640" height="182" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>Three backup copies</title><rect x="0" y="0" width="640" height="182" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">A simple backup habit: 3 copies, 2 places, 1 away</text><rect x="30" y="56" width="180" height="104" rx="10" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="120" cy="84" r="16" fill="#2a62ad"/><text x="120" y="90" font-size="15" fill="white" text-anchor="middle" font-weight="bold">1</text><text x="120" y="124" font-size="16" fill="#10212b" text-anchor="middle" font-weight="bold">Live data</text><text x="120" y="146" font-size="13" fill="#10212b" text-anchor="middle" font-weight="normal">on this computer</text><rect x="230" y="56" width="180" height="104" rx="10" fill="#8bb9e0" stroke="#2a62ad" stroke-width="1.5"/><circle cx="320" cy="84" r="16" fill="#2a62ad"/><text x="320" y="90" font-size="15" fill="white" text-anchor="middle" font-weight="bold">2</text><text x="320" y="124" font-size="16" fill="#10212b" text-anchor="middle" font-weight="bold">Backup file</text><text x="320" y="146" font-size="13" fill="#10212b" text-anchor="middle" font-weight="normal">pen drive / external disk</text><rect x="430" y="56" width="180" height="104" rx="10" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><circle cx="520" cy="84" r="16" fill="#2a62ad"/><text x="520" y="90" font-size="15" fill="white" text-anchor="middle" font-weight="bold">3</text><text x="520" y="124" font-size="16" fill="#10212b" text-anchor="middle" font-weight="bold">Backup file</text><text x="520" y="146" font-size="13" fill="#10212b" text-anchor="middle" font-weight="normal">cloud folder or another site</text></svg></figure>
+
+  <h2>A routine that works</h2>
+  <table>
+    <tr><th>When</th><th>What</th><th>Keep</th></tr>
+    <tr><td>End of every working day</td><td>Backup to a pen drive or synced folder</td><td>Last 7</td></tr>
+    <tr><td>Before GST filing or a big import</td><td>Extra backup, named for the occasion</td><td>Until next month</td></tr>
+    <tr><td>Month end</td><td>Backup kept away from the office</td><td>12 months</td></tr>
+    <tr><td>Year end, after finalisation</td><td>Backup stored permanently</td><td>As long as records must be kept</td></tr>
+  </table>
+  <p>Automatic scheduled backup is not available yet, so make it part of closing the day.</p>
+
+  <h2>Restore</h2>
+  <ol class="steps">
+    <li><kbd>Alt</kbd>+<kbd>Y</kbd> → <kbd>R</kbd> (<b>Restore</b>) and pick the backup file.</li>
+    <li>TallyBook warns: "Restoring replaces ALL data in this company with the backup." Choose Yes only if that is what you want.</li>
+    <li>It reports how many records were restored. Check the Trial Balance and Day Book.</li>
+  </ol>
+  <p>Tip: before restoring an old backup to look something up, take a fresh backup of today's data first.</p>
+
+  <h2>Edit log: who changed what</h2>
+  <p><kbd>Alt</kbd>+<kbd>Y</kbd> → <kbd>E</kbd> opens the <b>Edit Log</b>, a list of changes to masters and vouchers, latest first, with date and time, action, type, particulars and user. <kbd>Ctrl</kbd>+<kbd>F</kbd> filters it.</p>
+
+  <h2>Users and passwords</h2>
+  <ol class="steps">
+    <li><kbd>Alt</kbd>+<kbd>K</kbd> → <b>Company Security</b>. Set <b>Use Security Control</b> to Yes and enter the <b>Name of Administrator</b> and password.</li>
+    <li><b>Users and Passwords</b>: <kbd>Alt</kbd>+<kbd>C</kbd> creates a user, and you pick a role for them, such as Owner or Data Entry. <b>User Roles</b> lists the roles.</li>
+    <li>Set rules such as <b>Minimum password length</b> under <b>Password Policy</b>, and fine-tune what each role may do in <b>Security Control</b>.</li>
+    <li>Anyone can use <b>Change User</b> and <b>Change Password</b> from the same menu.</li>
+  </ol>
+  <p>A user without access to a report or action sees "You do not have access" instead.</p>
+
+  <h2>The TallyVault password, honestly</h2>
+  <p>In Company Security you can also set a <b>TallyVault password</b>. TallyBook then asks for it before the company opens. In the current version this works as an opening password: the data file and backup files are <b>not</b> encrypted yet, and backups are readable files. For real protection against a lost or stolen laptop, turn on your operating system's disk encryption (BitLocker on Windows, FileVault on Mac, disk encryption on Linux) and keep backup drives somewhere safe. Keep your passwords written down securely; they never leave your computer, so we cannot reset them for you.</p>
+  <div class="warn">TallyBook is single-user: one person works in a company on one computer at a time. Do not put the live data folder in a shared or syncing drive that two computers open together. Share backup files instead.</div>
+
+<h2>Frequently asked questions</h2><h3>Is my TallyBook data uploaded anywhere?</h3><p>No. It stays on your computer. The app goes online only to check for updates.</p><h3>Where should I keep backups?</h3><p>In at least two places besides the computer, for example a pen drive and a cloud folder, with one copy away from the office.</p><h3>Does restoring merge data?</h3><p>No. Restore replaces all data in the company with the backup. Take a fresh backup first if you may need today's entries.</p><h3>Does the TallyVault password encrypt my data?</h3><p>Not yet. In the current version it asks for a password before the company opens. Use your operating system's disk encryption for protection at rest.</p><h3>Can I set up automatic backups?</h3><p>Not in the current version. Take a backup with Alt+Y → B at the end of each day.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/free-accounting-software-for-small-business-india/">Choosing accounting software</a> · <a href="/blog/tally-for-mac-alternative/">Tally on Mac</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>

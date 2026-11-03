@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bank reconciliation in TallyBook: statements, cheques and post-dated entries</title>
+<meta name="description" content="Import your bank statement CSV, let TallyBook match entries, reconcile the rest, and keep track of cheque books and post-dated cheques.">
+<link rel="canonical" href="https://tallybook.online/blog/bank-reconciliation-in-tallybook/">
+<meta property="og:title" content="Bank reconciliation in TallyBook: statements, cheques and post-dated entries">
+<meta property="og:description" content="Import your bank statement CSV, let TallyBook match entries, reconcile the rest, and keep track of cheque books and post-dated cheques.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/bank-reconciliation-in-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/bank-reconciliation.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bank reconciliation in TallyBook: statements, cheques and post-dated entries">
+<meta name="twitter:description" content="Import your bank statement CSV, let TallyBook match entries, reconcile the rest, and keep track of cheque books and post-dated cheques.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/bank-reconciliation.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Bank reconciliation in TallyBook: statements, cheques and post-dated entries", "description": "Import your bank statement CSV, let TallyBook match entries, reconcile the rest, and keep track of cheque books and post-dated cheques.", "image": "https://tallybook.online/assets/shots/bank-reconciliation.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/bank-reconciliation-in-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Bank reconciliation in TallyBook: statements, cheques and post-dated entries", "item": "https://tallybook.online/blog/bank-reconciliation-in-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which bank statement formats does TallyBook import?", "acceptedAnswer": {"@type": "Answer", "text": "CSV files with recognisable column headings such as Date, Narration, Chq/Ref No., Withdrawal, Deposit and Balance. Save Excel statements as CSV first."}}, {"@type": "Question", "name": "Will importing the same statement twice create duplicates?", "acceptedAnswer": {"@type": "Answer", "text": "No. Lines already present are skipped and counted as already present."}}, {"@type": "Question", "name": "Why was a matching entry not reconciled automatically?", "acceptedAnswer": {"@type": "Answer", "text": "Automatic matching needs the same amount plus the same cheque or reference number, or the same date when the statement has no number. Use F8 or manual reconciliation for the rest."}}, {"@type": "Question", "name": "How do I record a post-dated cheque?", "acceptedAnswer": {"@type": "Answer", "text": "Press Ctrl+T in the Payment, Receipt or Contra voucher, then enter the cheque details in Bank Allocations when you save."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Reconcile a bank account in TallyBook", "description": "Import your bank statement CSV, let TallyBook match entries, reconcile the rest, and keep track of cheque books and post-dated cheques.", "step": [{"@type": "HowToStep", "position": 1, "name": "Download the statement", "text": "Download the bank statement for the period as a CSV file from your net banking."}, {"@type": "HowToStep", "position": 2, "name": "Import the statement", "text": "Gateway → Banking → Import Bank Statement, choose the bank ledger, press F4 to choose the CSV and Ctrl+A to import."}, {"@type": "HowToStep", "position": 3, "name": "Open Bank Reconciliation", "text": "Banking → Bank Reconciliation, pick the bank and press Enter on the unreconciled line."}, {"@type": "HowToStep", "position": 4, "name": "Match the remaining entries", "text": "Select an entry and press F8 to reconcile it with its match, or use Alt+R to enter bank dates manually."}, {"@type": "HowToStep", "position": 5, "name": "Check the difference", "text": "Back on the summary, confirm that Difference is nil."}]}</script>
+</head>
+<body>
+@@HEADER:Blog · Banking@@
+<section><div class="wrap narrow"><article>
+  <h1>Bank reconciliation in TallyBook: statements, cheques and post-dated entries</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 4 min read</div>
+  <div class="note"><b>Quick answer:</b> Go to Gateway → <b>Banking</b> (<kbd>N</kbd>) → <b>Import Bank Statement</b>, choose the bank ledger and your bank's CSV file. TallyBook reconciles exact matches automatically. Open <b>Bank Reconciliation</b> to match the rest with <kbd>F8</kbd>, or press <kbd>Alt</kbd>+<kbd>R</kbd> to enter bank dates by hand.</div>
+
+  <p>Bank reconciliation answers one question: why does the bank say one balance and your books another? Usually the reasons are timing (a cheque not yet cleared) and entries only one side knows about (bank charges, interest). TallyBook puts both lists side by side, matches what it can, and leaves you the few lines that need a decision.</p>
+  <figure style="margin:24px 0"><svg role="img" aria-label="Books 1,00,000 plus 15,000 uncleared cheques minus 20,000 uncredited deposits plus 300 interest minus 500 charges equals expected bank balance 94,800" viewBox="0 0 640 312" width="640" height="312" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>Bank reconciliation example</title><rect x="0" y="0" width="640" height="312" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">Bank reconciliation in numbers</text><rect x="30" y="50" width="580" height="36" rx="6" fill="#dfeefa" stroke="#2a62ad" stroke-width="1"/><text x="46" y="73" font-size="15" fill="#10212b" text-anchor="start" font-weight="bold">Balance as per company books</text><text x="594" y="73" font-size="15" fill="#10212b" text-anchor="end" font-weight="bold">₹1,00,000</text><rect x="30" y="92" width="580" height="36" rx="6" fill="white" stroke="#2a62ad" stroke-width="1"/><text x="46" y="115" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Add: cheques issued, not yet cleared</text><text x="594" y="115" font-size="15" fill="#10212b" text-anchor="end" font-weight="bold">+ 15,000</text><rect x="30" y="134" width="580" height="36" rx="6" fill="white" stroke="#2a62ad" stroke-width="1"/><text x="46" y="157" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Less: deposits not yet credited by bank</text><text x="594" y="157" font-size="15" fill="#10212b" text-anchor="end" font-weight="bold">− 20,000</text><rect x="30" y="176" width="580" height="36" rx="6" fill="white" stroke="#2a62ad" stroke-width="1"/><text x="46" y="199" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Add: interest credited only by bank</text><text x="594" y="199" font-size="15" fill="#10212b" text-anchor="end" font-weight="bold">+ 300</text><rect x="30" y="218" width="580" height="36" rx="6" fill="white" stroke="#2a62ad" stroke-width="1"/><text x="46" y="241" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Less: charges debited only by bank</text><text x="594" y="241" font-size="15" fill="#10212b" text-anchor="end" font-weight="bold">− 500</text><rect x="30" y="260" width="580" height="36" rx="6" fill="#ffc32b" stroke="#2a62ad" stroke-width="1"/><text x="46" y="283" font-size="15" fill="#10212b" text-anchor="start" font-weight="bold">Expected bank balance</text><text x="594" y="283" font-size="15" fill="#10212b" text-anchor="end" font-weight="bold">₹94,800</text></svg></figure>
+
+  <h2>The Banking menu</h2>
+  <p>From the Gateway press <kbd>N</kbd> for <b>Banking</b>. Your bank ledgers must be under the <b>Bank Accounts</b> (or Bank OD A/c) group.</p>
+  <table>
+    <tr><th>Option</th><th>Use it to</th></tr>
+    <tr><td>Banking Activities</td><td>See every bank account's position in one place</td></tr>
+    <tr><td>Bank Reconciliation</td><td>Match book entries with the bank statement</td></tr>
+    <tr><td>Imported Bank Data</td><td>View statement lines you have imported, monthly or quarterly</td></tr>
+    <tr><td>Import Bank Statement</td><td>Bring in a statement CSV</td></tr>
+    <tr><td>Cheque Register</td><td>Track cheque books and the status of each cheque</td></tr>
+    <tr><td>Cheque Printing</td><td>Print cheques for payments</td></tr>
+    <tr><td>Post-Dated Summary</td><td>See post-dated cheques issued and received, month by month</td></tr>
+  </table>
+
+  <h2>Import the bank statement</h2>
+  <ol class="steps">
+    <li>Download the statement from net banking as CSV. If your bank only offers Excel, open it and save as CSV.</li>
+    <li>Banking → <b>Import Bank Statement</b>. Choose the <b>Bank Ledger</b>, press <kbd>F4</kbd> to choose the file, then <kbd>Ctrl</kbd>+<kbd>A</kbd>.</li>
+    <li>TallyBook recognises columns named like Date, Narration / Description / Particulars, Chq / Ref No., Withdrawal / Debit, Deposit / Credit and Balance.</li>
+    <li>A message tells you how many lines were imported, already present, rejected and reconciled. Importing an overlapping statement again does not duplicate lines.</li>
+  </ol>
+  <p>Automatic matching is strict on purpose: the amount must be the same, and either the cheque or reference number matches, or, when the statement line has no number, the date matches.</p>
+
+  <h2>Reconcile the rest</h2>
+  <ol class="steps">
+    <li>Banking → <b>Bank Reconciliation</b> → pick the bank. The <b>Bank Reconciliation Summary</b> shows Balance as per Company Books, the unreconciled items split into <b>Available Only in Books</b> and <b>Available Only in Bank</b>, the Expected Bank Balance, the Balance as per Bank Statement and the <b>Difference</b>.</li>
+    <li>Press <kbd>Enter</kbd> on the unreconciled line. Book entries and bank lines are listed under their own headings.</li>
+    <li>Select a line and press <kbd>F8</kbd> (Reconcile). If one match is certain it is linked at once; otherwise pick from the list of candidates. <kbd>Alt</kbd>+<kbd>S</kbd> shows potential matches.</li>
+    <li>Press <kbd>Space</kbd> to select several lines and <kbd>F9</kbd> to set a status such as <i>On Hold</i> or <i>Processed</i>.</li>
+    <li>Prefer the classic way? <kbd>Alt</kbd>+<kbd>R</kbd> opens manual reconciliation, where you type the bank date against each entry (<kbd>F9</kbd> updates the bank date) and accept with <kbd>Ctrl</kbd>+<kbd>A</kbd>.</li>
+  </ol>
+  <p>Starting mid-year? Use <b>Opening BRS</b> (<kbd>Alt</kbd>+<kbd>H</kbd> in manual reconciliation) to record items that were already uncleared on the day you began.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/bank-reconciliation.png" alt="TallyBook Bank Reconciliation screen listing entries available only in books and only in bank" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Book entries and statement lines side by side. F8 reconciles the selected line.</figcaption></figure>
+
+  <h2>Cheque books, cheque register and printing</h2>
+  <p>Alter the bank ledger (Gateway → Alter → Ledger) and press <kbd>F9</kbd> for <b>Bank Configuration</b>. Here you can set cheque book ranges and turn on <b>Enable Cheque Printing</b> with a cheque format and layout. The <b>Cheque Register</b> then counts cheques per bank as available, unreconciled, reconciled, blank, cancelled and out of period. <kbd>Alt</kbd>+<kbd>B</kbd> alters a cheque book, and from a cheque list you can issue a blank cheque or cancel one.</p>
+  <p>When cheque printing is on, saving a Payment asks for <b>Bank Allocations</b>: Inst No., Inst Date and Favouring Name. Those cheque numbers also make automatic matching more reliable.</p>
+
+  <h2>Post-dated cheques</h2>
+  <ol class="steps">
+    <li>In a Payment, Receipt or Contra voucher press <kbd>Ctrl</kbd>+<kbd>T</kbd>. The voucher shows <i>Status : Post-Dated</i>.</li>
+    <li>On saving, fill <b>Bank Allocations</b>: cheque number and date, favouring name, PDC issue date and a PDC note.</li>
+    <li>Banking → <b>Post-Dated Summary</b> shows them month by month. Open a month to see each cheque, switch between pending and all with <kbd>F8</kbd>, and add a note with <kbd>Alt</kbd>+<kbd>R</kbd>.</li>
+    <li>In banking reports, <kbd>Ctrl</kbd>+<kbd>B</kbd> (Basis of Values) includes or leaves out post-dated vouchers.</li>
+  </ol>
+  <figure style="margin:24px 0"><img src="/assets/shots/payment-voucher.png" alt="TallyBook Payment voucher with bank account, party ledger and amount" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">A Payment voucher. Ctrl+T marks it as post-dated.</figcaption></figure>
+  <div class="warn">Not available yet: creating vouchers straight from statement lines (the F7 button is shown but disabled), connected banking and e-payments. Bank Allocations are asked only for post-dated vouchers or when cheque printing is on.</div>
+
+<h2>Frequently asked questions</h2><h3>Which bank statement formats does TallyBook import?</h3><p>CSV files with recognisable column headings such as Date, Narration, Chq/Ref No., Withdrawal, Deposit and Balance. Save Excel statements as CSV first.</p><h3>Will importing the same statement twice create duplicates?</h3><p>No. Lines already present are skipped and counted as already present.</p><h3>Why was a matching entry not reconciled automatically?</h3><p>Automatic matching needs the same amount plus the same cheque or reference number, or the same date when the statement has no number. Use F8 or manual reconciliation for the rest.</p><h3>How do I record a post-dated cheque?</h3><p>Press Ctrl+T in the Payment, Receipt or Contra voucher, then enter the cheque details in Bank Allocations when you save.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/backup-restore-and-data-safety/">Backup and data safety</a> · <a href="/blog/tds-on-payments-in-tallybook/">TDS on payments</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>

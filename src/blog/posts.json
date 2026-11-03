@@ -1,1 +1,93 @@
-[{"slug":"tallyprime-vs-tallybook","title":"TallyPrime vs TallyBook: an honest comparison for 2026","description":"Price, platforms, features and limits side by side, so you can decide which one fits your business.","date":"2026-11-03","tag":"Comparison"}]
+[
+ {
+  "slug": "tallyprime-vs-tallybook",
+  "title": "TallyPrime vs TallyBook: an honest comparison for 2026",
+  "description": "Price, platforms, features and limits side by side, so you can decide which one fits your business.",
+  "date": "2026-11-03",
+  "tag": "Comparison"
+ },
+ {
+  "slug": "switch-from-tally-to-tallybook",
+  "title": "How to switch from Tally to TallyBook, step by step",
+  "description": "Move ledgers, stock items and vouchers from Tally to TallyBook with XML or Excel, preview every import, and check the Trial Balance before you rely on it.",
+  "date": "2026-11-03",
+  "tag": "Migration"
+ },
+ {
+  "slug": "tallybook-keyboard-shortcuts",
+  "title": "TallyBook keyboard shortcuts: the complete cheat sheet",
+  "description": "Every TallyBook shortcut in one place: voucher keys, Gateway letters, voucher entry, reports, printing, import and export, with notes for Mac users.",
+  "date": "2026-11-03",
+  "tag": "Guide"
+ },
+ {
+  "slug": "create-gst-invoice-in-tallybook",
+  "title": "How to create a GST invoice in TallyBook",
+  "description": "Set up GST, create the customer and sales ledgers, and raise a GST sales invoice with the right CGST, SGST or IGST, including item invoices with HSN codes.",
+  "date": "2026-11-03",
+  "tag": "GST"
+ },
+ {
+  "slug": "gstr-1-and-gstr-3b-with-tallybook",
+  "title": "Preparing GSTR-1 and GSTR-3B with TallyBook",
+  "description": "How TallyBook builds GSTR-1 and GSTR-3B from your vouchers, exports GSTR-1 JSON, reconciles purchases with GSTR-2B and gives you an HSN summary.",
+  "date": "2026-11-03",
+  "tag": "GST"
+ },
+ {
+  "slug": "bank-reconciliation-in-tallybook",
+  "title": "Bank reconciliation in TallyBook: statements, cheques and post-dated entries",
+  "description": "Import your bank statement CSV, let TallyBook match entries, reconcile the rest, and keep track of cheque books and post-dated cheques.",
+  "date": "2026-11-03",
+  "tag": "Banking"
+ },
+ {
+  "slug": "inventory-costing-fifo-lifo-average",
+  "title": "FIFO, LIFO and average cost: inventory costing explained with an example",
+  "description": "What stock costing methods mean, a worked example comparing FIFO, LIFO, average, last purchase and standard cost, and how to set the method on a stock item in TallyBook.",
+  "date": "2026-11-03",
+  "tag": "Inventory"
+ },
+ {
+  "slug": "payroll-pf-esi-pt-in-tallybook",
+  "title": "Payroll in TallyBook: employees, pay heads, PF, ESI, PT and pay slips",
+  "description": "Set up employees and pay heads, add PF, ESI and professional tax, record attendance, post the monthly payroll voucher and print pay slips in TallyBook.",
+  "date": "2026-11-03",
+  "tag": "Payroll"
+ },
+ {
+  "slug": "tds-on-payments-in-tallybook",
+  "title": "TDS on payments in TallyBook: setup, deduction, challans and Form 26Q summary",
+  "description": "Enable TDS, review the nature of payments, mark parties as deductible, let TallyBook deduct TDS during entry, pay it with challan details and review the Form 26Q summary.",
+  "date": "2026-11-03",
+  "tag": "TDS"
+ },
+ {
+  "slug": "e-invoice-and-e-way-bill-in-tallybook",
+  "title": "e-Invoice and e-Way Bill in TallyBook: offline JSON, IRN and e-way bill details",
+  "description": "What TallyBook does for e-invoicing and e-way bills: checks invoices, exports JSON for offline upload, and records the IRN, acknowledgement and e-way bill numbers you get back.",
+  "date": "2026-11-03",
+  "tag": "GST"
+ },
+ {
+  "slug": "backup-restore-and-data-safety",
+  "title": "Backup, restore and data safety in TallyBook",
+  "description": "Where TallyBook keeps your data, how to back up and restore with Alt+Y, the edit log, users and passwords, and what the TallyVault password does today.",
+  "date": "2026-11-03",
+  "tag": "Data"
+ },
+ {
+  "slug": "tally-for-mac-alternative",
+  "title": "Tally on Mac in 2026: your options and a native alternative",
+  "description": "TallyPrime installs only on Windows. Here are the ways Mac users run it, and TallyBook, a free Tally-style accounting app that runs natively on Apple-chip and Intel Macs.",
+  "date": "2026-11-03",
+  "tag": "Mac"
+ },
+ {
+  "slug": "free-accounting-software-for-small-business-india",
+  "title": "Free accounting software for small businesses in India: what to look for",
+  "description": "A practical checklist for choosing free accounting software in India: GST, offline data, keyboard speed, backups and migration, and where TallyBook fits and does not.",
+  "date": "2026-11-03",
+  "tag": "Guide"
+ }
+]

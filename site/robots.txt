@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /download/windows/
+Disallow: /download/mac/
+Disallow: /download/linux/
+
 Sitemap: https://tallybook.online/sitemap.xml

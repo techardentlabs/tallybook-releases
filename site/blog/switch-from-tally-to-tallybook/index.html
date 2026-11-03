@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to switch from Tally to TallyBook, step by step</title>
+<meta name="description" content="Move ledgers, stock items and vouchers from Tally to TallyBook with XML or Excel, preview every import, and check the Trial Balance before you rely on it.">
+<link rel="canonical" href="https://tallybook.online/blog/switch-from-tally-to-tallybook/">
+<meta property="og:title" content="How to switch from Tally to TallyBook, step by step">
+<meta property="og:description" content="Move ledgers, stock items and vouchers from Tally to TallyBook with XML or Excel, preview every import, and check the Trial Balance before you rely on it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/switch-from-tally-to-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/import-menu.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to switch from Tally to TallyBook, step by step">
+<meta name="twitter:description" content="Move ledgers, stock items and vouchers from Tally to TallyBook with XML or Excel, preview every import, and check the Trial Balance before you rely on it.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/import-menu.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to switch from Tally to TallyBook, step by step", "description": "Move ledgers, stock items and vouchers from Tally to TallyBook with XML or Excel, preview every import, and check the Trial Balance before you rely on it.", "image": "https://tallybook.online/assets/shots/import-menu.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/switch-from-tally-to-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to switch from Tally to TallyBook, step by step", "item": "https://tallybook.online/blog/switch-from-tally-to-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will importing into TallyBook change my Tally data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Tally only writes the export files; TallyBook only reads them. Your Tally company stays exactly as it was."}}, {"@type": "Question", "name": "What happens if I import the same file twice?", "acceptedAnswer": {"@type": "Answer", "text": "Vouchers already present are recognised by their unique ID and skipped, so nothing is duplicated. Masters follow the behaviour you choose: Ignore Duplicates or Modify with New Data."}}, {"@type": "Question", "name": "Does the import bring my stock items and item invoices?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Stock items, units and godowns come in with the masters file, and item lines come in with the vouchers file. Check the Stock Summary afterwards."}}, {"@type": "Question", "name": "Can I move data back to Tally later?", "acceptedAnswer": {"@type": "Answer", "text": "TallyBook can export groups, ledgers, voucher types and the current period's vouchers in Tally's XML structure with Alt+E. Test that on a copy of a Tally company before you depend on it."}}, {"@type": "Question", "name": "Can I import from Excel without having Tally?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Export a sample sheet from Alt+O → Manage → Sample Excel File, fill it in, and import it as masters or transactions."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Move a company from Tally to TallyBook", "description": "Move ledgers, stock items and vouchers from Tally to TallyBook with XML or Excel, preview every import, and check the Trial Balance before you rely on it.", "step": [{"@type": "HowToStep", "position": 1, "name": "Create the company in TallyBook", "text": "Enter the same name, state, financial year and books beginning date, and switch on the features you use in F11."}, {"@type": "HowToStep", "position": 2, "name": "Export masters from Tally", "text": "In Tally, export all masters in XML (Data Interchange) format."}, {"@type": "HowToStep", "position": 3, "name": "Export transactions from Tally", "text": "Export all vouchers for the full period in XML (Data Interchange) format."}, {"@type": "HowToStep", "position": 4, "name": "Import masters in TallyBook", "text": "Press Alt+O, choose Masters, select the masters XML, accept with Ctrl+A, check the summary and press I."}, {"@type": "HowToStep", "position": 5, "name": "Import transactions in TallyBook", "text": "Press Alt+O, choose Transactions, select the vouchers XML, check the summary and press I."}, {"@type": "HowToStep", "position": 6, "name": "Compare the Trial Balance", "text": "Open the Trial Balance in both programs for the same period and match the totals."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · Migration</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>How to switch from Tally to TallyBook, step by step</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> Export your masters and your vouchers from Tally as XML. In TallyBook press <kbd>Alt</kbd>+<kbd>O</kbd>, import <b>Masters</b> first and <b>Transactions</b> second, read the preview, and press <kbd>I</kbd> to import. Then compare the Trial Balance in both programs. Your Tally data is only read, never changed.</div>
+
+  <p>Most people who try TallyBook already have years of data in Tally. You do not have to type any of it again. TallyBook reads the XML files that Tally exports, shows you exactly what it is about to create, and only then writes anything. This guide covers the XML route and the Excel/CSV route.</p>
+  <figure style="margin:24px 0"><svg role="img" aria-label="Six steps: create company, export masters, export vouchers, import masters, import transactions, compare trial balance" viewBox="0 0 640 484" width="640" height="484" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>Moving from Tally to TallyBook</title><rect x="0" y="0" width="640" height="484" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320.0" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">Moving from Tally to TallyBook</text><rect x="40" y="50" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="75.0" r="15" fill="#2a62ad"/><text x="70" y="80.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">1</text><text x="98" y="80.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Create the company in TallyBook (same FY dates)</text><path d="M320.0 102 L320.0 118" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 112 L320.0 119 L326.0 112" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="122" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="147.0" r="15" fill="#2a62ad"/><text x="70" y="152.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">2</text><text x="98" y="152.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Tally: export Masters as XML</text><path d="M320.0 174 L320.0 190" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 184 L320.0 191 L326.0 184" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="194" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="219.0" r="15" fill="#2a62ad"/><text x="70" y="224.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">3</text><text x="98" y="224.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Tally: export Transactions as XML</text><path d="M320.0 246 L320.0 262" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 256 L320.0 263 L326.0 256" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="266" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="291.0" r="15" fill="#2a62ad"/><text x="70" y="296.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">4</text><text x="98" y="296.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">TallyBook: Alt+O → Masters → preview → I</text><path d="M320.0 318 L320.0 334" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 328 L320.0 335 L326.0 328" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="338" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="363.0" r="15" fill="#2a62ad"/><text x="70" y="368.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">5</text><text x="98" y="368.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">TallyBook: Alt+O → Transactions → preview → I</text><path d="M320.0 390 L320.0 406" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 400 L320.0 407 L326.0 400" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="410" width="560" height="50" rx="8" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="435.0" r="15" fill="#2a62ad"/><text x="70" y="440.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">6</text><text x="98" y="440.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Compare Trial Balance in both programs</text></svg></figure>
+
+  <h2>Before you start</h2>
+  <ul>
+    <li><a href="/download/">Install TallyBook</a>. On first start it opens <b>Company Creation</b>. Use the same company name, state, <b>Financial year beginning from</b> and <b>Books beginning from</b> dates as in Tally, then press <kbd>Ctrl</kbd>+<kbd>A</kbd>.</li>
+    <li>Press <kbd>F11</kbd> and switch on what you use: bill-wise details, inventory, cost centres, payroll, TDS. The related menus only appear when a feature is on.</li>
+    <li>Keep Tally installed until you have compared the figures. Nothing you do here touches your Tally company.</li>
+  </ul>
+
+  <h2>Step 1: Export your data from Tally</h2>
+  <ol class="steps">
+    <li>Open the company in Tally and use its <b>Export</b> option (<kbd>Alt</kbd>+<kbd>E</kbd> in TallyPrime).</li>
+    <li>Choose <b>Masters</b>, set the file format to <b>XML (Data Interchange)</b>, select all masters and export.</li>
+    <li>Export again, this time <b>Transactions</b> (all vouchers) for the full period, also in XML.</li>
+    <li>Note the folder where Tally saved the two files. Menu wording differs a little between Tally versions; Tally's own help pages describe the export screen for your release.</li>
+  </ol>
+
+  <h2>Step 2: Import masters</h2>
+  <ol class="steps">
+    <li>From the Gateway, press <kbd>Alt</kbd>+<kbd>O</kbd>. The <b>Import</b> menu shows <b>Masters</b>, <b>Transactions</b> and <b>Manage</b>.</li>
+    <li>Press <kbd>M</kbd> for Masters and pick the masters XML file. <b>File Format</b> is set to XML (Data Interchange) for you.</li>
+    <li>Choose <b>Behaviour of Import if master already exists</b>: <i>Ignore Duplicates</i> (the default) or <i>Modify with New Data</i>.</li>
+    <li>Leave <b>Preview Import Summary</b> and <b>Backup Company Data before Import</b> on. Press <kbd>Ctrl</kbd>+<kbd>A</kbd>; TallyBook asks where to save the backup.</li>
+    <li>The <b>Import Summary</b> lists groups, ledgers, stock items, units, godowns, cost centres, voucher types and any exceptions. Nothing has changed yet. Press <kbd>I</kbd> to import or <kbd>Esc</kbd> to cancel.</li>
+  </ol>
+  <figure style="margin:24px 0"><img src="/assets/shots/import-menu.png" alt="TallyBook Import menu with Masters, Transactions and Manage options" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The Import menu (Alt+O). Import masters first so every voucher finds its ledgers.</figcaption></figure>
+
+  <h2>Step 3: Import transactions</h2>
+  <p>Press <kbd>Alt</kbd>+<kbd>O</kbd>, then <kbd>T</kbd>, and pick the vouchers XML. The summary shows the number of vouchers and stock lines. Press <kbd>I</kbd>. If there are exceptions, the next key press opens <b>Import Exceptions</b>, grouped into master-related and voucher-related problems, so you can fix them and import again.</p>
+
+  <h2>Re-importing never duplicates</h2>
+  <p>Every voucher Tally exports carries a unique ID. TallyBook remembers it, so a voucher that is already present is skipped. That makes a gradual move safe: keep entering in Tally for a few weeks, export again and import the same file or a newer one. Only new vouchers come in. One thing to know: a voucher you <i>changed</i> in Tally after the first import is also skipped, so correct those few by hand.</p>
+
+  <h2>Step 4: Check the Trial Balance</h2>
+  <p>Open <b>Trial Balance</b> from <b>Display More Reports</b> (or <kbd>Alt</kbd>+<kbd>G</kbd> and type "Trial"). Press <kbd>Alt</kbd>+<kbd>F2</kbd> to set the same period as in Tally and compare the closing totals. Then check the Balance Sheet, Profit &amp; Loss and, if you keep stock, the Stock Summary. Press <kbd>Enter</kbd> on any line to drill down to ledgers and vouchers.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/trial-balance.png" alt="TallyBook Trial Balance report showing groups with debit and credit closing balances" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Trial Balance after import. If opening balances in the source do not balance, the difference shows here.</figcaption></figure>
+
+  <h2>What comes across</h2>
+  <table>
+    <tr><th>Data</th><th>XML import</th></tr>
+    <tr><td>Groups, ledgers, opening balances, bill-wise details</td><td>Yes</td></tr>
+    <tr><td>Voucher types and accounting vouchers</td><td>Yes</td></tr>
+    <tr><td>Stock items, units, godowns, item lines in vouchers</td><td>Yes</td></tr>
+    <tr><td>Cost centres and cost allocations</td><td>Yes (allocations that do not match are skipped with a warning)</td></tr>
+    <tr><td>Currencies</td><td>No, skipped with a warning</td></tr>
+    <tr><td>Payroll, TDS and other newer statutory masters</td><td>Not yet; set these up in TallyBook</td></tr>
+  </table>
+
+  <h2>Using Excel or CSV instead</h2>
+  <p>If your data is in spreadsheets, or you are starting fresh, use Excel (.xlsx) or CSV files.</p>
+  <ol class="steps">
+    <li>Press <kbd>Alt</kbd>+<kbd>O</kbd> → <b>Manage</b> → <b>Sample Excel File</b> → <b>Masters</b> or <b>Transactions</b>. Press <kbd>C</kbd> to choose <i>All Accounting Masters</i>, <i>All Inventory Masters</i> or <i>Accounting Voucher</i>, then <kbd>E</kbd> to save the sample.</li>
+    <li>Fill in your rows. The columns use the same header names as Tally's sample Excel templates, and the <b>Default Template</b> matches columns by header name, so a sheet already prepared in that format usually works as it is.</li>
+    <li>Import with <kbd>Alt</kbd>+<kbd>O</kbd> → Masters or Transactions. Pick the <b>Worksheet Name</b> and <b>Type of Master</b> (guessed from the sheet name). For masters you can also choose <i>Combine Opening Balance</i>.</li>
+    <li>A voucher sheet needs at least Voucher Date, Voucher Type Name, Ledger Name, Ledger Amount and Ledger Amount Dr/Cr. Rows whose voucher number already exists are ignored.</li>
+  </ol>
+  <div class="warn">Current limits: you cannot create your own mapping templates yet, and JSON (Data Exchange) files are not supported. TallyBook is single-user, so plan the move for one computer.</div>
+
+<h2>Frequently asked questions</h2><h3>Will importing into TallyBook change my Tally data?</h3><p>No. Tally only writes the export files; TallyBook only reads them. Your Tally company stays exactly as it was.</p><h3>What happens if I import the same file twice?</h3><p>Vouchers already present are recognised by their unique ID and skipped, so nothing is duplicated. Masters follow the behaviour you choose: Ignore Duplicates or Modify with New Data.</p><h3>Does the import bring my stock items and item invoices?</h3><p>Yes. Stock items, units and godowns come in with the masters file, and item lines come in with the vouchers file. Check the Stock Summary afterwards.</p><h3>Can I move data back to Tally later?</h3><p>TallyBook can export groups, ledgers, voucher types and the current period's vouchers in Tally's XML structure with Alt+E. Test that on a copy of a Tally company before you depend on it.</p><h3>Can I import from Excel without having Tally?</h3><p>Yes. Export a sample sheet from Alt+O → Manage → Sample Excel File, fill it in, and import it as masters or transactions.</p>
+<div class="note" style="margin-top:32px"><b>Ready to try it?</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Still deciding? Read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/tallybook-keyboard-shortcuts/">Keyboard shortcuts</a> · <a href="/blog/backup-restore-and-data-safety/">Backup and restore</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

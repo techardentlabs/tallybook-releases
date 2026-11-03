@@ -19,5 +19,40 @@
   "description": "The eight accounting vouchers, when to use each one, the key that opens it and a worked example for every type.",
   "date": "2026-11-03",
   "tag": "Accounting basics"
+ },
+ {
+  "slug": "bill-wise-outstanding-receivables-payables",
+  "title": "Bill-wise outstanding: New Ref, Agst Ref, Advance, On Account and the Bills Receivable report",
+  "description": "Track receivables and payables bill by bill: the four reference types, credit period, the outstanding reports and ageing.",
+  "date": "2026-11-03",
+  "tag": "Receivables & payables"
+ },
+ {
+  "slug": "how-to-read-balance-sheet-and-profit-and-loss",
+  "title": "How to read a Balance Sheet and Profit & Loss account: a guide for owners",
+  "description": "A worked sample Profit & Loss and Balance Sheet for a small shop, explained line by line, with drill-down in TallyBook.",
+  "date": "2026-11-03",
+  "tag": "Reports"
+ },
+ {
+  "slug": "trial-balance-explained",
+  "title": "Trial Balance explained: what it shows, why it must tally and how to find a difference",
+  "description": "What the Trial Balance shows, why it must tally, common causes of a difference, and the F12, Alt+F1 and Ctrl+F options in TallyBook.",
+  "date": "2026-11-03",
+  "tag": "Reports"
+ },
+ {
+  "slug": "cost-centres-and-budgets-in-tallybook",
+  "title": "Cost centres and budgets in TallyBook: track spending by branch, project or department",
+  "description": "Enable cost centres with F11, allocate expenses during entry, read the Cost Centre Summary, and compare budget with actuals.",
+  "date": "2026-11-03",
+  "tag": "How-to"
+ },
+ {
+  "slug": "interest-calculation-on-outstanding-bills",
+  "title": "Interest calculation on outstanding bills in TallyBook",
+  "description": "Activate interest on a party ledger, choose the parameters, and read the Group and Ledger Interest Calculation reports.",
+  "date": "2026-11-03",
+  "tag": "How-to"
  }
 ]

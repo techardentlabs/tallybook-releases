@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trial Balance explained: why it must tally, fix differences</title>
+<meta name="description" content="What a Trial Balance shows, why debits must equal credits, the usual causes of a difference, and how to use F12, Alt+F1 and Ctrl+F on it in TallyBook.">
+<link rel="canonical" href="https://tallybook.online/blog/trial-balance-explained/">
+<meta property="og:title" content="Trial Balance explained: what it shows, why it must tally and how to find a difference">
+<meta property="og:description" content="What a Trial Balance shows, why debits must equal credits, the usual causes of a difference, and how to use F12, Alt+F1 and Ctrl+F on it in TallyBook.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/trial-balance-explained/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/trial-balance.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Trial Balance explained: what it shows, why it must tally and how to find a difference", "description": "What a Trial Balance shows, why debits must equal credits, the usual causes of a difference, and how to use F12, Alt+F1 and Ctrl+F on it in TallyBook.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/trial-balance.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/trial-balance-explained/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Trial Balance explained: what it shows, why it must tally and how to find a difference", "item": "https://tallybook.online/blog/trial-balance-explained/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "If my Trial Balance tallies, are my books correct?", "acceptedAnswer": {"@type": "Answer", "text": "Not necessarily. A tallied Trial Balance proves only that debits equal credits. Posting to the wrong ledger, entering the wrong amount on both sides or missing a bill completely still leaves it tallied."}}, {"@type": "Question", "name": "Why does my Trial Balance show an opening total that is not zero?", "acceptedAnswer": {"@type": "Answer", "text": "The opening balances entered on your ledgers do not add up. Open each ledger with an opening balance, check the amount and its Dr or Cr side, and correct it in Alter › Ledger."}}, {"@type": "Question", "name": "Does TallyBook remember my F12 settings?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The options you choose in F12 are remembered on that computer for that report until you change them."}}, {"@type": "Question", "name": "How do I send the Trial Balance to my CA?", "acceptedAnswer": {"@type": "Answer", "text": "Press Alt+E or Ctrl+E to save it as a CSV file, which opens in Excel, or use Alt+P to print or save it as PDF."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Find a Trial Balance difference in TallyBook", "step": [{"@type": "HowToStep", "position": 1, "name": "Open the Trial Balance and note the Grand Total in the Opening column", "text": "Open the Trial Balance and note the Grand Total in the Opening column. That is the amount you are looking for."}, {"@type": "HowToStep", "position": 2, "name": "Press Alt + F1 to switch to the detailed view so every ledger is visible.", "text": "Press Alt + F1 to switch to the detailed view so every ledger is visible."}, {"@type": "HowToStep", "position": 3, "name": "Press F12 , turn off Show transactions and turn on Hide ledgers and groups with ", "text": "Press F12 , turn off Show transactions and turn on Hide ledgers and groups with zero balances , then accept. Empty ledgers disappear and the Opening column is easier to scan."}, {"@type": "HowToStep", "position": 4, "name": "Compare each opening balance with last year's closing Balance Sheet from your CA", "text": "Compare each opening balance with last year's closing Balance Sheet from your CA. Look for an amount equal to the difference, or to half of it (a balance on the wrong side)."}, {"@type": "HowToStep", "position": 5, "name": "Press Enter on a wrong ledger to open it, then correct it in Gateway › Alter › L", "text": "Press Enter on a wrong ledger to open it, then correct it in Gateway › Alter › Ledger. The Trial Balance updates immediately."}]}</script>
+</head>
+<body>
+@@HEADER:Blog · Reports@@
+<section><div class="wrap narrow"><article>
+  <h1>Trial Balance explained: what it shows, why it must tally and how to find a difference</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> A Trial Balance lists every ledger's balance on a date, debits in one column and credits in the other. Because every entry has equal debit and credit sides, the two totals must match. In TallyBook every voucher is balanced before it is saved, so a difference almost always comes from opening balances.</div>
+
+<p>The <b>Trial Balance</b> is the first report an accountant opens at the end of a month or year. It is a one-page summary of every ledger in your books, and it is the quickest test that your double-entry bookkeeping is complete. This guide explains what it shows, why it must “tally”, and how to use it in TallyBook.</p>
+
+  <h2>What the Trial Balance shows</h2>
+  <p>Open it from Gateway of Tally › <b>Display More Reports</b> › <b>Trial Balance</b>, or with <kbd>Alt</kbd>+<kbd>G</kbd> › Trial Balance. TallyBook lists your primary groups with these columns:</p>
+  <table>
+    <tr><th>Column</th><th>Meaning</th></tr>
+    <tr><td>Particulars</td><td>Group or ledger name. Groups are in bold.</td></tr>
+    <tr><td>Opening</td><td>Balance at the start of the period, marked Dr or Cr</td></tr>
+    <tr><td>Debit</td><td>Total debits posted during the period</td></tr>
+    <tr><td>Credit</td><td>Total credits posted during the period</td></tr>
+    <tr><td>Closing</td><td>Balance at the end of the period: opening + debits − credits</td></tr>
+  </table>
+  <p>The <b>Grand Total</b> row at the bottom is the line that matters. The Debit and Credit totals must be equal, and the total Opening and Closing balances must come to zero, because every Dr balance somewhere is matched by a Cr balance elsewhere.</p>
+  <figure style="margin:22px 0"><img src="/assets/shots/trial-balance.png" alt="TallyBook Trial Balance with Particulars, Opening, Debit, Credit and Closing columns and a Grand Total row" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The Trial Balance in TallyBook. Debit and Credit totals in the Grand Total row are equal.</figcaption></figure>
+
+  <h2>Why it must tally</h2>
+  <p>Every transaction is recorded with equal debit and credit amounts (see <a href="/blog/double-entry-accounting-basics/">double-entry basics</a>). Add up every account and the debits must therefore equal the credits. If they do not, something was recorded on one side only, or with different amounts on each side.</p>
+
+  <svg role="img" aria-label="Comparison: errors a Trial Balance catches, such as one-sided entries, unequal amounts and wrong opening balances, versus errors it cannot catch, such as wrong ledger, missing entries, same wrong amount on both sides and compensating errors" viewBox="0 0 720 270" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>What a Trial Balance can and cannot catch</title>
+    <rect width="720" height="270" fill="white"/>
+    <rect x="10" y="10" width="340" height="250" rx="10" fill="#dfeefa" stroke="#2a62ad" stroke-width="2"/>
+    <rect x="10" y="10" width="340" height="44" rx="10" fill="#2a62ad"/>
+    <text x="180" y="38" fill="white" font-size="16" font-weight="bold" text-anchor="middle">Shows up as a difference</text>
+    <g fill="#10212b" font-size="14">
+      <text x="30" y="88">• Entry posted on one side only</text>
+      <text x="30" y="120">• Debit ₹5,400, credit ₹4,500</text>
+      <text x="30" y="152">• Opening balance on the wrong side</text>
+      <text x="30" y="184">• Opening balance missing or mistyped</text>
+      <text x="30" y="216">• Opening balances imported twice</text>
+    </g>
+    <rect x="370" y="10" width="340" height="250" rx="10" fill="white" stroke="#10212b" stroke-width="2"/>
+    <rect x="370" y="10" width="340" height="44" rx="10" fill="#10212b"/>
+    <text x="540" y="38" fill="#ffc32b" font-size="16" font-weight="bold" text-anchor="middle">Tallies anyway</text>
+    <g fill="#10212b" font-size="14">
+      <text x="390" y="88">• Posted to the wrong ledger</text>
+      <text x="390" y="120">• Same wrong amount on both sides</text>
+      <text x="390" y="152">• Bill never entered at all</text>
+      <text x="390" y="184">• Entered twice</text>
+      <text x="390" y="216">• Two errors that cancel out</text>
+    </g>
+    <text x="540" y="246" fill="#2a62ad" font-size="13" text-anchor="middle">Find these by checking ledgers and statements</text>
+  </svg>
+
+  <h2>Common reasons for a difference</h2>
+  <p>In manual books, a difference usually comes from posting or totalling mistakes. In TallyBook those cannot happen inside a voucher: a voucher is refused unless total debit equals total credit. So when the Trial Balance does not tally, look at <b>opening balances</b>:</p>
+  <ul>
+    <li><b>An opening balance on the wrong side.</b> A supplier's balance entered as Dr instead of Cr doubles the gap.</li>
+    <li><b>A missing ledger.</b> You entered all your assets but forgot a loan or the capital account.</li>
+    <li><b>A typing error</b> in one opening amount.</li>
+    <li><b>Openings imported twice.</b> Importing masters again with “Combine Opening Balance” adds the new opening to the existing one.</li>
+  </ul>
+  <p>When openings do not balance, the Grand Total Opening column shows the gap as a Dr or Cr amount, and the Balance Sheet shows a line called <b>Difference in Opening Balances</b>.</p>
+
+  <h3>Finding the difference step by step</h3>
+  <ol class="steps">
+    <li>Open the Trial Balance and note the Grand Total in the Opening column. That is the amount you are looking for.</li>
+    <li>Press <kbd>Alt</kbd>+<kbd>F1</kbd> to switch to the detailed view so every ledger is visible.</li>
+    <li>Press <kbd>F12</kbd>, turn off <b>Show transactions</b> and turn on <b>Hide ledgers and groups with zero balances</b>, then accept. Empty ledgers disappear and the Opening column is easier to scan.</li>
+    <li>Compare each opening balance with last year's closing Balance Sheet from your CA. Look for an amount equal to the difference, or to half of it (a balance on the wrong side).</li>
+    <li>Press <kbd>Enter</kbd> on a wrong ledger to open it, then correct it in Gateway › Alter › Ledger. The Trial Balance updates immediately.</li>
+  </ol>
+
+  <h2>F12, Alt+F1 and Ctrl+F on the Trial Balance</h2>
+  <table>
+    <tr><th>Key</th><th>What it does</th></tr>
+    <tr><td><kbd>F12</kbd></td><td>Configure: show or hide opening balances, transactions (Debit / Credit), closing balances; hide zero-balance ledgers and groups; open in detailed format by default</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F1</kbd></td><td>Switch between condensed (primary groups only) and detailed (every sub-group and ledger)</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Filter: type part of a name, such as “bank” or “GST”, to show only matching rows. <kbd>Esc</kbd> clears it.</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F2</kbd></td><td>Change the period</td></tr>
+    <tr><td><kbd>Enter</kbd></td><td>Drill down: a group opens its Group Summary, a ledger opens its vouchers</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>E</kbd></td><td>Export the Trial Balance as a CSV file</td></tr>
+  </table>
+  <p>The same screen, opened for a single group, is the <b>Group Summary</b> (Display More Reports › Account Books › Group Summary). Everything above works there too.</p>
+  <div class="note">Not yet in this preview: Ctrl+H change view, Ctrl+B basis of values and Alt+C new column on the Trial Balance. Export to CSV and compare periods in a spreadsheet if you need columns side by side.</div>
+
+  <h2>When to look at it</h2>
+  <ul>
+    <li><b>Right after setting up a company</b>, to confirm opening balances.</li>
+    <li><b>Every month</b>, before you file GST returns, to spot odd balances such as a Dr balance on a supplier.</li>
+    <li><b>At year end</b>, before your CA finalises accounts.</li>
+  </ul>
+  <p>Next: <a href="/blog/how-to-read-balance-sheet-and-profit-and-loss/">reading the Balance Sheet and P&amp;L</a> and <a href="/blog/reports-power-features-f12-alt-f1-filters/">every report shortcut in one place</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>If my Trial Balance tallies, are my books correct?</h3>
+  <p>Not necessarily. A tallied Trial Balance proves only that debits equal credits. Posting to the wrong ledger, entering the wrong amount on both sides or missing a bill completely still leaves it tallied.</p>
+  <h3>Why does my Trial Balance show an opening total that is not zero?</h3>
+  <p>The opening balances entered on your ledgers do not add up. Open each ledger with an opening balance, check the amount and its Dr or Cr side, and correct it in Alter › Ledger.</p>
+  <h3>Does TallyBook remember my F12 settings?</h3>
+  <p>Yes. The options you choose in F12 are remembered on that computer for that report until you change them.</p>
+  <h3>How do I send the Trial Balance to my CA?</h3>
+  <p>Press Alt+E or Ctrl+E to save it as a CSV file, which opens in Excel, or use Alt+P to print or save it as PDF.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bill-wise outstanding: New Ref, Agst Ref and On Account</title>
+<meta name="description" content="Track who owes what, bill by bill: New Ref, Agst Ref, Advance and On Account explained, credit period, the Bills Receivable and Payable reports, and ageing.">
+<link rel="canonical" href="https://tallybook.online/blog/bill-wise-outstanding-receivables-payables/">
+<meta property="og:title" content="Bill-wise outstanding: New Ref, Agst Ref, Advance, On Account and the Bills Receivable report">
+<meta property="og:description" content="Track who owes what, bill by bill: New Ref, Agst Ref, Advance and On Account explained, credit period, the Bills Receivable and Payable reports, and ageing.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/bill-wise-outstanding-receivables-payables/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/go-to.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Bill-wise outstanding: New Ref, Agst Ref, Advance, On Account and the Bills Receivable report", "description": "Track who owes what, bill by bill: New Ref, Agst Ref, Advance and On Account explained, credit period, the Bills Receivable and Payable reports, and ageing.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/go-to.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/bill-wise-outstanding-receivables-payables/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Bill-wise outstanding: New Ref, Agst Ref, Advance, On Account and the Bills Receivable report", "item": "https://tallybook.online/blog/bill-wise-outstanding-receivables-payables/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between Advance and On Account?", "acceptedAnswer": {"@type": "Answer", "text": "Advance is money received or paid before the bill exists, usually for a known order, and you give it a reference so you can adjust it later. On Account is money you cannot yet link to any bill. Both reduce the party's balance, but neither settles a specific bill."}}, {"@type": "Question", "name": "Why does a party show On Account in Bills Receivable?", "acceptedAnswer": {"@type": "Answer", "text": "Part of the party's balance is not linked to any open bill, usually a receipt entered On Account. Alter that receipt, change the line to Agst Ref and pick the bill it was meant for."}}, {"@type": "Question", "name": "Does TallyBook show ageing buckets like 0–30 and 31–60 days?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. Bills Receivable and Bills Payable show bill date, due date, overdue days and pending amount for each bill. For bucket-wise ageing, export the report with Ctrl+E and group the bills in a spreadsheet."}}, {"@type": "Question", "name": "Can I enter opening bills for old customers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Opening bill-wise breakups come in through opening vouchers or a Tally XML import, which also brings each bill's due date."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Turn on bill-wise tracking in TallyBook", "step": [{"@type": "HowToStep", "position": 1, "name": "Press F11 (Company Features) and set Maintain bill-wise details to Yes", "text": "Press F11 (Company Features) and set Maintain bill-wise details to Yes. Accept with Ctrl + A ."}, {"@type": "HowToStep", "position": 2, "name": "Create or alter a ledger under Sundry Debtors or Sundry Creditors and set Mainta", "text": "Create or alter a ledger under Sundry Debtors or Sundry Creditors and set Maintain balances bill-by-bill to Yes."}, {"@type": "HowToStep", "position": 3, "name": "Optionally fill Default credit period (for example “30 Days”) and Credit limit f", "text": "Optionally fill Default credit period (for example “30 Days”) and Credit limit for your own reference."}, {"@type": "HowToStep", "position": 4, "name": "Accept the ledger", "text": "Accept the ledger. From now on, every voucher that touches this party asks for bill-wise details."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · Receivables & payables</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Bill-wise outstanding: New Ref, Agst Ref, Advance, On Account and the Bills Receivable report</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> Bill-wise tracking links every payment to the invoice it settles. Use New Ref when a bill is raised, Agst Ref when money is received or paid against it, Advance for money before a bill exists, and On Account when you do not know which bill it is for. TallyBook then shows pending bills in Bills Receivable and Bills Payable.</div>
+
+<p>A customer's ledger tells you their total balance. It does not tell you <i>which</i> invoices are still unpaid, how old they are, or whether last week's ₹30,000 receipt settled invoice 101 or invoice 108. <b>Bill-wise details</b> answer those questions. TallyBook follows the TallyPrime method closely.</p>
+
+  <h2>Switch it on</h2>
+  <ol class="steps">
+    <li>Press <kbd>F11</kbd> (Company Features) and set <b>Maintain bill-wise details</b> to Yes. Accept with <kbd>Ctrl</kbd>+<kbd>A</kbd>.</li>
+    <li>Create or alter a ledger under Sundry Debtors or Sundry Creditors and set <b>Maintain balances bill-by-bill</b> to Yes.</li>
+    <li>Optionally fill <b>Default credit period</b> (for example “30 Days”) and <b>Credit limit</b> for your own reference.</li>
+    <li>Accept the ledger. From now on, every voucher that touches this party asks for bill-wise details.</li>
+  </ol>
+  <figure style="margin:22px 0"><img src="/assets/shots/ledger-creation.png" alt="TallyBook ledger form for a Sundry Debtors party with bill-by-bill, credit period and credit limit fields" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">For a customer or supplier, the ledger form shows the bill-by-bill, credit period and credit limit fields once bill-wise details are on in F11.</figcaption></figure>
+
+  <h2>The four types of reference</h2>
+  <p>When you enter a Sales, Purchase, Receipt, Payment, Credit Note, Debit Note or Journal line for a bill-by-bill party, the <b>Bill-wise Details</b> screen opens. Each line has a type of reference, a name and an amount:</p>
+  <table>
+    <tr><th>Type of Ref</th><th>Use it for</th><th>Example</th></tr>
+    <tr><td><b>New Ref</b></td><td>A new bill: you raise an invoice, or a supplier bills you</td><td>Sales invoice INV-101 for ₹50,000</td></tr>
+    <tr><td><b>Agst Ref</b></td><td>Money or a note against an existing bill</td><td>Receipt of ₹30,000 against INV-101</td></tr>
+    <tr><td><b>Advance</b></td><td>Money before a bill exists, with a reference you can adjust later</td><td>₹10,000 received with order PO-55</td></tr>
+    <tr><td><b>On Account</b></td><td>Money you cannot link to a bill yet</td><td>₹5,000 deposited with no remittance advice</td></tr>
+  </table>
+  <p>TallyBook picks a sensible default. For a customer, a debit (an invoice) starts as New Ref and a credit (a receipt) starts as Agst Ref. For Agst Ref, the name field lists the party's pending bills with their pending amounts, so you just choose one.</p>
+  <p>Two checks keep the allocation honest. The bill lines must add up exactly to the voucher amount; otherwise you see a message such as “Bill allocations (₹25,000.00) must equal ₹30,000.00”. And if you allocate less than the full amount, TallyBook adds a new On Account line for the balance, which you can change to another bill.</p>
+
+  <svg role="img" aria-label="Worked example for one customer: invoice INV-101 of 50,000 rupees as New Ref, a receipt of 30,000 Agst Ref leaves 20,000 pending; an advance of 10,000 and an on-account receipt of 5,000 reduce the balance without settling a bill" viewBox="0 0 720 270" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>How one customer's bills settle</title>
+    <rect width="720" height="270" fill="white"/>
+    <text x="20" y="26" fill="#10212b" font-size="15" font-weight="bold">Ravi Enterprises: invoice INV-101</text>
+    <rect x="20" y="40" width="500" height="34" fill="#2a62ad"/>
+    <text x="30" y="62" fill="white" font-size="14">New Ref INV-101  ₹50,000</text>
+    <rect x="20" y="84" width="300" height="34" fill="#8bb9e0"/>
+    <text x="30" y="106" fill="#10212b" font-size="14">Agst Ref INV-101  −₹30,000</text>
+    <rect x="320" y="84" width="200" height="34" fill="#ffc32b"/>
+    <text x="330" y="106" fill="#10212b" font-size="14" font-weight="bold">Pending ₹20,000</text>
+    <text x="540" y="66" fill="#10212b" font-size="13">bill raised</text>
+    <text x="540" y="106" fill="#10212b" font-size="13">part payment</text>
+    <line x1="20" y1="140" x2="700" y2="140" stroke="#dfeefa" stroke-width="2"/>
+    <text x="20" y="168" fill="#10212b" font-size="15" font-weight="bold">Other money from the same customer</text>
+    <rect x="20" y="182" width="100" height="34" fill="#dfeefa" stroke="#2a62ad"/>
+    <text x="30" y="204" fill="#10212b" font-size="13">Advance ₹10,000</text>
+    <rect x="130" y="182" width="50" height="34" fill="#dfeefa" stroke="#2a62ad"/>
+    <text x="134" y="204" fill="#10212b" font-size="11">On Acc</text>
+    <text x="200" y="198" fill="#10212b" font-size="13">Reduces the balance but stays open until you adjust it</text>
+    <text x="200" y="216" fill="#10212b" font-size="13">against a bill with Agst Ref in a later voucher.</text>
+    <text x="20" y="250" fill="#2a62ad" font-size="14" font-weight="bold">Ledger balance: 50,000 − 30,000 − 10,000 − 5,000 = ₹5,000 Dr, but INV-101 still shows ₹20,000 pending.</text>
+  </svg>
+
+  <h2>Credit period and due dates</h2>
+  <p>The credit period is the number of days a party has to pay. In TallyBook you set a default on the ledger. The <b>Bills Receivable</b> and <b>Bills Payable</b> reports show a <b>Due on</b> date and an <b>Overdue (days)</b> count, in red, for every bill that carries a due date.</p>
+  <div class="warn">An honest limitation of the current preview: the Bill-wise Details screen records the bill date but does not yet ask for a due date, and the ledger's default credit period, credit-days check and credit limit are saved but not yet applied during entry. Opening bills imported from Tally XML do keep their due dates. For bills entered in TallyBook, use the Bill date column to judge how old a bill is.</div>
+
+  <h2>The Bills Receivable and Bills Payable reports</h2>
+  <p>There are two ways to open them:</p>
+  <ul>
+    <li><kbd>Alt</kbd>+<kbd>G</kbd> (Go To), then type “Bills Receivable” or “Bills Payable”.</li>
+    <li>Gateway of Tally › <b>Display More Reports</b> › <b>Statements of Accounts</b> › <b>Receivables</b> (<kbd>R</kbd>) or <b>Payables</b> (<kbd>P</kbd>).</li>
+  </ul>
+  <p>Each party appears in bold with its total, followed by its open bills: reference number, bill date, due date, overdue days and pending amount. Any unlinked balance shows as a separate <b>On Account</b> line. Press <kbd>Enter</kbd> on a party to open its ledger, and <kbd>Alt</kbd>+<kbd>F2</kbd> to see what was outstanding as on another date.</p>
+  <figure style="margin:22px 0"><img src="/assets/shots/go-to.png" alt="TallyBook Go To list with Bills Receivable and Bills Payable under Common Reports" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Go To (Alt+G) lists Bills Receivable and Bills Payable under Common Reports.</figcaption></figure>
+
+  <h2>Ageing: how old are my dues?</h2>
+  <p>Ageing groups pending bills by how long they have been outstanding, so you chase the oldest money first. TallyBook does not yet have ageing columns in the outstanding reports. Until it does, you can do it in a few minutes:</p>
+  <ol class="steps">
+    <li>Open Bills Receivable as on the date you want.</li>
+    <li>Press <kbd>Ctrl</kbd>+<kbd>E</kbd> to export what is on screen as a CSV file.</li>
+    <li>In Excel or LibreOffice, add a column for today's date minus the bill date, and group the bills into 0–30, 31–60, 61–90 and over 90 days.</li>
+  </ol>
+
+  <h2>Good habits</h2>
+  <ul>
+    <li>Always use the party's own invoice number for purchases, so your Agst Ref matches their statement.</li>
+    <li>Clear On Account amounts every month by altering the receipt and linking it to the right bill.</li>
+    <li>Settle advances as soon as the bill is made, with an Agst Ref line against the advance's reference.</li>
+  </ul>
+  <p>Related: <a href="/blog/interest-calculation-on-outstanding-bills/">charging interest on overdue bills</a>, <a href="/blog/voucher-types-explained/">which voucher to use</a> and <a href="/blog/bank-reconciliation-in-tallybook/">bank reconciliation</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>What is the difference between Advance and On Account?</h3>
+  <p>Advance is money received or paid before the bill exists, usually for a known order, and you give it a reference so you can adjust it later. On Account is money you cannot yet link to any bill. Both reduce the party's balance, but neither settles a specific bill.</p>
+  <h3>Why does a party show On Account in Bills Receivable?</h3>
+  <p>Part of the party's balance is not linked to any open bill, usually a receipt entered On Account. Alter that receipt, change the line to Agst Ref and pick the bill it was meant for.</p>
+  <h3>Does TallyBook show ageing buckets like 0–30 and 31–60 days?</h3>
+  <p>Not yet. Bills Receivable and Bills Payable show bill date, due date, overdue days and pending amount for each bill. For bucket-wise ageing, export the report with Ctrl+E and group the bills in a spreadsheet.</p>
+  <h3>Can I enter opening bills for old customers?</h3>
+  <p>Yes. Opening bill-wise breakups come in through opening vouchers or a Tally XML import, which also brings each bill's due date.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

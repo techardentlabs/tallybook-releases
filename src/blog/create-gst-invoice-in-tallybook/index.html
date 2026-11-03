@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to create a GST invoice in TallyBook</title>
+<meta name="description" content="Set up GST, create the customer and sales ledgers, and raise a GST sales invoice with the right CGST, SGST or IGST, including item invoices with HSN codes.">
+<link rel="canonical" href="https://tallybook.online/blog/create-gst-invoice-in-tallybook/">
+<meta property="og:title" content="How to create a GST invoice in TallyBook">
+<meta property="og:description" content="Set up GST, create the customer and sales ledgers, and raise a GST sales invoice with the right CGST, SGST or IGST, including item invoices with HSN codes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/create-gst-invoice-in-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/sales-invoice.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to create a GST invoice in TallyBook">
+<meta name="twitter:description" content="Set up GST, create the customer and sales ledgers, and raise a GST sales invoice with the right CGST, SGST or IGST, including item invoices with HSN codes.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/sales-invoice.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to create a GST invoice in TallyBook", "description": "Set up GST, create the customer and sales ledgers, and raise a GST sales invoice with the right CGST, SGST or IGST, including item invoices with HSN codes.", "image": "https://tallybook.online/assets/shots/sales-invoice.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/create-gst-invoice-in-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to create a GST invoice in TallyBook", "item": "https://tallybook.online/blog/create-gst-invoice-in-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need to create CGST, SGST and IGST ledgers in TallyBook?", "acceptedAnswer": {"@type": "Answer", "text": "No. TallyBook creates the output and input tax ledgers for each rate the first time you save an invoice at that rate."}}, {"@type": "Question", "name": "How does TallyBook decide between IGST and CGST plus SGST?", "acceptedAnswer": {"@type": "Answer", "text": "It compares the place of supply with your company's state (taken from your GSTIN or company state). Same state means CGST plus SGST; a different state means IGST."}}, {"@type": "Question", "name": "Where do I enter the HSN or SAC code?", "acceptedAnswer": {"@type": "Answer", "text": "On the sales ledger for accounting invoices, or on each stock item when inventory is on. GSTR-1 flags supplies with no HSN/SAC."}}, {"@type": "Question", "name": "Can I raise a GST invoice to an unregistered customer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Set the ledger's Registration type to Unregistered/Consumer; the GSTIN field is then hidden. The invoice is counted in the B2C sections of GSTR-1."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Create a GST sales invoice in TallyBook", "description": "Set up GST, create the customer and sales ledgers, and raise a GST sales invoice with the right CGST, SGST or IGST, including item invoices with HSN codes.", "step": [{"@type": "HowToStep", "position": 1, "name": "Enable GST", "text": "Press F11, set Enable Goods and Services Tax (GST) to Yes and enter your GSTIN/UIN."}, {"@type": "HowToStep", "position": 2, "name": "Create the customer ledger", "text": "Create a ledger under Sundry Debtors with State, Registration type and GSTIN/UIN."}, {"@type": "HowToStep", "position": 3, "name": "Create the sales ledger", "text": "Create a ledger under Sales Accounts with its GST rate, nature of supply and HSN/SAC."}, {"@type": "HowToStep", "position": 4, "name": "Open a sales voucher", "text": "Press F8. The voucher opens in invoice view."}, {"@type": "HowToStep", "position": 5, "name": "Fill party and place of supply", "text": "Select the party; the place of supply fills from the party's GSTIN or state."}, {"@type": "HowToStep", "position": 6, "name": "Enter the lines and save", "text": "Choose the sales ledger, check the rate, enter the taxable value, add a narration and press Ctrl+A."}]}</script>
+</head>
+<body>
+@@HEADER:Blog · GST@@
+<section><div class="wrap narrow"><article>
+  <h1>How to create a GST invoice in TallyBook</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 4 min read</div>
+  <div class="note"><b>Quick answer:</b> Turn on GST and enter your GSTIN in <kbd>F11</kbd>, create the customer ledger under Sundry Debtors with its state and GSTIN, then press <kbd>F8</kbd>. Pick the party, confirm the place of supply, choose the sales ledger and enter the taxable value. TallyBook applies CGST + SGST for a same-state sale and IGST for an other-state sale, and creates the tax ledgers itself.</div>
+
+  <p>A GST invoice needs four things to be right: who you are selling to, where the supply takes place, what you are selling and at what rate. TallyBook asks for them in that order and works out the tax heads for you. This guide covers the plain accounting invoice and the item invoice you get when inventory is switched on.</p>
+
+  <h2>One-time setup</h2>
+  <ol class="steps">
+    <li><b>Company GST.</b> Press <kbd>F11</kbd>, set <b>Enable Goods and Services Tax (GST)</b> to Yes and type your 15-character <b>GSTIN/UIN</b>. TallyBook checks the format and check digit. Make sure your company's state is correct (<kbd>Alt</kbd>+<kbd>K</kbd> → Alter).</li>
+    <li><b>Customer ledger.</b> Gateway → Create → Ledger. Put it <b>Under</b> Sundry Debtors, fill the address, <b>State</b> and <b>Pincode</b>, choose a <b>Registration type</b> (Regular, Composition, Unregistered/Consumer, SEZ and others) and enter the <b>GSTIN/UIN</b>. TallyBook warns if the GSTIN's first two digits do not match the state.</li>
+    <li><b>Sales ledger.</b> Create a ledger under Sales Accounts. Set <b>Percentage of calculation</b> (the GST rate), <b>Nature of supply</b> (Goods or Services), <b>HSN/SAC</b>, <b>Taxability</b> and <b>Nature of transaction</b>.</li>
+  </ol>
+  <p>You do not need to create CGST, SGST or IGST ledgers. When you save the first invoice at a rate, TallyBook creates ledgers such as "Output CGST 9%" under Duties &amp; Taxes.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/ledger-creation.png" alt="TallyBook Ledger Creation screen for a customer with state, registration type and GSTIN fields" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">A customer ledger with its GST registration details.</figcaption></figure>
+
+  <h2>Raise the invoice</h2>
+  <ol class="steps">
+    <li>Press <kbd>F8</kbd>. With GST on, the Sales voucher opens in <b>invoice view</b>. Check the date (<kbd>F2</kbd> to change it).</li>
+    <li>In <b>Party A/c name</b>, type a few letters and pick the customer. <kbd>Alt</kbd>+<kbd>C</kbd> creates a new ledger without leaving the voucher.</li>
+    <li><b>Place of supply</b> fills from the party's GSTIN or state. Change it if goods are delivered elsewhere; you can type a state name or code. A hint shows "Intra-state: CGST + SGST" or "Inter-state: IGST".</li>
+    <li>On each line pick the <b>Sales ledger</b>. The <b>Rate</b> comes from the ledger and can be changed. Enter the <b>Taxable value</b>.</li>
+    <li>Press <kbd>Enter</kbd> on an empty line to finish. The panel on the right shows the taxable value, each tax ledger and the invoice total.</li>
+    <li>Type a narration and press <kbd>Enter</kbd>, then Yes to accept, or simply <kbd>Ctrl</kbd>+<kbd>A</kbd>. If the customer keeps bill-by-bill balances, TallyBook asks for the bill reference first.</li>
+  </ol>
+  <figure style="margin:24px 0"><svg role="img" aria-label="If place of supply is in the same state, CGST plus SGST; otherwise IGST" viewBox="0 0 640 262" width="640" height="262" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>Intra-state or inter-state GST</title><rect x="0" y="0" width="640" height="262" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">How TallyBook chooses the GST heads</text><rect x="150" y="52" width="340" height="62" rx="10" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><text x="320" y="78" font-size="15" fill="#10212b" text-anchor="middle" font-weight="normal">Is the place of supply in the</text><text x="320" y="99" font-size="15" fill="#10212b" text-anchor="middle" font-weight="normal">same state as your company?</text><path d="M230 114 L150 160" stroke="#2a62ad" stroke-width="2"/><path d="M410 114 L490 160" stroke="#2a62ad" stroke-width="2"/><text x="170" y="140" font-size="14" fill="#2a62ad" text-anchor="middle" font-weight="bold">Yes</text><text x="470" y="140" font-size="14" fill="#2a62ad" text-anchor="middle" font-weight="bold">No</text><rect x="30" y="162" width="250" height="78" rx="10" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><text x="155" y="190" font-size="16" fill="#10212b" text-anchor="middle" font-weight="bold">Intra-state</text><text x="155" y="214" font-size="14" fill="#10212b" text-anchor="middle" font-weight="normal">CGST + SGST, half each</text><rect x="360" y="162" width="250" height="78" rx="10" fill="#8bb9e0" stroke="#2a62ad" stroke-width="1.5"/><text x="485" y="190" font-size="16" fill="#10212b" text-anchor="middle" font-weight="bold">Inter-state</text><text x="485" y="214" font-size="14" fill="#10212b" text-anchor="middle" font-weight="normal">IGST, full rate</text></svg></figure>
+
+  <h3>Example: ₹10,000 taxable at an 18% rate</h3>
+  <table>
+    <tr><th></th><th>Customer in your state</th><th>Customer in another state</th></tr>
+    <tr><td>Taxable value</td><td>₹10,000</td><td>₹10,000</td></tr>
+    <tr><td>CGST</td><td>₹900 (Output CGST 9%)</td><td>–</td></tr>
+    <tr><td>SGST</td><td>₹900 (Output SGST 9%)</td><td>–</td></tr>
+    <tr><td>IGST</td><td>–</td><td>₹1,800 (Output IGST 18%)</td></tr>
+    <tr><td><b>Invoice total</b></td><td><b>₹11,800</b></td><td><b>₹11,800</b></td></tr>
+  </table>
+  <p>The 18% rate is only an illustration. Use the rate notified for your goods or services; check it on <a href="https://www.gst.gov.in/">gst.gov.in</a> or with your CA.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/sales-invoice.png" alt="TallyBook GST sales invoice with party, place of supply, sales ledger, taxable value and tax totals" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">A sales invoice in TallyBook. Tax ledgers and the total appear as you type.</figcaption></figure>
+
+  <h2>Item invoices when you maintain stock</h2>
+  <p>Switch on <b>Maintain inventory</b> in <kbd>F11</kbd> and give each stock item its <b>HSN/SAC</b> and <b>GST rate</b> in Stock Item Creation. Now <kbd>F8</kbd> opens an item invoice: Party, Place of supply and Sales ledger at the top, then <b>Name of Item</b>, Godown (when you have more than one), <b>Quantity</b> and <b>Rate</b> on each line. GST is worked out from each item's rate, and the HSN codes feed the HSN summary in GSTR-1. <kbd>Ctrl</kbd>+<kbd>H</kbd> (switch to voucher view) is only for accounting invoices.</p>
+
+  <h2>Print or send it</h2>
+  <p>After saving, open the invoice from the Day Book and press <kbd>Ctrl</kbd>+<kbd>P</kbd> to print, or <kbd>Alt</kbd>+<kbd>P</kbd> for printer settings, including <b>Save as PDF</b>. <kbd>Ctrl</kbd>+<kbd>M</kbd> e-mails it and <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>W</kbd> shares it on WhatsApp.</p>
+  <div class="warn">Not connected in voucher entry yet: price-list rates, batch allocation and foreign-currency amounts. Enter the rate yourself and keep batch details in your notes for now.</div>
+
+<h2>Frequently asked questions</h2><h3>Do I need to create CGST, SGST and IGST ledgers in TallyBook?</h3><p>No. TallyBook creates the output and input tax ledgers for each rate the first time you save an invoice at that rate.</p><h3>How does TallyBook decide between IGST and CGST plus SGST?</h3><p>It compares the place of supply with your company's state (taken from your GSTIN or company state). Same state means CGST plus SGST; a different state means IGST.</p><h3>Where do I enter the HSN or SAC code?</h3><p>On the sales ledger for accounting invoices, or on each stock item when inventory is on. GSTR-1 flags supplies with no HSN/SAC.</p><h3>Can I raise a GST invoice to an unregistered customer?</h3><p>Yes. Set the ledger's Registration type to Unregistered/Consumer; the GSTIN field is then hidden. The invoice is counted in the B2C sections of GSTR-1.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/gstr-1-and-gstr-3b-with-tallybook/">GSTR-1 and GSTR-3B</a> · <a href="/blog/e-invoice-and-e-way-bill-in-tallybook/">e-Invoice and e-Way Bill</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>

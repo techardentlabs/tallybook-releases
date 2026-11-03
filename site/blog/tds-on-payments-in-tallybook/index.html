@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TDS on payments in TallyBook: setup, deduction, challans and Form 26Q summary</title>
+<meta name="description" content="Enable TDS, review the nature of payments, mark parties as deductible, let TallyBook deduct TDS during entry, pay it with challan details and review the Form 26Q summary.">
+<link rel="canonical" href="https://tallybook.online/blog/tds-on-payments-in-tallybook/">
+<meta property="og:title" content="TDS on payments in TallyBook: setup, deduction, challans and Form 26Q summary">
+<meta property="og:description" content="Enable TDS, review the nature of payments, mark parties as deductible, let TallyBook deduct TDS during entry, pay it with challan details and review the Form 26Q summary.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/tds-on-payments-in-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/payment-voucher.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TDS on payments in TallyBook: setup, deduction, challans and Form 26Q summary">
+<meta name="twitter:description" content="Enable TDS, review the nature of payments, mark parties as deductible, let TallyBook deduct TDS during entry, pay it with challan details and review the Form 26Q summary.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/payment-voucher.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "TDS on payments in TallyBook: setup, deduction, challans and Form 26Q summary", "description": "Enable TDS, review the nature of payments, mark parties as deductible, let TallyBook deduct TDS during entry, pay it with challan details and review the Form 26Q summary.", "image": "https://tallybook.online/assets/shots/payment-voucher.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/tds-on-payments-in-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "TDS on payments in TallyBook: setup, deduction, challans and Form 26Q summary", "item": "https://tallybook.online/blog/tds-on-payments-in-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are the TDS rates in TallyBook up to date?", "acceptedAnswer": {"@type": "Answer", "text": "They are starting defaults. Review each nature of payment against current rules on incometax.gov.in or with your CA and edit the rates and thresholds before use."}}, {"@type": "Question", "name": "Which vouchers trigger TDS?", "acceptedAnswer": {"@type": "Answer", "text": "New Payment, Purchase and Journal vouchers that include a party marked Is TDS deductible, when TDS is enabled in F11."}}, {"@type": "Question", "name": "What if the party has a lower deduction certificate?", "acceptedAnswer": {"@type": "Answer", "text": "Alter the party ledger, press F7 and set Deduct TDS at lower/zero rate with the certificate rate and number."}}, {"@type": "Question", "name": "Can TallyBook file my TDS return?", "acceptedAnswer": {"@type": "Answer", "text": "No. It gives a Form 26Q summary and CSV export to help you or your CA prepare the return in the official utility."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Deduct and pay TDS in TallyBook", "description": "Enable TDS, review the nature of payments, mark parties as deductible, let TallyBook deduct TDS during entry, pay it with challan details and review the Form 26Q summary.", "step": [{"@type": "HowToStep", "position": 1, "name": "Enable TDS", "text": "Press F11 and set Enable Tax Deducted at Source (TDS) to Yes."}, {"@type": "HowToStep", "position": 2, "name": "Review nature of payments", "text": "Create → TDS Nature of Payments; check section, rates and threshold for each nature you use."}, {"@type": "HowToStep", "position": 3, "name": "Set up the party", "text": "Set Is TDS deductible to Yes on the party ledger, then alter it and press F7 to set deductee type and default nature."}, {"@type": "HowToStep", "position": 4, "name": "Deduct during entry", "text": "Enter the Payment, Purchase or Journal and press Ctrl+A; confirm the nature in TDS Details and accept."}, {"@type": "HowToStep", "position": 5, "name": "Pay the TDS", "text": "Statutory Reports → TDS Payment, select deductions with Space, press Ctrl+A and enter the challan details."}, {"@type": "HowToStep", "position": 6, "name": "Review Form 26Q", "text": "Statutory Reports → Form 26Q to check deductions, PAN and challans for the quarter."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · TDS</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>TDS on payments in TallyBook: setup, deduction, challans and Form 26Q summary</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 4 min read</div>
+  <div class="note"><b>Quick answer:</b> Enable TDS in <kbd>F11</kbd>, review the <b>TDS Nature of Payments</b> list, and mark the party ledger "Is TDS deductible" with its deductee type and default nature (<kbd>F7</kbd> in ledger alteration). When you save a Payment, Purchase or Journal to that party, TallyBook opens <b>TDS Details</b>, works out the deduction and posts it to a TDS ledger.</div>
+
+  <p>TDS means you pay the party a little less than the bill and deposit the difference with the government in their name. The bookkeeping has three parts: deduct at the right rate, deposit it with a challan, and report it every quarter. TallyBook helps with all three inside your normal vouchers.</p>
+  <figure style="margin:24px 0"><svg role="img" aria-label="Set up nature and party, deduct during voucher entry, track outstandings, pay with challan, reconcile challan, review Form 26Q" viewBox="0 0 640 412" width="640" height="412" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>TDS from bill to return</title><rect x="0" y="0" width="640" height="412" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320.0" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">TDS from bill to return</text><rect x="40" y="50" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="75.0" r="15" fill="#2a62ad"/><text x="70" y="80.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">1</text><text x="98" y="80.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Set up nature of payment and party (F11, F7)</text><path d="M320.0 102 L320.0 118" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 112 L320.0 119 L326.0 112" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="122" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="147.0" r="15" fill="#2a62ad"/><text x="70" y="152.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">2</text><text x="98" y="152.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Deduct during Payment / Purchase / Journal entry</text><path d="M320.0 174 L320.0 190" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 184 L320.0 191 L326.0 184" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="194" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="219.0" r="15" fill="#2a62ad"/><text x="70" y="224.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">3</text><text x="98" y="224.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">TDS Outstandings: what you still owe</text><path d="M320.0 246 L320.0 262" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 256 L320.0 263 L326.0 256" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="266" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="291.0" r="15" fill="#2a62ad"/><text x="70" y="296.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">4</text><text x="98" y="296.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">TDS Payment: pay with challan details</text><path d="M320.0 318 L320.0 334" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 328 L320.0 335 L326.0 328" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="338" width="560" height="50" rx="8" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="363.0" r="15" fill="#2a62ad"/><text x="70" y="368.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">5</text><text x="98" y="368.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Challan Reconciliation and Form 26Q summary</text></svg></figure>
+
+  <h2>1. Turn TDS on and review the natures</h2>
+  <p>Press <kbd>F11</kbd> and set <b>Enable Tax Deducted at Source (TDS)</b> to Yes. Then Gateway → Create → <b>TDS Nature of Payments</b>. TallyBook starts you with common natures:</p>
+  <table>
+    <tr><th>Nature of payment</th><th>Section code as seeded</th></tr>
+    <tr><td>Payments to Contractors</td><td>194C</td></tr>
+    <tr><td>Commission or Brokerage</td><td>194H</td></tr>
+    <tr><td>Rent of Land, Building or Furniture; Rent of Plant &amp; Machinery</td><td>194I</td></tr>
+    <tr><td>Fees for Professional Services; Fees for Technical Services</td><td>194J</td></tr>
+    <tr><td>Interest from an Indian company</td><td>194A</td></tr>
+    <tr><td>Purchase of Goods</td><td>194Q</td></tr>
+  </table>
+  <p>Each nature holds a rate for individuals/HUF and for others, with and without PAN, and a <b>Threshold/exemption limit</b>. These are default values to review, not advice. Rates, thresholds and even section numbering change through Finance Acts and the new Income-tax Act, so check each nature against <a href="https://www.incometax.gov.in/">incometax.gov.in</a> or with your CA and edit it before your first deduction.</p>
+
+  <h2>2. Set up the party</h2>
+  <ol class="steps">
+    <li>On the party's ledger (Sundry Creditors, for example) set <b>Is TDS deductible</b> to Yes and fill <b>PAN/IT No.</b>.</li>
+    <li>Save, then open it again (Alter → Ledger) and press <kbd>F7</kbd> for <b>TDS Statutory Details</b>: <b>Deductee type</b>, <b>Default nature of payment</b>, and, if the party has a certificate, <b>Deduct TDS at lower/zero rate</b> with the rate and certificate number.</li>
+  </ol>
+
+  <h2>3. Deduct while entering the bill</h2>
+  <p>Enter a Purchase, Journal or Payment to that party as usual and press <kbd>Ctrl</kbd>+<kbd>A</kbd>. Before saving, TallyBook opens <b>TDS Details</b> with the nature of payment pre-selected. It shows the assessable value, taxable value, TDS rate, section, any surcharge or cess, and the <b>TDS amount</b>. If the party is below the threshold it says so and deducts nothing. Accept with <kbd>Ctrl</kbd>+<kbd>A</kbd>.</p>
+  <p>Example: a professional's bill of ₹50,000 booked as a Journal, with an illustrative rate of 10% set on the nature:</p>
+  <table>
+    <tr><th>Ledger</th><th>Debit</th><th>Credit</th></tr>
+    <tr><td>Professional Fees</td><td>₹50,000</td><td></td></tr>
+    <tr><td>Party (Sundry Creditor)</td><td></td><td>₹45,000</td></tr>
+    <tr><td>TDS duty ledger</td><td></td><td>₹5,000</td></tr>
+  </table>
+  <p>TallyBook reduces the party's credit by the TDS and credits a TDS duty ledger, creating that ledger for you if one does not exist. TDS Details opens only when you create a voucher, not when you alter an old one, so check the figures before saving.</p>
+  <figure style="margin:24px 0"><img src="/assets/shots/payment-voucher.png" alt="TallyBook Payment voucher where TDS Details opens on saving" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">TDS is worked out when you save the voucher for a TDS-deductible party.</figcaption></figure>
+
+  <h2>4. Pay, reconcile and report</h2>
+  <p>Display More Reports → <b>Statutory Reports</b> → TDS Reports:</p>
+  <ul>
+    <li><b>TDS Outstandings</b>: what has been deducted but not yet paid. <kbd>Alt</kbd>+<kbd>E</kbd> exports CSV.</li>
+    <li><b>TDS Payment</b>: lists pending deductions with their due date. Press <kbd>Space</kbd> on each one you are paying, then <kbd>Ctrl</kbd>+<kbd>A</kbd> (Pay). Enter Date, Bank Name, Cheque/DD No., BSR Code, Challan No., Challan Date and Branch. TallyBook creates the payment voucher.</li>
+    <li><b>Challan Reconciliation</b>: <kbd>F8</kbd> toggles pending and all; <kbd>Alt</kbd>+<kbd>R</kbd> records the BSR code, challan number and date once you have the challan.</li>
+    <li><b>Form 26Q</b>: every deduction for the period with deductee, PAN (PANNOTAVBL when missing), section, amount paid, rate, tax, amount deposited and challan details. <kbd>Alt</kbd>+<kbd>E</kbd> exports CSV.</li>
+  </ul>
+  <div class="warn">Form 26Q in TallyBook is a working summary, not the return file. Prepare and validate the quarterly statement with the official utility or through your CA. The screen for your own TAN and deductor details is not on a menu yet, so the TAN in the report header may be blank. TCS works the same way when enabled in F11.</div>
+
+<h2>Frequently asked questions</h2><h3>Are the TDS rates in TallyBook up to date?</h3><p>They are starting defaults. Review each nature of payment against current rules on incometax.gov.in or with your CA and edit the rates and thresholds before use.</p><h3>Which vouchers trigger TDS?</h3><p>New Payment, Purchase and Journal vouchers that include a party marked Is TDS deductible, when TDS is enabled in F11.</p><h3>What if the party has a lower deduction certificate?</h3><p>Alter the party ledger, press F7 and set Deduct TDS at lower/zero rate with the certificate rate and number.</p><h3>Can TallyBook file my TDS return?</h3><p>No. It gives a Form 26Q summary and CSV export to help you or your CA prepare the return in the official utility.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/payroll-pf-esi-pt-in-tallybook/">Payroll, PF and ESI</a> · <a href="/blog/bank-reconciliation-in-tallybook/">Bank reconciliation</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

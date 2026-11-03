@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interest on outstanding bills: TallyBook guide</title>
+<meta name="description" content="Charge interest on late payments: activate interest on a party ledger, set rate, style and balances, then read Group and Ledger Interest Calculation reports.">
+<link rel="canonical" href="https://tallybook.online/blog/interest-calculation-on-outstanding-bills/">
+<meta property="og:title" content="Interest calculation on outstanding bills in TallyBook">
+<meta property="og:description" content="Charge interest on late payments: activate interest on a party ledger, set rate, style and balances, then read Group and Ledger Interest Calculation reports.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/interest-calculation-on-outstanding-bills/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/ledger-creation.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Interest calculation on outstanding bills in TallyBook", "description": "Charge interest on late payments: activate interest on a party ledger, set rate, style and balances, then read Group and Ledger Interest Calculation reports.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/ledger-creation.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/interest-calculation-on-outstanding-bills/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Interest calculation on outstanding bills in TallyBook", "item": "https://tallybook.online/blog/interest-calculation-on-outstanding-bills/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does TallyBook post the interest entry automatically?", "acceptedAnswer": {"@type": "Answer", "text": "No. The interest reports calculate the amount. To charge it, record a voucher yourself, usually a Debit Note or Journal to the party, as your CA advises."}}, {"@type": "Question", "name": "What is the difference between Calendar Year and 365-day Year?", "acceptedAnswer": {"@type": "Answer", "text": "Both treat the rate as yearly. Calendar Year divides by 366 days in a leap year and 365 otherwise; 365-day Year always divides by 365. Calendar Month treats the rate as a monthly rate."}}, {"@type": "Question", "name": "How do I give customers 30 days before interest starts?", "acceptedAnswer": {"@type": "Answer", "text": "Use the advanced parameters (F12 in the Interest Parameters screen), set Applicability to Past Due Date and Days to 30. Interest then starts 30 days after the due date, or after the bill date when a bill has no due date."}}, {"@type": "Question", "name": "Is GST payable on interest charged for late payment?", "acceptedAnswer": {"@type": "Answer", "text": "That depends on the facts and current rules. Confirm with your CA or on gst.gov.in before you raise the interest entry."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Activate interest calculation on a party ledger in TallyBook", "step": [{"@type": "HowToStep", "position": 1, "name": "Go to Gateway of Tally › Alter › Ledger and open the customer or supplier (a led", "text": "Go to Gateway of Tally › Alter › Ledger and open the customer or supplier (a ledger under Sundry Debtors or Sundry Creditors)."}, {"@type": "HowToStep", "position": 2, "name": "Set Activate interest calculation to Yes and accept with Ctrl + A .", "text": "Set Activate interest calculation to Yes and accept with Ctrl + A ."}, {"@type": "HowToStep", "position": 3, "name": "Open the same ledger again in Alter", "text": "Open the same ledger again in Alter. A new button, F6: Interest Parameters , now appears on the right. Press F6 ."}, {"@type": "HowToStep", "position": 4, "name": "Enter the parameters described below and press Ctrl + A ", "text": "Enter the parameters described below and press Ctrl + A . You see “Interest Parameters saved”."}]}</script>
+</head>
+<body>
+@@HEADER:Blog · How-to@@
+<section><div class="wrap narrow"><article>
+  <h1>Interest calculation on outstanding bills in TallyBook</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> Set Activate interest calculation to Yes on a customer or supplier ledger, save it, then alter the ledger and press F6 to enter the rate, interest style and which balances attract interest. TallyBook then works out interest day by day in Display More Reports › Statements of Accounts › Ledger Interest Calculation and Group Interest Calculation.</div>
+
+<p>Many traders and distributors charge interest when customers pay late, and many suppliers charge it to you. Working it out by hand for every bill is tedious and easy to get wrong. TallyBook can calculate interest on a ledger's running balance or bill by bill, with the same parameters TallyPrime users know.</p>
+
+  <h2>How interest is calculated</h2>
+  <p>The idea is simple: <b>amount × rate × days ÷ days in the year</b>. If Ravi Enterprises owes ₹1,00,000 for 45 days at an example rate of 12% a year:</p>
+  <p style="text-align:center"><b>1,00,000 × 12% × 45 ÷ 365 = ₹1,479.45</b></p>
+  <p>When the balance changes, for example after a part payment, the calculation splits into periods and adds them up. That is exactly what the Ledger Interest Calculation report shows.</p>
+
+  <svg role="img" aria-label="Step chart: 1 lakh outstanding for 30 days earns 986 rupees 30 paise interest; after a 60,000 payment, 40,000 outstanding for the next 30 days earns 394 rupees 52 paise; total 1,380 rupees 82 paise at 12 percent a year" viewBox="0 0 720 270" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>Interest on a balance that changes (12% a year, example)</title>
+    <rect width="720" height="270" fill="white"/>
+    <line x1="60" y1="220" x2="690" y2="220" stroke="#10212b" stroke-width="1.5"/>
+    <line x1="60" y1="30" x2="60" y2="220" stroke="#10212b" stroke-width="1.5"/>
+    <text x="52" y="64" fill="#10212b" font-size="12" text-anchor="end">1,00,000</text>
+    <text x="52" y="148" fill="#10212b" font-size="12" text-anchor="end">40,000</text>
+    <rect x="60" y="60" width="300" height="160" fill="#2a62ad"/>
+    <rect x="360" y="144" width="300" height="76" fill="#8bb9e0"/>
+    <text x="210" y="120" fill="white" font-size="15" text-anchor="middle">Days 1–30</text>
+    <text x="210" y="146" fill="#ffc32b" font-size="17" font-weight="bold" text-anchor="middle">₹986.30</text>
+    <text x="510" y="176" fill="#10212b" font-size="15" text-anchor="middle">Days 31–60</text>
+    <text x="510" y="200" fill="#10212b" font-size="17" font-weight="bold" text-anchor="middle">₹394.52</text>
+    <path d="M360 40 V215" stroke="#ffc32b" stroke-width="3" stroke-dasharray="6 4"/>
+    <text x="368" y="44" fill="#10212b" font-size="13">₹60,000 received</text>
+    <text x="60" y="244" fill="#10212b" font-size="12">Bill date</text>
+    <text x="660" y="244" fill="#10212b" font-size="12" text-anchor="end">Day 60</text>
+    <rect x="470" y="40" width="210" height="34" rx="17" fill="#ffc32b"/>
+    <text x="575" y="62" fill="#10212b" font-size="15" font-weight="bold" text-anchor="middle">Total ₹1,380.82</text>
+  </svg>
+
+  <h2>Step 1: activate interest on the ledger</h2>
+  <ol class="steps">
+    <li>Go to Gateway of Tally › <b>Alter</b> › <b>Ledger</b> and open the customer or supplier (a ledger under Sundry Debtors or Sundry Creditors).</li>
+    <li>Set <b>Activate interest calculation</b> to Yes and accept with <kbd>Ctrl</kbd>+<kbd>A</kbd>.</li>
+    <li>Open the same ledger again in Alter. A new button, <b>F6: Interest Parameters</b>, now appears on the right. Press <kbd>F6</kbd>.</li>
+    <li>Enter the parameters described below and press <kbd>Ctrl</kbd>+<kbd>A</kbd>. You see “Interest Parameters saved”.</li>
+  </ol>
+  <figure style="margin:22px 0"><img src="/assets/shots/ledger-creation.png" alt="TallyBook ledger alteration form for a customer with the Activate interest calculation field" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The party ledger form. After “Activate interest calculation” is saved as Yes, F6 opens Interest Parameters.</figcaption></figure>
+
+  <h2>Step 2: choose the parameters</h2>
+  <table>
+    <tr><th>Field</th><th>Choices and meaning</th></tr>
+    <tr><td>Calculate Interest Transaction-by-Transaction</td><td>Shown for bill-by-bill ledgers. Yes calculates on each bill separately; No calculates on the running ledger balance.</td></tr>
+    <tr><td>Override Parameters for each Transaction</td><td>Shown when the previous field is Yes; allows different terms per bill.</td></tr>
+    <tr><td>Include transaction date: for amounts added / deducted</td><td>Whether the day of the invoice or payment itself counts as a day of interest.</td></tr>
+    <tr><td>Rate (%)</td><td>The interest rate you agreed with the party.</td></tr>
+    <tr><td>Interest Style</td><td><b>Calendar Year</b> (yearly rate, 366 days in a leap year), <b>365-day Year</b> (yearly rate, always 365 days) or <b>Calendar Month</b> (monthly rate).</td></tr>
+    <tr><td>Interest Balances</td><td><b>All Balances</b>, <b>Debit Balances Only</b> (customers who owe you) or <b>Credit Balances Only</b> (what you owe a supplier).</td></tr>
+  </table>
+  <h3>Advanced parameters (F12)</h3>
+  <p>Press <kbd>F12</kbd> inside Interest Parameters to switch to advanced mode. You then enter one or more slabs, each with its own rate, style and balances, plus:</p>
+  <ul>
+    <li><b>Applicability</b>: Always, or Past Due Date with a number of <b>Days</b>, which gives a grace period.</li>
+    <li><b>Calculate From</b>: Due Date of Invoice/Ref, or Date of Invoice/Ref.</li>
+    <li><b>Rounding</b>: Not Applicable, Normal, Upward or Downward.</li>
+  </ul>
+  <div class="warn">Bills entered in this TallyBook preview do not yet store a due date (see <a href="/blog/bill-wise-outstanding-receivables-payables/">bill-wise details</a>). When a bill has no due date, interest counts from the bill date. To allow a credit period, use Past Due Date with the number of days, for example 30.</div>
+
+  <h2>Step 3: read the interest reports</h2>
+  <p>Both reports are in Gateway › <b>Display More Reports</b> › <b>Statements of Accounts</b> › <b>Interest Calculations</b>.</p>
+  <h3>Ledger Interest Calculation</h3>
+  <p>The list shows only ledgers with interest parameters saved. Pick one to see each period of the balance with its <b>From</b> and <b>To</b> dates, <b>Total Days</b>, <b>Rate %</b> and <b>Interest</b>, and a total at the bottom.</p>
+  <ul>
+    <li><kbd>Ctrl</kbd>+<kbd>H</kbd> (Change View) switches to the bill-wise view: date, reference, pending amount, due date, days, rate and interest for each bill.</li>
+    <li>In the bill-wise view, <kbd>Alt</kbd>+<kbd>F5</kbd> shows the detailed split of each bill into periods.</li>
+    <li><kbd>Alt</kbd>+<kbd>F2</kbd> changes the period; <kbd>Ctrl</kbd>+<kbd>F</kbd> filters the rows.</li>
+  </ul>
+  <h3>Group Interest Calculation</h3>
+  <p>Choose a group, such as Sundry Debtors, to see every ledger's closing balance and interest in one place, with a grand total. Press <kbd>Enter</kbd> on a ledger to open its Ledger Interest Calculation, or on a sub-group to go one level down. <kbd>F12</kbd> can hide ledgers with no interest.</p>
+
+  <h2>Step 4: charge the interest</h2>
+  <p>TallyBook calculates interest; it does not post it for you. When you decide to charge a customer, record a voucher for the amount shown, usually a Debit Note or a Journal (Dr customer, Cr Interest Received under Indirect Incomes); see <a href="/blog/voucher-types-explained/">voucher types</a>. Confirm the tax treatment with your CA first.</p>
+  <h2>Tips</h2>
+  <ul>
+    <li>Put your interest terms on your invoices so customers are not surprised.</li>
+    <li>Check the bill-wise view before sending a demand: a receipt left On Account still counts as unpaid in bill-wise interest.</li>
+    <li>Export the report with <kbd>Ctrl</kbd>+<kbd>E</kbd> to share the working with the party. See <a href="/blog/print-email-whatsapp-reports/">printing and sharing reports</a>.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Does TallyBook post the interest entry automatically?</h3>
+  <p>No. The interest reports calculate the amount. To charge it, record a voucher yourself, usually a Debit Note or Journal to the party, as your CA advises.</p>
+  <h3>What is the difference between Calendar Year and 365-day Year?</h3>
+  <p>Both treat the rate as yearly. Calendar Year divides by 366 days in a leap year and 365 otherwise; 365-day Year always divides by 365. Calendar Month treats the rate as a monthly rate.</p>
+  <h3>How do I give customers 30 days before interest starts?</h3>
+  <p>Use the advanced parameters (F12 in the Interest Parameters screen), set Applicability to Past Due Date and Days to 30. Interest then starts 30 days after the due date, or after the bill date when a bill has no due date.</p>
+  <h3>Is GST payable on interest charged for late payment?</h3>
+  <p>That depends on the facts and current rules. Confirm with your CA or on gst.gov.in before you raise the interest entry.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>
