@@ -4,7 +4,11 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT / 'src', ROOT / 'site'
 HEADER = (SRC / '_header.html').read_text()
 FOOTER = (SRC / '_footer.html').read_text()
-POSTS = json.loads((SRC / 'blog' / 'posts.json').read_text())
+POSTS = []
+for f in sorted((SRC / 'blog').glob('posts*.json')):
+    POSTS += json.loads(f.read_text())
+_seen = set()
+POSTS = [p for p in POSTS if not (p['slug'] in _seen or _seen.add(p['slug']))]
 BASE = 'https://tallybook.online'
 
 
@@ -33,7 +37,9 @@ def blog_index():
 
 
 def sitemap(pages):
-    urls = ''.join(f'<url><loc>{BASE}{p}</loc></url>' for p in pages)
+    import datetime
+    today = datetime.date.today().isoformat()
+    urls = ''.join(f'<url><loc>{BASE}{p}</loc><lastmod>{today}</lastmod></url>' for p in pages)
     return f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n'
 
 

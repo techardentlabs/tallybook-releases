@@ -1,0 +1,23 @@
+[
+ {
+  "slug": "double-entry-accounting-basics",
+  "title": "Double-entry accounting basics: debit, credit and the golden rules",
+  "description": "Debit, credit, the three golden rules and five worked entries, with how TallyBook keeps every voucher balanced.",
+  "date": "2026-11-03",
+  "tag": "Accounting basics"
+ },
+ {
+  "slug": "groups-and-ledgers-explained",
+  "title": "Groups and ledgers explained: the 28 predefined groups and which one to choose",
+  "description": "The 28 predefined groups, primary vs sub-groups, a lookup table for common ledgers, and how to create one in TallyBook.",
+  "date": "2026-11-03",
+  "tag": "Accounting basics"
+ },
+ {
+  "slug": "voucher-types-explained",
+  "title": "Voucher types explained: Contra, Payment, Receipt, Journal, Sales, Purchase, Credit and Debit Note",
+  "description": "The eight accounting vouchers, when to use each one, the key that opens it and a worked example for every type.",
+  "date": "2026-11-03",
+  "tag": "Accounting basics"
+ }
+]

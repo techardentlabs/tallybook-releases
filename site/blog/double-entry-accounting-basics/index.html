@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Double-entry accounting basics: debit, credit, rules</title>
+<meta name="description" content="Learn debit and credit, the three golden rules of accounting and five worked entries, then see how TallyBook refuses to save any voucher that does not balance.">
+<link rel="canonical" href="https://tallybook.online/blog/double-entry-accounting-basics/">
+<meta property="og:title" content="Double-entry accounting basics: debit, credit and the golden rules">
+<meta property="og:description" content="Learn debit and credit, the three golden rules of accounting and five worked entries, then see how TallyBook refuses to save any voucher that does not balance.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/double-entry-accounting-basics/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/journal-voucher.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Double-entry accounting basics: debit, credit and the golden rules", "description": "Learn debit and credit, the three golden rules of accounting and five worked entries, then see how TallyBook refuses to save any voucher that does not balance.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/journal-voucher.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/double-entry-accounting-basics/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Double-entry accounting basics: debit, credit and the golden rules", "item": "https://tallybook.online/blog/double-entry-accounting-basics/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is debit always good and credit always bad?", "acceptedAnswer": {"@type": "Answer", "text": "No. Debit and credit are only the two sides of an account. A debit increases assets and expenses; a credit increases liabilities, capital and income. A credit to your Sales account is good news."}}, {"@type": "Question", "name": "Can a voucher have more than two ledgers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A single voucher can debit one ledger and credit three, or any mix, as long as the debit total equals the credit total. A sales invoice with GST is a common example."}}, {"@type": "Question", "name": "What happens if my entry does not balance in TallyBook?", "acceptedAnswer": {"@type": "Answer", "text": "The Journal screen shows the difference in red while you type. If you still try to accept, TallyBook shows the message “Total debit must equal total credit” and does not save the voucher."}}, {"@type": "Question", "name": "Do I need to learn the golden rules if the software does the posting?", "acceptedAnswer": {"@type": "Answer", "text": "For invoices and simple payments the software picks the sides for you. For journals, adjustments and year-end entries you still decide the sides, so the rules are worth knowing."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Record a rent payment as a balanced voucher in TallyBook", "step": [{"@type": "HowToStep", "position": 1, "name": "From the Gateway of Tally, press F5 to open a Payment voucher.", "text": "From the Gateway of Tally, press F5 to open a Payment voucher."}, {"@type": "HowToStep", "position": 2, "name": "In Account , choose your bank ledger", "text": "In Account , choose your bank ledger. This is the credit side."}, {"@type": "HowToStep", "position": 3, "name": "Under Particulars, choose the Rent ledger", "text": "Under Particulars, choose the Rent ledger. If it does not exist, press Alt + C in the list to create it under Indirect Expenses."}, {"@type": "HowToStep", "position": 4, "name": "Type 8,000 as the amount and add a narration such as “Shop rent for October”.", "text": "Type 8,000 as the amount and add a narration such as “Shop rent for October”."}, {"@type": "HowToStep", "position": 5, "name": "Press Ctrl + A to accept", "text": "Press Ctrl + A to accept. Rent is debited and the bank is credited with ₹8,000 each."}]}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · Accounting basics</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Double-entry accounting basics: debit, credit and the golden rules</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 6 min read</div>
+  <div class="note"><b>Quick answer:</b> Double-entry accounting records every transaction in at least two accounts: one is debited and another is credited with the same total. The golden rules tell you which side each account goes on. TallyBook will not save a voucher until total debit equals total credit.</div>
+
+<p>Every accounting package used in India, from TallyPrime to TallyBook, is built on one idea that is more than five hundred years old: <b>double entry</b>. Once you understand it, ledgers, vouchers, the Trial Balance and the Balance Sheet all start to make sense. This guide explains it in plain words, with worked examples you can type into TallyBook.</p>
+
+  <h2>The idea in one line</h2>
+  <p>Every transaction has two sides. When you pay ₹8,000 rent from your bank, the rent account goes up and your bank balance goes down by the same ₹8,000. Accounting records both sides: one account is <b>debited</b> (Dr) and the other is <b>credited</b> (Cr). Because both sides are always equal, the books as a whole always balance.</p>
+
+  <svg role="img" aria-label="Diagram: a rent payment of 8,000 rupees debits Rent and credits Bank, and the two totals are equal" viewBox="0 0 720 250" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>One transaction, two equal sides</title>
+    <rect x="0" y="0" width="720" height="250" fill="white"/>
+    <rect x="250" y="14" width="220" height="46" rx="8" fill="#10212b"/>
+    <text x="360" y="43" fill="white" font-size="16" text-anchor="middle">Pay rent ₹8,000 by bank</text>
+    <line x1="320" y1="60" x2="170" y2="104" stroke="#2a62ad" stroke-width="3"/>
+    <line x1="400" y1="60" x2="550" y2="104" stroke="#2a62ad" stroke-width="3"/>
+    <rect x="40" y="104" width="260" height="96" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="2"/>
+    <text x="170" y="134" fill="#10212b" font-size="15" font-weight="bold" text-anchor="middle">DEBIT (Dr)</text>
+    <text x="170" y="160" fill="#10212b" font-size="15" text-anchor="middle">Rent (expense goes up)</text>
+    <text x="170" y="186" fill="#2a62ad" font-size="18" font-weight="bold" text-anchor="middle">₹8,000</text>
+    <rect x="420" y="104" width="260" height="96" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="2"/>
+    <text x="550" y="134" fill="#10212b" font-size="15" font-weight="bold" text-anchor="middle">CREDIT (Cr)</text>
+    <text x="550" y="160" fill="#10212b" font-size="15" text-anchor="middle">Bank (asset goes down)</text>
+    <text x="550" y="186" fill="#2a62ad" font-size="18" font-weight="bold" text-anchor="middle">₹8,000</text>
+    <rect x="300" y="138" width="120" height="30" rx="15" fill="#ffc32b"/>
+    <text x="360" y="158" fill="#10212b" font-size="15" font-weight="bold" text-anchor="middle">Dr = Cr</text>
+    <text x="360" y="232" fill="#10212b" font-size="14" text-anchor="middle">TallyBook saves the voucher only when both totals match.</text>
+  </svg>
+
+  <h2>Debit and credit are sides, not good or bad</h2>
+  <p>Many people think “credit” means money coming in. In accounting it simply means the right-hand side of an account. What a debit or credit does depends on the type of account:</p>
+  <table>
+    <tr><th>Type of account</th><th>A debit…</th><th>A credit…</th><th>Examples in TallyBook</th></tr>
+    <tr><td>Assets</td><td>increases it</td><td>decreases it</td><td>Cash, bank, debtors, stock, machinery</td></tr>
+    <tr><td>Expenses</td><td>increases it</td><td>decreases it</td><td>Purchases, rent, salary, electricity</td></tr>
+    <tr><td>Liabilities</td><td>decreases it</td><td>increases it</td><td>Creditors, loans, GST payable</td></tr>
+    <tr><td>Capital</td><td>decreases it</td><td>increases it</td><td>Owner's capital, reserves</td></tr>
+    <tr><td>Income</td><td>decreases it</td><td>increases it</td><td>Sales, commission received, interest received</td></tr>
+  </table>
+
+  <h2>The three golden rules</h2>
+  <p>Indian commerce textbooks teach the traditional golden rules. They classify accounts into three kinds and give one rule for each:</p>
+  <table>
+    <tr><th>Kind of account</th><th>What it covers</th><th>Rule</th></tr>
+    <tr><td><b>Personal</b></td><td>People and organisations: customers, suppliers, banks, the owner</td><td>Debit the receiver, credit the giver</td></tr>
+    <tr><td><b>Real</b></td><td>Things you own: cash, stock, furniture, buildings</td><td>Debit what comes in, credit what goes out</td></tr>
+    <tr><td><b>Nominal</b></td><td>Expenses, losses, incomes and gains</td><td>Debit all expenses and losses, credit all incomes and gains</td></tr>
+  </table>
+  <p>The table in the previous section (the “modern” approach) and the golden rules always give the same answer. Use whichever you find easier.</p>
+
+  <h2>Five worked examples</h2>
+  <p>Take a new shop, Mehta Stores. GST is left out here to keep the numbers simple; a GST invoice just adds tax ledgers to the same idea.</p>
+  <table>
+    <tr><th>#</th><th>Transaction</th><th>Debit</th><th>Credit</th><th>Why</th></tr>
+    <tr><td>1</td><td>Owner brings ₹1,00,000 cash into the business</td><td>Cash ₹1,00,000</td><td>Capital ₹1,00,000</td><td>Cash comes in (real); the owner is the giver (personal)</td></tr>
+    <tr><td>2</td><td>Buys goods on credit from Sharma Traders, ₹40,000</td><td>Purchase ₹40,000</td><td>Sharma Traders ₹40,000</td><td>Purchase is an expense; Sharma Traders is the giver</td></tr>
+    <tr><td>3</td><td>Sells goods for cash, ₹25,000</td><td>Cash ₹25,000</td><td>Sales ₹25,000</td><td>Cash comes in; sales is income</td></tr>
+    <tr><td>4</td><td>Pays shop rent by bank, ₹8,000</td><td>Rent ₹8,000</td><td>Bank ₹8,000</td><td>Rent is an expense; money goes out of the bank</td></tr>
+    <tr><td>5</td><td>Pays Sharma Traders by bank, ₹40,000</td><td>Sharma Traders ₹40,000</td><td>Bank ₹40,000</td><td>Sharma Traders receives the money</td></tr>
+  </table>
+  <p>Add up every debit (₹2,13,000) and every credit (₹2,13,000): they match. That equality is exactly what the <a href="/blog/trial-balance-explained/">Trial Balance</a> checks for the whole year.</p>
+
+  <h2>How TallyBook keeps every voucher balanced</h2>
+  <p>In TallyBook you never write a debit or credit on its own. You record a <b>voucher</b>, and every voucher carries both sides. The checks are built into the core of the program, so they apply whether you type an entry, import one from Excel or bring it in from Tally XML:</p>
+  <ul>
+    <li><b>Total debit must equal total credit.</b> If they differ, TallyBook shows the message “Total debit must equal total credit” and does not save.</li>
+    <li><b>At least two ledger entries.</b> A voucher with only one ledger is refused.</li>
+    <li><b>No zero amounts.</b> Each line must carry an amount, stored in whole paise, so rounding cannot leave stray differences.</li>
+    <li><b>The date must fall inside your books period.</b></li>
+    <li><b>Contra vouchers accept only cash and bank ledgers.</b></li>
+  </ul>
+  <p>On the Journal screen (<kbd>F7</kbd>) each line has a Dr or Cr side (type <kbd>D</kbd> or <kbd>C</kbd>), and a red “Difference” line under the entry shows how much is still unbalanced as you type. Payment (<kbd>F5</kbd>), Receipt (<kbd>F6</kbd>) and Contra (<kbd>F4</kbd>) use a simpler layout: you choose the cash or bank <b>Account</b> at the top and list the other ledgers below, and TallyBook fills in the other side for you.</p>
+
+  <figure style="margin:22px 0"><img src="/assets/shots/journal-voucher.png" alt="TallyBook Journal voucher screen with debit and credit lines and the totals shown below the entry" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">A Journal voucher (F7). Each line is marked Dr or Cr, and the voucher is saved with Ctrl+A only when both totals match.</figcaption></figure>
+
+  <h3>Try example 4 yourself</h3>
+  <ol class="steps">
+    <li>From the Gateway of Tally, press <kbd>F5</kbd> to open a Payment voucher.</li>
+    <li>In <b>Account</b>, choose your bank ledger. This is the credit side.</li>
+    <li>Under Particulars, choose the Rent ledger. If it does not exist, press <kbd>Alt</kbd>+<kbd>C</kbd> in the list to create it under Indirect Expenses.</li>
+    <li>Type 8,000 as the amount and add a narration such as “Shop rent for October”.</li>
+    <li>Press <kbd>Ctrl</kbd>+<kbd>A</kbd> to accept. Rent is debited and the bank is credited with ₹8,000 each.</li>
+  </ol>
+
+  <figure style="margin:22px 0"><img src="/assets/shots/payment-voucher.png" alt="TallyBook Payment voucher with a bank account at the top and an expense ledger under Particulars" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The Payment voucher (F5): pick the bank in Account, the expense under Particulars, then accept.</figcaption></figure>
+
+  <p>Next, read <a href="/blog/voucher-types-explained/">which voucher type to use for each transaction</a> and <a href="/blog/groups-and-ledgers-explained/">how groups and ledgers are organised</a>. If you are coming from TallyPrime, the <a href="/blog/tallybook-keyboard-shortcuts/">keyboard shortcuts guide</a> shows that the keys are the same.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Is debit always good and credit always bad?</h3>
+  <p>No. Debit and credit are only the two sides of an account. A debit increases assets and expenses; a credit increases liabilities, capital and income. A credit to your Sales account is good news.</p>
+  <h3>Can a voucher have more than two ledgers?</h3>
+  <p>Yes. A single voucher can debit one ledger and credit three, or any mix, as long as the debit total equals the credit total. A sales invoice with GST is a common example.</p>
+  <h3>What happens if my entry does not balance in TallyBook?</h3>
+  <p>The Journal screen shows the difference in red while you type. If you still try to accept, TallyBook shows the message “Total debit must equal total credit” and does not save the voucher.</p>
+  <h3>Do I need to learn the golden rules if the software does the posting?</h3>
+  <p>For invoices and simple payments the software picks the sides for you. For journals, adjustments and year-end entries you still decide the sides, so the rules are worth knowing.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voucher types explained: when to use each, with keys</title>
+<meta name="description" content="When to use Contra, Payment, Receipt, Journal, Sales, Purchase, Credit Note and Debit Note vouchers, with the TallyBook key for each and a worked example.">
+<link rel="canonical" href="https://tallybook.online/blog/voucher-types-explained/">
+<meta property="og:title" content="Voucher types explained: Contra, Payment, Receipt, Journal, Sales, Purchase, Credit and Debit Note">
+<meta property="og:description" content="When to use Contra, Payment, Receipt, Journal, Sales, Purchase, Credit Note and Debit Note vouchers, with the TallyBook key for each and a worked example.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/voucher-types-explained/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/sales-invoice.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Voucher types explained: Contra, Payment, Receipt, Journal, Sales, Purchase, Credit and Debit Note", "description": "When to use Contra, Payment, Receipt, Journal, Sales, Purchase, Credit Note and Debit Note vouchers, with the TallyBook key for each and a worked example.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/sales-invoice.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/voucher-types-explained/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Voucher types explained: Contra, Payment, Receipt, Journal, Sales, Purchase, Credit and Debit Note", "item": "https://tallybook.online/blog/voucher-types-explained/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I record a cash sale as a Receipt instead of a Sales voucher?", "acceptedAnswer": {"@type": "Answer", "text": "You can, but it is better to use a Sales voucher with Cash as the party. Sales vouchers feed the Sales Register and, with GST enabled, GSTR-1. A Receipt does neither."}}, {"@type": "Question", "name": "Why does my Contra voucher refuse a ledger?", "acceptedAnswer": {"@type": "Answer", "text": "Contra vouchers accept only cash and bank ledgers. If one side is anything else, such as a supplier or an expense, use Payment, Receipt or Journal."}}, {"@type": "Question", "name": "Can I create my own voucher types, such as a separate Sales series for each branch?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Go to Gateway of Tally › Create › Voucher Type, base it on one of the eight predefined types and choose the numbering method, prefix and suffix. Voucher classes are not connected to voucher entry yet in this preview."}}, {"@type": "Question", "name": "Where do I see all the vouchers I entered today?", "acceptedAnswer": {"@type": "Answer", "text": "Open the Day Book from the Gateway (K). Press Enter on any line to open that voucher, and use Alt+F2 to change the period."}}]}</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · Accounting basics</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Voucher types explained: Contra, Payment, Receipt, Journal, Sales, Purchase, Credit and Debit Note</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> Use Contra (F4) for cash-bank transfers, Payment (F5) for money going out, Receipt (F6) for money coming in, Sales (F8) and Purchase (F9) for bills, Credit Note (Alt+F6) for sales returns, Debit Note (Alt+F5) for purchase returns, and Journal (F7) for adjustments that involve no cash or bank.</div>
+
+<p>A <b>voucher</b> is the document you use to record a transaction. Each voucher type exists for a kind of transaction, and choosing the right one keeps your registers, GST reports and bank books correct. TallyBook has the same eight accounting voucher types as TallyPrime, opened with the same keys.</p>
+
+  <h2>The eight accounting vouchers at a glance</h2>
+  <table>
+    <tr><th>Key</th><th>Voucher</th><th>Use it when…</th><th>Typical entry</th></tr>
+    <tr><td><kbd>F4</kbd></td><td>Contra</td><td>Money moves between cash and bank, or between two banks</td><td>Dr Bank, Cr Cash (cash deposited)</td></tr>
+    <tr><td><kbd>F5</kbd></td><td>Payment</td><td>Money leaves the business by cash or bank</td><td>Dr Rent, Cr Bank</td></tr>
+    <tr><td><kbd>F6</kbd></td><td>Receipt</td><td>Money comes into the business</td><td>Dr Bank, Cr Customer</td></tr>
+    <tr><td><kbd>F7</kbd></td><td>Journal</td><td>Adjustments with no cash or bank involved</td><td>Dr Depreciation, Cr Furniture</td></tr>
+    <tr><td><kbd>F8</kbd></td><td>Sales</td><td>You sell goods or services (cash or credit)</td><td>Dr Customer, Cr Sales, Cr GST</td></tr>
+    <tr><td><kbd>F9</kbd></td><td>Purchase</td><td>You buy goods or services for the business</td><td>Dr Purchase, Dr GST, Cr Supplier</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F6</kbd></td><td>Credit Note</td><td>A customer returns goods or you reduce what they owe</td><td>Dr Sales, Dr GST, Cr Customer</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F5</kbd></td><td>Debit Note</td><td>You return goods to a supplier or reduce what you owe</td><td>Dr Supplier, Cr Purchase, Cr GST</td></tr>
+  </table>
+  <p>You can press any of these keys from almost anywhere in TallyBook. If you press one while a voucher is already open, TallyBook switches to the new type.</p>
+
+  <svg role="img" aria-label="Decision chart: if only cash and bank ledgers are involved use Contra; if money goes out use Payment; if money comes in use Receipt; if it is a bill use Sales or Purchase; if it is a return use Credit Note or Debit Note; otherwise use Journal" viewBox="0 0 720 330" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>Which voucher should I use?</title>
+    <rect width="720" height="330" fill="white"/>
+    <rect x="230" y="10" width="260" height="40" rx="20" fill="#10212b"/>
+    <text x="360" y="36" fill="white" font-size="15" text-anchor="middle">Does cash or bank move?</text>
+    <line x1="300" y1="50" x2="180" y2="84" stroke="#2a62ad" stroke-width="2.5"/>
+    <line x1="420" y1="50" x2="540" y2="84" stroke="#2a62ad" stroke-width="2.5"/>
+    <text x="215" y="72" fill="#10212b" font-size="13" font-weight="bold">YES</text>
+    <text x="490" y="72" fill="#10212b" font-size="13" font-weight="bold">NO</text>
+    <rect x="20" y="84" width="320" height="34" rx="6" fill="#dfeefa"/>
+    <text x="180" y="106" fill="#10212b" font-size="14" text-anchor="middle">Which way does the money go?</text>
+    <rect x="380" y="84" width="320" height="34" rx="6" fill="#dfeefa"/>
+    <text x="540" y="106" fill="#10212b" font-size="14" text-anchor="middle">Is it a bill, a return or an adjustment?</text>
+    <g font-size="13" text-anchor="middle">
+      <rect x="20" y="140" width="100" height="70" rx="6" fill="#2a62ad"/>
+      <text x="70" y="166" fill="white">Out</text><text x="70" y="188" fill="#ffc32b" font-weight="bold">Payment F5</text>
+      <rect x="130" y="140" width="100" height="70" rx="6" fill="#2a62ad"/>
+      <text x="180" y="166" fill="white">In</text><text x="180" y="188" fill="#ffc32b" font-weight="bold">Receipt F6</text>
+      <rect x="240" y="140" width="100" height="70" rx="6" fill="#2a62ad"/>
+      <text x="290" y="160" fill="white">Cash ↔ bank</text><text x="290" y="178" fill="white">only</text><text x="290" y="198" fill="#ffc32b" font-weight="bold">Contra F4</text>
+      <rect x="380" y="140" width="100" height="70" rx="6" fill="#2a62ad"/>
+      <text x="430" y="160" fill="white">Bill</text><text x="430" y="180" fill="#ffc32b" font-weight="bold">Sales F8</text><text x="430" y="198" fill="#ffc32b" font-weight="bold">Purchase F9</text>
+      <rect x="490" y="140" width="100" height="70" rx="6" fill="#2a62ad"/>
+      <text x="540" y="160" fill="white">Return</text><text x="540" y="180" fill="#ffc32b" font-weight="bold">Credit Alt+F6</text><text x="540" y="198" fill="#ffc32b" font-weight="bold">Debit Alt+F5</text>
+      <rect x="600" y="140" width="100" height="70" rx="6" fill="#2a62ad"/>
+      <text x="650" y="166" fill="white">Adjustment</text><text x="650" y="188" fill="#ffc32b" font-weight="bold">Journal F7</text>
+    </g>
+    <text x="360" y="250" fill="#10212b" font-size="13" text-anchor="middle">A credit sale or purchase is a bill even though no money moves today.</text>
+    <text x="360" y="272" fill="#10212b" font-size="13" text-anchor="middle">Paying that bill later is a Payment; collecting it is a Receipt.</text>
+  </svg>
+
+  <h2>Each voucher, with an example</h2>
+  <h3>Contra (F4)</h3>
+  <p>You deposit ₹50,000 of shop cash into the bank. Both ledgers are cash or bank, so this is a Contra. TallyBook enforces this: a Contra voucher accepts only cash and bank ledgers. Withdrawing cash for the till and transferring between two bank accounts are Contra entries too.</p>
+  <h3>Payment (F5)</h3>
+  <p>You pay ₹12,000 to a supplier by cheque. Choose the bank in <b>Account</b>, the supplier under Particulars, and type the amount. If the supplier is kept bill-by-bill, TallyBook asks which bill you are paying. For payments by cheque you can press <kbd>Ctrl</kbd>+<kbd>T</kbd> to mark the voucher as post-dated.</p>
+  <h3>Receipt (F6)</h3>
+  <p>A customer pays ₹30,000 into your bank. Choose the bank in Account and the customer under Particulars. Receipt also suits other money coming in, such as a loan received or interest credited by the bank.</p>
+  <h3>Journal (F7)</h3>
+  <p>At year end you charge ₹5,000 depreciation on furniture: Dr Depreciation, Cr Furniture. No cash or bank moves, so Journal is the right voucher. Provisions, write-offs and corrections between two ledgers also go here.</p>
+  <h3>Sales (F8)</h3>
+  <p>You sell goods worth ₹20,000 on credit to Ravi Enterprises. The Sales voucher debits the customer and credits Sales and, if GST is enabled, the output tax ledgers. With GST on, <kbd>Ctrl</kbd>+<kbd>H</kbd> switches between the invoice view and the plain voucher view while creating it. With inventory on, you enter items, quantities and rates on the invoice. See the <a href="/blog/create-gst-invoice-in-tallybook/">GST invoice guide</a> for a full walk-through.</p>
+  <figure style="margin:22px 0"><img src="/assets/shots/sales-invoice.png" alt="TallyBook Sales voucher in invoice view with party, place of supply, item lines and GST totals" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">A Sales voucher (F8) in invoice view.</figcaption></figure>
+  <h3>Purchase (F9)</h3>
+  <p>You buy stock worth ₹40,000 from Sharma Traders on credit. Enter the supplier's bill number in the reference field so you can match it later. Purchases of fixed assets, such as a computer, can also be entered here with the asset ledger in place of Purchase.</p>
+  <h3>Credit Note (Alt+F6) and Debit Note (Alt+F5)</h3>
+  <p>Ravi Enterprises returns goods worth ₹2,000: issue a Credit Note, which reduces what they owe you. You return damaged goods worth ₹1,500 to Sharma Traders: record a Debit Note, which reduces what you owe them. With GST on, both reverse the tax as well.</p>
+
+  <h2>Useful keys inside any voucher</h2>
+  <table>
+    <tr><th>Key</th><th>What it does</th></tr>
+    <tr><td><kbd>F2</kbd></td><td>Change the voucher date</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>C</kbd></td><td>Create a ledger from inside a list</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>R</kbd></td><td>Remove a line</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd></td><td>Accept and save</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>D</kbd></td><td>Delete the voucher (when altering)</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>X</kbd></td><td>Cancel the voucher, keeping its number (when altering)</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>2</kbd></td><td>Duplicate the voucher (when altering)</td></tr>
+  </table>
+  <figure style="margin:22px 0"><img src="/assets/shots/day-book.png" alt="TallyBook Day Book listing vouchers with date, particulars, voucher type, number and amounts" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Every voucher you save appears in the Day Book. Press Enter on a line to open it.</figcaption></figure>
+
+  <h2>Inventory and order vouchers</h2>
+  <p>If you turn on inventory in <kbd>F11</kbd>, more voucher types become available: Stock Journal, Physical Stock, Delivery Note, Receipt Note, Rejection In and Out, and Sales and Purchase Orders. They move or track stock, not money. They are covered in <a href="/blog/stock-journal-delivery-note-receipt-note/">our guide to inventory vouchers</a>.</p>
+  <div class="warn">Not yet available in this preview: Memorandum, Reversing Journal and Optional vouchers, and voucher classes during entry. Plan around them if you rely on these in TallyPrime.</div>
+  <p>New to debit and credit? Start with <a href="/blog/double-entry-accounting-basics/">double-entry basics</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Can I record a cash sale as a Receipt instead of a Sales voucher?</h3>
+  <p>You can, but it is better to use a Sales voucher with Cash as the party. Sales vouchers feed the Sales Register and, with GST enabled, GSTR-1. A Receipt does neither.</p>
+  <h3>Why does my Contra voucher refuse a ledger?</h3>
+  <p>Contra vouchers accept only cash and bank ledgers. If one side is anything else, such as a supplier or an expense, use Payment, Receipt or Journal.</p>
+  <h3>Can I create my own voucher types, such as a separate Sales series for each branch?</h3>
+  <p>Yes. Go to Gateway of Tally › Create › Voucher Type, base it on one of the eight predefined types and choose the numbering method, prefix and suffix. Voucher classes are not connected to voucher entry yet in this preview.</p>
+  <h3>Where do I see all the vouchers I entered today?</h3>
+  <p>Open the Day Book from the Gateway (K). Press Enter on any line to open that voucher, and use Alt+F2 to change the period.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>
