@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TallyBook reports: F12, Alt+F1, Ctrl+F and drill-down</title>
+<meta name="description" content="Get more from every TallyBook report: F12 configure, Alt+F1 detailed view, Ctrl+F filter, Alt+F2 period, Enter drill-down and the Display More Reports menu.">
+<link rel="canonical" href="https://tallybook.online/blog/reports-power-features-f12-alt-f1-filters/">
+<meta property="og:title" content="Report power features in TallyBook: F12, Alt+F1, Ctrl+F, Alt+F2 and drill-down">
+<meta property="og:description" content="Get more from every TallyBook report: F12 configure, Alt+F1 detailed view, Ctrl+F filter, Alt+F2 period, Enter drill-down and the Display More Reports menu.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/reports-power-features-f12-alt-f1-filters/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/trial-balance.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Report power features in TallyBook: F12, Alt+F1, Ctrl+F, Alt+F2 and drill-down", "description": "Get more from every TallyBook report: F12 configure, Alt+F1 detailed view, Ctrl+F filter, Alt+F2 period, Enter drill-down and the Display More Reports menu.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/trial-balance.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/reports-power-features-f12-alt-f1-filters/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Report power features in TallyBook: F12, Alt+F1, Ctrl+F, Alt+F2 and drill-down", "item": "https://tallybook.online/blog/reports-power-features-f12-alt-f1-filters/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does changing the period in one report change it everywhere?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The period is shared by all reports, as in TallyPrime. The current period is shown at the top right; press Alt+F2 again to change it."}}, {"@type": "Question", "name": "Are my F12 settings saved?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for each report, on the computer you set them on. They stay until you change them again in F12."}}, {"@type": "Question", "name": "Why does F12 do nothing on the Balance Sheet?", "acceptedAnswer": {"@type": "Answer", "text": "F12, Ctrl+F and Alt+F1 are not available on the Balance Sheet, P&L and Bills Receivable or Payable yet. Drill into a group with Enter and use them in the Group Summary."}}, {"@type": "Question", "name": "How do I jump straight to one ledger?", "acceptedAnswer": {"@type": "Answer", "text": "Press Alt+G and start typing the ledger name. Go To lists every ledger as “Ledger: name” alongside the common reports."}}]}</script>
+</head>
+<body>
+@@HEADER:Blog · Reports@@
+<section><div class="wrap narrow"><article>
+  <h1>Report power features in TallyBook: F12, Alt+F1, Ctrl+F, Alt+F2 and drill-down</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 6 min read</div>
+  <div class="note"><b>Quick answer:</b> In TallyBook reports, F12 chooses which columns and rows appear, Alt+F1 switches between condensed and detailed views, Ctrl+F filters rows by text, Alt+F2 changes the period, Enter drills down to the next level and Esc comes back. Everything not on the Gateway is under Display More Reports, or one Alt+G search away.</div>
+
+<p>TallyBook's reports look simple, but a handful of keys turn each one into a working tool: choose the columns, expand the detail, filter to what you need, change the dates and drill all the way down to a voucher. These are the same keys TallyPrime users already have in their fingers. This guide covers each one and maps the reports menu.</p>
+
+  <h2>The keys at a glance</h2>
+  <table>
+    <tr><th>Key</th><th>Name</th><th>What it does</th></tr>
+    <tr><td><kbd>F12</kbd></td><td>Configure</td><td>Show or hide columns and rows; remembered per report</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F1</kbd></td><td>Detailed / Condensed</td><td>Expand every sub-group and ledger, or collapse back</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F</kbd></td><td>Filter</td><td>Show only rows containing the text you type</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F2</kbd></td><td>Period</td><td>Change the from and to dates (<kbd>F2</kbd> also works in reports)</td></tr>
+    <tr><td><kbd>Enter</kbd></td><td>Drill down</td><td>Open the highlighted group, ledger, month or voucher</td></tr>
+    <tr><td><kbd>Esc</kbd></td><td>Back</td><td>Return one level</td></tr>
+    <tr><td><kbd>Up</kbd> <kbd>Down</kbd> <kbd>PgUp</kbd> <kbd>PgDn</kbd> <kbd>Home</kbd> <kbd>End</kbd></td><td>Move</td><td>Move the highlight; PgUp and PgDn jump ten rows</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>E</kbd> / <kbd>Alt</kbd>+<kbd>P</kbd></td><td>Export / Print</td><td>Save the visible table as CSV, or print it</td></tr>
+  </table>
+
+  <h2>F12: configure a report</h2>
+  <p>Press <kbd>F12</kbd>, switch options with the toggles, and accept with <kbd>Ctrl</kbd>+<kbd>A</kbd>. The choices are saved for that report on that computer.</p>
+  <table>
+    <tr><th>Report</th><th>F12 options</th></tr>
+    <tr><td>Trial Balance and Group Summary</td><td>Show opening balances; show transactions (Debit / Credit); show closing balances; hide ledgers and groups with zero balances; show detailed format</td></tr>
+    <tr><td>Day Book</td><td>Show cancelled vouchers; show voucher type; show voucher number</td></tr>
+    <tr><td>Ledger Vouchers</td><td>Show running balance; show voucher type; show voucher number</td></tr>
+    <tr><td>Cost Centre Summary, Budget Variance, Group Interest</td><td>Hide rows with no transactions, budget or interest; show closing balances where relevant</td></tr>
+  </table>
+  <p>Many inventory, banking, payroll and statutory reports have their own F12 options too. Look for <b>F12: Configure</b> at the bottom of the button bar on the right.</p>
+
+  <h2>Alt+F1: detailed and condensed</h2>
+  <p>On the Trial Balance and any Group Summary, the condensed view lists only the top-level groups. <kbd>Alt</kbd>+<kbd>F1</kbd> expands every sub-group and ledger in place, indented under its parent, so you can read the whole chart of accounts with balances on one screen. Press it again to collapse. To always open detailed, turn on “Show detailed format” in <kbd>F12</kbd>.</p>
+  <figure style="margin:22px 0"><img src="/assets/shots/trial-balance.png" alt="TallyBook Trial Balance in condensed view with primary groups, the Alt+F1 Detailed, Filter, Export and F12 Configure buttons on the right" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The Trial Balance in condensed view. The buttons on the right show Alt+F1: Detailed, Filter, Export (CSV) and F12: Configure.</figcaption></figure>
+
+  <h2>Ctrl+F: filter</h2>
+  <p>Press <kbd>Ctrl</kbd>+<kbd>F</kbd> and a Filter box appears above the report. Type part of a name: “GST” on the Trial Balance shows only GST ledgers; a party name on the Day Book shows only that party's vouchers. In the Day Book and Ledger Vouchers the filter also matches the voucher type, number and date. <kbd>Enter</kbd> keeps the filter and returns you to the rows; <kbd>Esc</kbd> clears it. If nothing matches, the report says “No rows match the filter”.</p>
+
+  <h2>Alt+F2: change the period</h2>
+  <p>Press <kbd>Alt</kbd>+<kbd>F2</kbd> and enter the from and to dates. The period applies to every report until you change it, so you can open the Trial Balance for a quarter and then drill into ledgers for the same quarter. The Balance Sheet uses the end date, “as at”; outstanding reports use it as “as on”.</p>
+
+  <h2>Enter: drill down to the source</h2>
+  <svg role="img" aria-label="Drill-down ladder: from the Balance Sheet or Trial Balance press Enter to open a Group Summary, Enter again for Ledger Vouchers, and Enter again to open the voucher. Esc goes back one level each time" viewBox="0 0 720 230" style="max-width:100%;height:auto" font-family="Arial, sans-serif">
+    <title>Drilling down with Enter, coming back with Esc</title>
+    <rect width="720" height="230" fill="white"/>
+    <g text-anchor="middle" font-size="14">
+      <rect x="10" y="40" width="150" height="60" rx="8" fill="#10212b"/><text x="85" y="66" fill="white">Balance Sheet</text><text x="85" y="86" fill="white">or Trial Balance</text>
+      <rect x="190" y="70" width="150" height="60" rx="8" fill="#2a62ad"/><text x="265" y="96" fill="white">Group Summary</text><text x="265" y="116" fill="#ffc32b">Alt+F1, F12, Ctrl+F</text>
+      <rect x="370" y="100" width="150" height="60" rx="8" fill="#2a62ad"/><text x="445" y="126" fill="white">Ledger Vouchers</text><text x="445" y="146" fill="#ffc32b">F12, Ctrl+F</text>
+      <rect x="550" y="130" width="160" height="60" rx="8" fill="#ffc32b"/><text x="630" y="156" fill="#10212b" font-weight="bold">Voucher</text><text x="630" y="176" fill="#10212b">alter, then Ctrl+A</text>
+    </g>
+    <g stroke="#10212b" stroke-width="2.5" fill="none">
+      <path d="M160 70 H185"/><path d="M340 100 H365"/><path d="M520 130 H545"/>
+    </g>
+    <g font-size="13" fill="#10212b" font-weight="bold">
+      <text x="160" y="62">Enter</text><text x="340" y="92">Enter</text><text x="518" y="122">Enter</text>
+    </g>
+    <path d="M630 196 C630 222 85 222 85 104" stroke="#8bb9e0" stroke-width="2.5" stroke-dasharray="6 4" fill="none"/>
+    <text x="360" y="214" fill="#2a62ad" font-size="13" text-anchor="middle">Esc goes back one level at a time</text>
+  </svg>
+  <p>Drill-down works on most reports: a register opens month by month and then the vouchers in that month; the Day Book and Ledger Vouchers open the voucher itself; Bills Receivable opens the party's ledger. You can alter a voucher you reach this way and accept it; the reports above it update immediately. Cancelled vouchers cannot be altered.</p>
+
+  <h2>Display More Reports: the map</h2>
+  <p>From the Gateway press <kbd>D</kbd>. Some sections appear only when the matching feature is on in <kbd>F11</kbd>.</p>
+  <table>
+    <tr><th>Section</th><th>Reports inside</th></tr>
+    <tr><td>Trial Balance, Day Book</td><td>Opened directly</td></tr>
+    <tr><td>Account Books</td><td>Cash/Bank Book; Ledger; Group Summary; Sales, Purchase, Payment, Receipt, Journal, Contra, Credit Note and Debit Note Registers</td></tr>
+    <tr><td>Statements of Accounts</td><td>Receivables (Bills Receivable) and Payables (Bills Payable); Group and Ledger Interest Calculation; Budget Variance</td></tr>
+    <tr><td>Inventory Books (inventory on)</td><td>Stock Summary, Stock Query, Godown Summary, group and category summaries, Reorder Status, Stock Ageing, Batch Summary, movement analysis, orders and pending bills, price lists</td></tr>
+    <tr><td>Statutory Reports (GST or TDS on)</td><td>GSTR-1, GSTR-3B, GSTR-2B Reconciliation, HSN/SAC Summary, Tax Analysis; TDS reports when enabled</td></tr>
+    <tr><td>Analysis &amp; Verification</td><td>Cash Flow, Funds Flow, Forex Gain/Loss, Ratio Analysis, Statistics</td></tr>
+    <tr><td>Cost Centres (cost centres on)</td><td>Cost Centre Summary, Cost Category Summary, Cost Centre Breakup</td></tr>
+    <tr><td>Payroll Reports (payroll on)</td><td>Pay Slip, Payroll Statement, Attendance Sheet, Employee Vouchers</td></tr>
+  </table>
+  <p>Faster still, press <kbd>Alt</kbd>+<kbd>G</kbd> (Go To) from anywhere and type a few letters: it lists the common reports, GST returns, create screens, import and export, and every ledger by name.</p>
+  <figure style="margin:22px 0"><img src="/assets/shots/go-to.png" alt="TallyBook Go To box with “bal” typed, listing Balance Sheet and Trial Balance under Common Reports" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Go To (Alt+G): typing “bal” narrows the list to Balance Sheet and Trial Balance.</figcaption></figure>
+
+  <h2>Not yet available</h2>
+  <ul>
+    <li>F12, Ctrl+F and Alt+F1 on the Balance Sheet, P&amp;L and outstanding reports.</li>
+    <li>Ctrl+H change view, Ctrl+B basis of values and Alt+C new column on the Trial Balance; Alt+F1 detail on registers.</li>
+    <li>Saved report views.</li>
+  </ul>
+  <p>Put these keys to work on <a href="/blog/trial-balance-explained/">the Trial Balance</a> and <a href="/blog/how-to-read-balance-sheet-and-profit-and-loss/">the Balance Sheet and P&amp;L</a>, then share results with <a href="/blog/print-email-whatsapp-reports/">print, export and WhatsApp</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+  <h3>Does changing the period in one report change it everywhere?</h3>
+  <p>Yes. The period is shared by all reports, as in TallyPrime. The current period is shown at the top right; press Alt+F2 again to change it.</p>
+  <h3>Are my F12 settings saved?</h3>
+  <p>Yes, for each report, on the computer you set them on. They stay until you change them again in F12.</p>
+  <h3>Why does F12 do nothing on the Balance Sheet?</h3>
+  <p>F12, Ctrl+F and Alt+F1 are not available on the Balance Sheet, P&amp;L and Bills Receivable or Payable yet. Drill into a group with Enter and use them in the Group Summary.</p>
+  <h3>How do I jump straight to one ledger?</h3>
+  <p>Press Alt+G and start typing the ledger name. Go To lists every ledger as “Ledger: name” alongside the common reports.</p>
+
+  <div class="note"><b>Try it on your own books.</b> TallyBook is free for Windows, macOS and Linux, with no registration. <a href="/download/">Download TallyBook</a> and press <kbd>F1</kbd> inside the app for the shortcut list.</div>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>

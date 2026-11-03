@@ -89,5 +89,12 @@
   "description": "Alt+P to print or save as PDF, Ctrl+E for CSV, Alt+M for e-mail and WhatsApp, with exactly what each one does.",
   "date": "2026-11-03",
   "tag": "How-to"
+ },
+ {
+  "slug": "reports-power-features-f12-alt-f1-filters",
+  "title": "Report power features in TallyBook: F12, Alt+F1, Ctrl+F, Alt+F2 and drill-down",
+  "description": "F12 configure, Alt+F1 detailed view, Ctrl+F filter, Alt+F2 period, Enter drill-down and a map of the Display More Reports menu.",
+  "date": "2026-11-03",
+  "tag": "Reports"
  }
 ]
