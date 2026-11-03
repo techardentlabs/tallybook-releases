@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TallyPrime vs TallyBook: an honest comparison for 2026</title>
+<meta name="description" content="TallyPrime and TallyBook compared: price, yearly cost, Windows/Mac/Linux support, GST, inventory, payroll, multi-user, support and limitations.">
+<link rel="canonical" href="https://tallybook.online/blog/tallyprime-vs-tallybook/">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+@@HEADER:Blog · Comparison@@
+<section><div class="wrap narrow"><article>
+  <h1>TallyPrime vs TallyBook: an honest comparison for 2026</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 8 min read</div>
+
+  <p>TallyPrime is the accounting software most Indian businesses and accountants grew up with. TallyBook is a new, free alternative that keeps TallyPrime's keyboard-first way of working. This page compares the two side by side, including where TallyPrime is clearly ahead, so you can choose what fits your business.</p>
+  <div class="note">We make TallyBook, so read this with that in mind. Prices for TallyPrime come from Tally Solutions' own pages (linked at the end) and can change. Check with an authorised Tally partner before you buy.</div>
+
+  <h2>At a glance</h2>
+  <table>
+    <tr><th></th><th>TallyPrime</th><th>TallyBook</th></tr>
+    <tr><td>Price to start</td><td>Silver (single user) ₹22,500 + GST; Gold (multi-user) ₹67,500 + GST, one-time, first year of TSS included</td><td class="y">Free</td></tr>
+    <tr><td>Yearly cost after year one</td><td>TSS renewal ₹4,500 (Silver) or ₹13,500 (Gold) + 18% GST, needed for updates and connected services</td><td class="y">₹0, updates included</td></tr>
+    <tr><td>Windows</td><td class="y">Yes, 64-bit</td><td class="y">Yes, Windows 10/11 64-bit</td></tr>
+    <tr><td>Mac</td><td class="n">Not installable; Windows virtual machine or Tally's cloud access</td><td class="y">Native app, Apple chip and Intel</td></tr>
+    <tr><td>Linux</td><td class="n">Not installable; cloud access only</td><td class="y">Native (AppImage, .deb, .rpm)</td></tr>
+    <tr><td>Several people on one company at once</td><td class="y">Yes, with Gold over your office network</td><td class="n">No, single user per computer</td></tr>
+    <tr><td>Remote access, reports in browser</td><td class="y">Yes, with TSS</td><td class="n">No</td></tr>
+    <tr><td>GST returns</td><td class="y">Prepare and upload/file from inside the app with TSS (connected GST)</td><td>Prepare GSTR-1, GSTR-3B, GSTR-2B reconciliation and HSN summary; upload is done on the GST portal</td></tr>
+    <tr><td>e-Invoice and e-Way Bill</td><td class="y">Generate directly from the app with TSS</td><td>Creates the JSON file for offline upload; you enter the IRN/e-way number back</td></tr>
+    <tr><td>Inventory</td><td class="y">Full, including bill of materials, manufacturing and job work</td><td>Stock items, godowns, batches, price levels, five costing methods, stock vouchers and reports; no manufacturing or job work yet</td></tr>
+    <tr><td>Payroll</td><td class="y">Full, including statutory returns</td><td>Employees, pay heads, attendance, PF/ESI/PT, pay slips; no income-tax or gratuity calculation or statutory returns yet</td></tr>
+    <tr><td>TDS / TCS</td><td class="y">Yes, with returns</td><td>Deduction during entry, outstandings, challans, Form 26Q summary; no e-TDS file yet</td></tr>
+    <tr><td>Banking</td><td class="y">Reconciliation, connected banking and e-payments</td><td>Reconciliation with statement import, cheque register and printing, post-dated cheques; no connected banking</td></tr>
+    <tr><td>Moving your existing data in</td><td>—</td><td class="y">Imports Tally XML (masters and vouchers) and Excel/CSV</td></tr>
+    <tr><td>Customisation</td><td class="y">TDL add-ons and a large add-on ecosystem</td><td>No add-ons; source code is public</td></tr>
+    <tr><td>Support and training</td><td class="y">Large partner network, certified trainers, decades of track record</td><td>New product; help through the website and GitHub</td></tr>
+    <tr><td>Signed installers</td><td class="y">Yes</td><td class="n">Not yet (you will see a security prompt on first install)</td></tr>
+    <tr><td>Where your data lives</td><td>On your computer (or Tally's cloud access)</td><td>On your computer only</td></tr>
+  </table>
+
+  <h2>What it costs over five years</h2>
+  <p>Using Tally's published prices and assuming you renew TSS every year to keep getting updates:</p>
+  <table>
+    <tr><th>Five-year cost (before GST)</th><th>TallyPrime Silver</th><th>TallyPrime Gold</th><th>TallyBook</th></tr>
+    <tr><td>Licence (includes year 1 TSS)</td><td>₹22,500</td><td>₹67,500</td><td>₹0</td></tr>
+    <tr><td>TSS renewals, years 2–5</td><td>4 × ₹4,500 = ₹18,000</td><td>4 × ₹13,500 = ₹54,000</td><td>₹0</td></tr>
+    <tr><td><b>Total</b></td><td><b>₹40,500</b></td><td><b>₹1,21,500</b></td><td><b>₹0</b></td></tr>
+  </table>
+  <p>Add 18% GST to the TallyPrime figures. Multi-year renewal discounts can lower them a little.</p>
+
+  <h2>Where they feel the same</h2>
+  <p>TallyBook deliberately follows the TallyPrime way of working, so a trained Tally operator can start immediately:</p>
+  <ul>
+    <li>The <b>Gateway</b> home menu with Masters, Transactions, Utilities and Reports.</li>
+    <li>The same voucher keys: <kbd>F4</kbd> Contra, <kbd>F5</kbd> Payment, <kbd>F6</kbd> Receipt, <kbd>F7</kbd> Journal, <kbd>F8</kbd> Sales, <kbd>F9</kbd> Purchase, <kbd>Alt</kbd>+<kbd>F6</kbd> Credit Note, <kbd>Alt</kbd>+<kbd>F5</kbd> Debit Note.</li>
+    <li><kbd>Alt</kbd>+<kbd>G</kbd> Go To, <kbd>Alt</kbd>+<kbd>C</kbd> to create a ledger from inside a voucher, <kbd>Ctrl</kbd>+<kbd>A</kbd> to accept, <kbd>Esc</kbd> to go back, <kbd>F11</kbd> features, <kbd>F12</kbd> report configuration, <kbd>Alt</kbd>+<kbd>F1</kbd> detailed view.</li>
+    <li>The same groups (Sundry Debtors, Duties &amp; Taxes and so on), bill-by-bill outstandings, and the familiar report layouts.</li>
+  </ul>
+
+  <h2>Choose TallyPrime if…</h2>
+  <ul>
+    <li>Several staff need to work in the same company at the same time over your office network.</li>
+    <li>You want to file GST returns, generate e-invoices or make bank payments directly from the accounting software.</li>
+    <li>You run manufacturing or job work and need bills of materials.</li>
+    <li>You depend on a local Tally partner, TDL customisations, or your CA insists on TallyPrime data.</li>
+    <li>You need a product with a long track record today.</li>
+  </ul>
+
+  <h2>Choose TallyBook if…</h2>
+  <ul>
+    <li>One person keeps the books on one computer.</li>
+    <li>You work on a Mac or Linux and do not want a Windows virtual machine.</li>
+    <li>You want to stop paying a yearly renewal for features you do not use.</li>
+    <li>You are a student or trainee practising Tally-style accounting at home.</li>
+    <li>You are comfortable using a new product and uploading returns on the GST portal yourself.</li>
+  </ul>
+
+  <h2>Can I try TallyBook without leaving TallyPrime?</h2>
+  <p>Yes. Export your company from TallyPrime as XML and import it into TallyBook. Your TallyPrime data is not touched. Compare the Trial Balance and Balance Sheet in both, and keep working in TallyPrime until you are sure. The <a href="/blog/switch-from-tally-to-tallybook/">switching guide</a> walks through it.</p>
+
+  <div class="note"><b>Try it free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration.</div>
+
+  <h3>Sources</h3>
+  <ul>
+    <li><a href="https://tallysolutions.com/business-guides/tallyprime-total-cost-of-ownership-india/">Tally Solutions: The total cost of TallyPrime in India</a></li>
+    <li><a href="https://tallysolutions.com/customer-hub/">Tally Solutions: Customer pricing and TSS renewal</a></li>
+    <li><a href="https://help.tallysolutions.com/tally-prime/quick-start-guide/recommended-system-configuration-for-tallyprime">TallyHelp: Recommended system configuration for TallyPrime</a></li>
+    <li><a href="https://tallysolutions.com/cloud-accounting-software/">Tally Solutions: Access TallyPrime from anywhere</a></li>
+  </ul>
+  <p style="font-size:14px;color:var(--muted)">TallyBook is not affiliated with Tally Solutions Pvt. Ltd. TallyPrime is a trademark of its owner. Feature descriptions of TallyPrime are based on its public documentation as of November 2026.</p>
+</article></div></section>
+@@FOOTER@@
+</body>
+</html>

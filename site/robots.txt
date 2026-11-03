@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tallybook.online/sitemap.xml
