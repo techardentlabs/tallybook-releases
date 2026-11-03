@@ -87,14 +87,14 @@
     <li><b>Godown transfer:</b> 20 cartons of tea Out from “Shop”, 20 cartons In to “Warehouse”.</li>
     <li><b>Repacking or conversion:</b> 50 kg loose sugar Out, 50 packets of 1 kg In.</li>
   </ul>
-  <p>Transfers appear in Inventory Books › Godown Transfers and Stock Transfer Analysis. Manufacturing with a bill of materials is not available yet, so record simple conversions this way.</p>
+  <p>Transfers appear in Inventory Books › Godown Transfers and Stock Transfer Analysis. For true manufacturing, where components are consumed to make a finished item, use a bill of materials and the Manufacturing Journal instead (Stock Journal also has <kbd>Ctrl</kbd>+<kbd>H</kbd> Change Mode); see <a href="/blog/manufacturing-bill-of-materials-in-tallybook/">manufacturing with a bill of materials</a>.</p>
 
   <h2>Physical Stock (Ctrl+F7)</h2>
   <p>After counting the shelves, enter each item's <b>actual</b> quantity, not the difference. If the books say 120 and you counted 114, enter 114; TallyBook adjusts the balance from that date. Physical Stock entries are left out of movement analysis so they do not look like sales or purchases.</p>
 
   <h2>Delivery Note (Alt+F8) and Receipt Note (Alt+F9)</h2>
   <p>A <b>Delivery Note</b> records goods sent to a customer before you raise the invoice, for example goods sent on approval. A <b>Receipt Note</b> records goods received from a supplier before their bill arrives. Both need a party (a Sundry Debtor, Sundry Creditor or Cash) and immediately change stock.</p>
-  <div class="warn"><b>Avoid double counting.</b> Order and delivery tracking is not connected to voucher entry yet in this preview, so a Sales invoice with items does not know about an earlier Delivery Note for the same goods. If you enter both, stock reduces twice. The same applies to a Receipt Note followed by a Purchase invoice with items. Until tracking arrives, use either the note or the item invoice for the stock movement, not both.</div>
+  <div class="note"><b>Linking notes to invoices.</b> Since version 0.1.5, when the party has pending Delivery or Receipt Notes or Orders, a Sales or Purchase invoice asks for a <b>Tracking No.</b>, fills in the pending items and links them. An invoice raised against a Delivery Note or Receipt Note does not change stock a second time. Delivery and Receipt Notes in turn ask for an <b>Order No.</b> Pick the pending note when asked rather than typing the items again.</div>
 
   <h2>Rejection In (Ctrl+F6) and Rejection Out (Ctrl+F5)</h2>
   <p>Use these for goods rejected on quality grounds that come back from a customer (In) or go back to a supplier (Out) before any Credit Note or Debit Note. The same caution applies: a Credit Note or Debit Note with items also moves stock.</p>
@@ -115,7 +115,7 @@
     <li>Use <kbd>Alt</kbd>+<kbd>F2</kbd> to see stock as on an earlier date.</li>
   </ol>
   <figure style="margin:22px 0"><img src="/assets/shots/stock-summary.png" alt="TallyBook Stock Summary with item quantities, rates and values" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The Stock Summary reflects Receipt Notes, Delivery Notes, Stock Journals and Physical Stock, but not orders.</figcaption></figure>
-  <div class="note">Also not connected to voucher entry yet: batch allocation and price-list rates. Batches and price lists can be set up and reported on, but voucher entry does not yet pick batches or fill rates from a price list; type the rate yourself.</div>
+  <div class="note">Batches and price lists work in vouchers too. With <b>Maintain batches</b> on in <kbd>F11</kbd>, invoices, delivery and receipt notes, rejections and stock journals ask for batch allocations for batch-wise items. With multiple price levels on, invoices fill the rate and discount from the party's price level. See <a href="/blog/batches-expiry-and-price-levels-in-tallybook/">batches, expiry and price levels</a>.</div>
   <p>How stock is valued is explained in <a href="/blog/inventory-costing-fifo-lifo-average/">FIFO, LIFO and average costing</a>. For the money side of sales and purchases, see <a href="/blog/voucher-types-explained/">accounting voucher types</a> and <a href="/blog/create-gst-invoice-in-tallybook/">GST invoices</a>.</p>
 
   <h2>Frequently asked questions</h2>

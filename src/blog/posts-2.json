@@ -96,5 +96,40 @@
   "description": "F12 configure, Alt+F1 detailed view, Ctrl+F filter, Alt+F2 period, Enter drill-down and a map of the Display More Reports menu.",
   "date": "2026-11-03",
   "tag": "Reports"
+ },
+ {
+  "slug": "multiple-companies-and-tallyvault-encryption",
+  "title": "Multiple companies and TallyVault encryption in TallyBook",
+  "description": "Keep each business as its own company, switch with F3, Alt+F3 and Ctrl+F3, and encrypt data and backups with TallyVault.",
+  "date": "2026-11-03",
+  "tag": "Security"
+ },
+ {
+  "slug": "manufacturing-bill-of-materials-in-tallybook",
+  "title": "Manufacturing in TallyBook: bill of materials and the Manufacturing Journal",
+  "description": "Set a bill of materials, record production with co-products, by-products, scrap and additional costs, and read the costing reports.",
+  "date": "2026-11-03",
+  "tag": "Inventory"
+ },
+ {
+  "slug": "batches-expiry-and-price-levels-in-tallybook",
+  "title": "Batch-wise stock, expiry and price levels in TallyBook",
+  "description": "Batch allocation in invoices and notes, a simple routine for expiring stock, and customer price levels that fill rates and discounts.",
+  "date": "2026-11-03",
+  "tag": "Inventory"
+ },
+ {
+  "slug": "tds-under-income-tax-act-2025",
+  "title": "TDS under the Income-tax Act, 2025: what changed from 1 April 2026",
+  "description": "Section 393 replaces the 194 sections, new quarterly forms, and how TallyBook keeps 1961 sections for older vouchers.",
+  "date": "2026-11-03",
+  "tag": "TDS"
+ },
+ {
+  "slug": "epf-wage-ceiling-25000-and-payroll-in-tallybook",
+  "title": "EPF wage ceiling ₹25,000 from 17 September 2026: payroll, salary TDS and gratuity",
+  "description": "The new EPF wage ceiling, the September 2026 split, salary TDS by regime and gratuity under the Labour Codes, with official sources.",
+  "date": "2026-11-03",
+  "tag": "Payroll"
  }
 ]

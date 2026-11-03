@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manufacturing in TallyBook: bill of materials and the Manufacturing Journal</title>
+<meta name="description" content="Set a bill of materials on a stock item, record production with the Manufacturing Journal (components, co-products, by-products, scrap, additional costs) and read Cost Estimation, Job Costing and Material Requirement.">
+<link rel="canonical" href="https://tallybook.online/blog/manufacturing-bill-of-materials-in-tallybook/">
+<meta property="og:title" content="Manufacturing in TallyBook: bill of materials and the Manufacturing Journal">
+<meta property="og:description" content="Set a bill of materials on a stock item, record production with the Manufacturing Journal (components, co-products, by-products, scrap, additional costs) and read Cost Estimation, Job Costing and Material Requirement.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/manufacturing-bill-of-materials-in-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/stock-summary.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manufacturing in TallyBook: bill of materials and the Manufacturing Journal">
+<meta name="twitter:description" content="Set a bill of materials on a stock item, record production with the Manufacturing Journal (components, co-products, by-products, scrap, additional costs) and read Cost Estimation, Job Costing and Material Requirement.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/stock-summary.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Manufacturing in TallyBook: bill of materials and the Manufacturing Journal", "description": "Set a bill of materials on a stock item, record production with the Manufacturing Journal (components, co-products, by-products, scrap, additional costs) and read Cost Estimation, Job Costing and Material Requirement.", "image": "https://tallybook.online/assets/shots/stock-summary.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/manufacturing-bill-of-materials-in-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Manufacturing in TallyBook: bill of materials and the Manufacturing Journal", "item": "https://tallybook.online/blog/manufacturing-bill-of-materials-in-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why set a bill of materials?", "acceptedAnswer": {"@type": "Answer", "text": "It is the recipe for the finished item. Cost Estimation and Material Requirement read it, and it is your check when you enter components in the Manufacturing Journal. Set it on the finished stock item with Set/Alter Components."}}, {"@type": "Question", "name": "What if a production run used more or less material than the recipe?", "acceptedAnswer": {"@type": "Answer", "text": "Enter the quantities actually used on the component lines of the Manufacturing Journal. Comparing Job Costing with Cost Estimation then shows the difference."}}, {"@type": "Question", "name": "Where do labour and power costs go?", "acceptedAnswer": {"@type": "Answer", "text": "Enter them as additional costs in the Manufacturing Journal so they are part of the finished item cost. Record the actual payment with your usual Payment voucher."}}, {"@type": "Question", "name": "Does TallyBook support job work?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. Job work orders and Material In and Out are planned for the next update."}}, {"@type": "Question", "name": "Can I use batches on manufacturing lines?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. Batches and alternate units are not available on Manufacturing Journal lines."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Record manufacturing in TallyBook", "description": "Set a bill of materials on a stock item, record production with the Manufacturing Journal (components, co-products, by-products, scrap, additional costs) and read Cost Estimation, Job Costing and Material Requirement.", "step": [{"@type": "HowToStep", "position": 1, "name": "Turn on inventory", "text": "Press F11 and set Maintain inventory to Yes."}, {"@type": "HowToStep", "position": 2, "name": "Create items", "text": "Create stock items for each component and the finished item."}, {"@type": "HowToStep", "position": 3, "name": "Set the bill of materials", "text": "Alter the finished item and use Set/Alter Components to list components and quantities."}, {"@type": "HowToStep", "position": 4, "name": "Open the Manufacturing Journal", "text": "Press Alt+F7 for a Stock Journal, then Ctrl+H to change mode to Manufacturing Journal."}, {"@type": "HowToStep", "position": 5, "name": "Enter production", "text": "Enter the finished item and quantity, the components used, any co-products, by-products, scrap and additional costs, and accept with Ctrl+A."}, {"@type": "HowToStep", "position": 6, "name": "Check results", "text": "Open Stock Summary and Job Costing."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · Inventory</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Manufacturing in TallyBook: bill of materials and the Manufacturing Journal</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> Turn on inventory in <kbd>F11</kbd>, create the components and the finished item, and set the finished item's <b>bill of materials</b> with Set/Alter Components. To record production, open a Stock Journal (<kbd>Alt</kbd>+<kbd>F7</kbd>), press <kbd>Ctrl</kbd>+<kbd>H</kbd> for the <b>Manufacturing Journal</b>, enter the quantity made and accept. Cost Estimation, Job Costing and Material Requirement reports read the bill of materials. Job work is not available yet.</div>
+
+  <p>If you turn raw material into something you sell, such as furniture from wood, sweets from sugar and milk, or kits from loose parts, your stock records need to show both sides: components going out and finished goods coming in, at a sensible cost. Since version 0.2.0 TallyBook does this with a <b>bill of materials</b> on the stock item and a <b>Manufacturing Journal</b>.</p>
+<figure style="margin:24px 0"><svg role="img" aria-label="Create stock items, add a bill of materials to the finished item, plan with Cost Estimation and Material Requirement, record production in a Manufacturing Journal, then check Stock Summary and Job Costing" viewBox="0 0 640 416" width="640" height="416" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>From recipe to finished stock</title><rect x="0" y="0" width="640" height="416" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320.0" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">From recipe to finished stock</text><rect x="40" y="50" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="75.0" r="15" fill="#2a62ad"/><text x="70" y="80.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">1</text><text x="98" y="80.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Turn on inventory (F11) and create the stock items</text><path d="M320.0 102 L320.0 118" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 112 L320.0 119 L326.0 112" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="122" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="147.0" r="15" fill="#2a62ad"/><text x="70" y="152.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">2</text><text x="98" y="152.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Bill of materials on the finished item (Set/Alter Components)</text><path d="M320.0 174 L320.0 190" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 184 L320.0 191 L326.0 184" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="194" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="219.0" r="15" fill="#2a62ad"/><text x="70" y="224.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">3</text><text x="98" y="224.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Plan: Cost Estimation and Material Requirement</text><path d="M320.0 246 L320.0 262" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 256 L320.0 263 L326.0 256" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="266" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="291.0" r="15" fill="#2a62ad"/><text x="70" y="296.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">4</text><text x="98" y="296.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Manufacturing Journal: components out, finished goods in</text><path d="M320.0 318 L320.0 334" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 328 L320.0 335 L326.0 328" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="338" width="560" height="50" rx="8" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="363.0" r="15" fill="#2a62ad"/><text x="70" y="368.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">5</text><text x="98" y="368.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Check Stock Summary and Job Costing</text></svg></figure>
+
+  <h2>Words you will see</h2>
+  <table>
+    <tr><th>Term</th><th>Meaning</th><th>Example (wooden chair)</th></tr>
+    <tr><td>Bill of materials (BOM)</td><td>The recipe: what goes into one batch of the finished item</td><td>1 chair = 4 legs, 1 seat, 1 backrest, 0.1 litre polish</td></tr>
+    <tr><td>Components</td><td>Items consumed</td><td>Legs, seat, backrest, polish</td></tr>
+    <tr><td>Co-product</td><td>A second main item made in the same process</td><td>A matching stool cut from the same timber</td></tr>
+    <tr><td>By-product</td><td>A minor item with some value</td><td>Wood shavings sold as fuel</td></tr>
+    <tr><td>Scrap</td><td>Waste, sometimes with a small resale value</td><td>Off-cuts</td></tr>
+    <tr><td>Additional costs</td><td>Costs other than materials that belong in the product's cost</td><td>Carpenter's wages, power</td></tr>
+  </table>
+
+  <h2>1. Set up the items</h2>
+  <ol class="steps">
+    <li>Press <kbd>F11</kbd> and make sure <b>Maintain inventory</b> is Yes.</li>
+    <li>Create a stock item for every component and for the finished item, each with its unit (Nos, Kg, Ltr). Give components their opening stock and rate if you already hold them.</li>
+    <li>Open the finished item (Alter → Stock Item) and use <b>Set/Alter Components</b> to enter its bill of materials: each component with the quantity used for one unit, or one batch, of the finished item.</li>
+  </ol>
+  <p>Keep units consistent. If polish is bought in litres, enter 0.1 Ltr per chair, not "100 ml".</p>
+
+  <h2>2. Plan before you make</h2>
+  <p>Three reports read the bill of materials:</p>
+  <ul>
+    <li><b>Cost Estimation</b>: what the finished item should cost to make from its components, so you can check your selling price.</li>
+    <li><b>Material Requirement</b>: how much of each component a planned quantity needs, so you know what to buy.</li>
+    <li><b>Job Costing</b>: what production actually cost, once you have recorded it.</li>
+  </ul>
+  <p>Find them with <kbd>Alt</kbd>+<kbd>G</kbd> (Go To) by typing the report name.</p>
+
+  <h2>3. Record production: the Manufacturing Journal</h2>
+  <ol class="steps">
+    <li>Open a Stock Journal (<kbd>Alt</kbd>+<kbd>F7</kbd>) and press <kbd>Ctrl</kbd>+<kbd>H</kbd> (Change Mode) to switch to the <b>Manufacturing Journal</b>.</li>
+    <li>Enter the finished item and the quantity made, then the components consumed. Use the bill of materials as your check, and enter what was actually used.</li>
+    <li>Add co-products, by-products and scrap if the process produced them.</li>
+    <li>Add the <b>additional costs</b>, such as wages or power, that should be part of the product's cost.</li>
+    <li>Accept with <kbd>Ctrl</kbd>+<kbd>A</kbd>.</li>
+  </ol>
+  <p>Example: you make 10 chairs. The journal takes out 40 legs, 10 seats, 10 backrests and 1 litre of polish, brings in 10 chairs, and values them at the cost of those components plus the additional costs you entered. Like every inventory voucher, it changes stock quantities and values; record the actual payment of wages or power with your usual Payment voucher.</p>
+<figure style="margin:24px 0"><img src="/assets/shots/stock-summary.png" alt="TallyBook Stock Summary listing items with quantity, rate and closing value" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">After a Manufacturing Journal, check the Stock Summary: components go down and the finished item goes up.</figcaption></figure>
+
+  <h2>4. Check the result</h2>
+  <ul>
+    <li><b>Stock Summary</b> (<kbd>S</kbd> on the Gateway): component quantities fall and the finished item rises.</li>
+    <li><b>Job Costing</b>: compare the actual cost with the Cost Estimation. A big gap usually means wastage, a changed purchase price or a wrong quantity in the bill of materials.</li>
+  </ul>
+
+  <h2>Simple conversions without a BOM</h2>
+  <p>For one-off repacking, such as 50 kg of loose sugar into 50 one-kilo packets, a plain Stock Journal (Out and In lines) is enough. See <a href="/blog/stock-journal-delivery-note-receipt-note/">Stock Journal and other inventory vouchers</a>.</p>
+
+  <h2>Limits today</h2>
+  <ul>
+    <li><b>Job work</b> (sending material to a job worker or processing material for a customer, with Material In and Material Out) is not available yet. It is planned for the next update.</li>
+    <li>Batches and alternate units cannot be used on manufacturing lines yet. If you track components by batch, record batch movements separately for now.</li>
+  </ul>
+  <p>How the cost of stock is valued afterwards is covered in <a href="/blog/inventory-costing-fifo-lifo-average/">FIFO, LIFO and average costing</a>.</p>
+
+<h2>Frequently asked questions</h2><h3>Why set a bill of materials?</h3><p>It is the recipe for the finished item. Cost Estimation and Material Requirement read it, and it is your check when you enter components in the Manufacturing Journal. Set it on the finished stock item with Set/Alter Components.</p><h3>What if a production run used more or less material than the recipe?</h3><p>Enter the quantities actually used on the component lines of the Manufacturing Journal. Comparing Job Costing with Cost Estimation then shows the difference.</p><h3>Where do labour and power costs go?</h3><p>Enter them as additional costs in the Manufacturing Journal so they are part of the finished item cost. Record the actual payment with your usual Payment voucher.</p><h3>Does TallyBook support job work?</h3><p>Not yet. Job work orders and Material In and Out are planned for the next update.</p><h3>Can I use batches on manufacturing lines?</h3><p>Not yet. Batches and alternate units are not available on Manufacturing Journal lines.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/stock-journal-delivery-note-receipt-note/">Inventory vouchers</a> · <a href="/blog/inventory-costing-fifo-lifo-average/">Stock costing methods</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

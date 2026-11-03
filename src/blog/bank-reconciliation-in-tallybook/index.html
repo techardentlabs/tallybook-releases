@@ -76,6 +76,7 @@
     <li>Banking → <b>Post-Dated Summary</b> shows them month by month. Open a month to see each cheque, switch between pending and all with <kbd>F8</kbd>, and add a note with <kbd>Alt</kbd>+<kbd>R</kbd>.</li>
     <li>In banking reports, <kbd>Ctrl</kbd>+<kbd>B</kbd> (Basis of Values) includes or leaves out post-dated vouchers.</li>
   </ol>
+  <p>Since version 0.2.0 a post-dated voucher stays out of ledger balances and ledger reports until its date arrives, so your bank balance today is not reduced by a cheque dated next month.</p>
   <figure style="margin:24px 0"><img src="/assets/shots/payment-voucher.png" alt="TallyBook Payment voucher with bank account, party ledger and amount" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">A Payment voucher. Ctrl+T marks it as post-dated.</figcaption></figure>
   <div class="warn">Not available yet: creating vouchers straight from statement lines (the F7 button is shown but disabled), connected banking and e-payments. Bank Allocations are asked only for post-dated vouchers or when cheque printing is on.</div>
 

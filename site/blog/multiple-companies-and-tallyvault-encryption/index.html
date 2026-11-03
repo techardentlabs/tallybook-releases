@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple companies and TallyVault encryption in TallyBook</title>
+<meta name="description" content="Keep each business as its own company, switch with F3, Alt+F3 and Ctrl+F3, and encrypt company data and backups with TallyVault, including what happens if the password is lost.">
+<link rel="canonical" href="https://tallybook.online/blog/multiple-companies-and-tallyvault-encryption/">
+<meta property="og:title" content="Multiple companies and TallyVault encryption in TallyBook">
+<meta property="og:description" content="Keep each business as its own company, switch with F3, Alt+F3 and Ctrl+F3, and encrypt company data and backups with TallyVault, including what happens if the password is lost.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/multiple-companies-and-tallyvault-encryption/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/company-creation.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Multiple companies and TallyVault encryption in TallyBook">
+<meta name="twitter:description" content="Keep each business as its own company, switch with F3, Alt+F3 and Ctrl+F3, and encrypt company data and backups with TallyVault, including what happens if the password is lost.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/company-creation.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Multiple companies and TallyVault encryption in TallyBook", "description": "Keep each business as its own company, switch with F3, Alt+F3 and Ctrl+F3, and encrypt company data and backups with TallyVault, including what happens if the password is lost.", "image": "https://tallybook.online/assets/shots/company-creation.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/multiple-companies-and-tallyvault-encryption/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Multiple companies and TallyVault encryption in TallyBook", "item": "https://tallybook.online/blog/multiple-companies-and-tallyvault-encryption/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I open two companies at the same time?", "acceptedAnswer": {"@type": "Answer", "text": "No. TallyBook opens one company at a time. Press F3 to change company or Alt+F3 for Company Info."}}, {"@type": "Question", "name": "I forgot my TallyVault password. Can it be reset?", "acceptedAnswer": {"@type": "Answer", "text": "No. A lost TallyVault password cannot be recovered by you or by Techardent Labs, and the company and its encrypted backups cannot be opened without it. Keep the password written down somewhere safe."}}, {"@type": "Question", "name": "Are backups encrypted too?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Backups of a company with a TallyVault password are encrypted. Take a fresh backup after you set or change the password."}}, {"@type": "Question", "name": "I upgraded from an older version. Where is my data?", "acceptedAnswer": {"@type": "Answer", "text": "Your existing data opens as the first company. It is not moved, so nothing needs to be migrated."}}, {"@type": "Question", "name": "Does TallyVault replace users and passwords?", "acceptedAnswer": {"@type": "Answer", "text": "No. TallyVault encrypts the data file and backups; users and roles control what each person at the keyboard may do. Many businesses use both."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Create a second company and protect it with TallyVault", "description": "Keep each business as its own company, switch with F3, Alt+F3 and Ctrl+F3, and encrypt company data and backups with TallyVault, including what happens if the password is lost.", "step": [{"@type": "HowToStep", "position": 1, "name": "Create the company", "text": "Press Alt+F3, choose Create, fill in name, state and financial year, and accept with Ctrl+A."}, {"@type": "HowToStep", "position": 2, "name": "Turn on features", "text": "Press F11 and enable the features this company needs."}, {"@type": "HowToStep", "position": 3, "name": "Set TallyVault", "text": "Press Alt+K, open Company Security and enter the TallyVault password twice."}, {"@type": "HowToStep", "position": 4, "name": "Reopen and back up", "text": "Shut and reopen the company to confirm the password, then take a fresh backup with Alt+Y."}, {"@type": "HowToStep", "position": 5, "name": "Switch companies", "text": "Press F3 to change company and Ctrl+F3 to shut the current one."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · Security</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Multiple companies and TallyVault encryption in TallyBook</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> Each business can be its own company with its own data file. Press <kbd>Alt</kbd>+<kbd>F3</kbd> → Create to add one, <kbd>F3</kbd> to change company and <kbd>Ctrl</kbd>+<kbd>F3</kbd> to shut it. Set a TallyVault password under <kbd>Alt</kbd>+<kbd>K</kbd> → Company Security to encrypt that company's data and backups. A lost TallyVault password cannot be recovered. Only one company is open at a time.</div>
+
+  <p>Many owners keep more than one set of books: a trading firm and a proprietor's consultancy, a business in two states with two GST registrations, or the books of a family member's shop. Since version 0.2.0 TallyBook keeps each of these as a separate <b>company</b>, and since 0.1.5 the <b>TallyVault</b> password really encrypts a company's data. This guide covers both, with the limits stated plainly.</p>
+<figure style="margin:24px 0"><svg role="img" aria-label="Start TallyBook, select a company, enter its TallyVault password if set, work, then press F3 to change company or Ctrl+F3 to shut it" viewBox="0 0 640 344" width="640" height="344" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>One computer, several companies</title><rect x="0" y="0" width="640" height="344" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320.0" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">One computer, several companies</text><rect x="40" y="50" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="75.0" r="15" fill="#2a62ad"/><text x="70" y="80.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">1</text><text x="98" y="80.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Start TallyBook: Select Company lists your companies</text><path d="M320.0 102 L320.0 118" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 112 L320.0 119 L326.0 112" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="122" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="147.0" r="15" fill="#2a62ad"/><text x="70" y="152.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">2</text><text x="98" y="152.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Pick one; TallyVault password asked if one is set</text><path d="M320.0 174 L320.0 190" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 184 L320.0 191 L326.0 184" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="194" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="219.0" r="15" fill="#2a62ad"/><text x="70" y="224.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">3</text><text x="98" y="224.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Work in it as usual: vouchers, reports, backups</text><path d="M320.0 246 L320.0 262" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 256 L320.0 263 L326.0 256" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="266" width="560" height="50" rx="8" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="291.0" r="15" fill="#2a62ad"/><text x="70" y="296.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">4</text><text x="98" y="296.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">F3 to change company, Ctrl+F3 to shut it</text></svg></figure>
+
+  <h2>When does a business need a separate company?</h2>
+  <p>A company in TallyBook is a complete, separate set of books: its own ledgers, stock, vouchers, financial year and reports. As a rule of thumb:</p>
+  <table>
+    <tr><th>Situation</th><th>Usually</th></tr>
+    <tr><td>A different legal entity (another proprietorship, partnership firm or private limited company)</td><td>Separate company</td></tr>
+    <tr><td>A separate GST registration (GSTIN), for example a branch in another state</td><td>Separate company, so GSTR-1 and GSTR-3B are prepared per GSTIN</td></tr>
+    <tr><td>A shop and a godown, or two departments, under the same GSTIN</td><td>One company, with godowns or <a href="/blog/cost-centres-and-budgets-in-tallybook/">cost centres</a></td></tr>
+    <tr><td>Practice or training data</td><td>A separate company you can delete or ignore</td></tr>
+  </table>
+  <p>If you are unsure, ask your CA how they want the books split before you start entering.</p>
+
+  <h2>The company keys</h2>
+  <table>
+    <tr><th>Key</th><th>What it does</th></tr>
+    <tr><td><kbd>F3</kbd></td><td>Change company: shuts the one you are in and opens another</td></tr>
+    <tr><td><kbd>Alt</kbd>+<kbd>F3</kbd></td><td>Company Info: Select, Shut, Create, Alter, Change TallyVault</td></tr>
+    <tr><td><kbd>Ctrl</kbd>+<kbd>F3</kbd></td><td>Shut the current company</td></tr>
+  </table>
+  <p>If you press any of these with a voucher on screen that you have not saved, TallyBook asks before discarding it. When TallyBook starts, it shows <b>Select Company</b> so you choose which books to open.</p>
+
+  <h2>Create a second company</h2>
+  <ol class="steps">
+    <li>Press <kbd>Alt</kbd>+<kbd>F3</kbd> and choose <b>Create</b>.</li>
+    <li>Fill in the company name, address, state, financial year and books beginning date. Turn on GST and enter the GSTIN if the business is registered.</li>
+    <li>Press <kbd>Ctrl</kbd>+<kbd>A</kbd> to accept. The new company opens with the standard groups, ready for ledgers.</li>
+    <li>Press <kbd>F11</kbd> to turn on the features this business needs (inventory, payroll, TDS and so on). Features are set per company.</li>
+  </ol>
+<figure style="margin:24px 0"><img src="/assets/shots/company-creation.png" alt="TallyBook Company Creation form with company name, address, state, financial year and GST fields" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Company Creation. Each company you create gets its own data file.</figcaption></figure>
+  <p><b>Upgrading from an earlier version?</b> Your existing data opens as the first company. It is not moved or copied, so there is nothing to migrate.</p>
+
+  <h2>How companies are stored</h2>
+  <p>Each company has <b>its own data file</b> on your computer and its own TallyVault. A backup (<kbd>Alt</kbd>+<kbd>Y</kbd> → Backup) is taken for the company that is open, so back up each company separately. See <a href="/blog/backup-restore-and-data-safety/">backup, restore and data safety</a>.</p>
+
+  <h2>TallyVault: what it does now</h2>
+  <p>A TallyVault password <b>encrypts the company's data on disk</b>. Without the password the data file is unreadable, even if someone copies it off the computer. Backups of that company are encrypted too. In the desktop app the encryption uses SQLCipher, a widely used encrypted database format.</p>
+  <ol class="steps">
+    <li>Open the company and press <kbd>Alt</kbd>+<kbd>K</kbd> → <b>Company Security</b>.</li>
+    <li>In the TallyVault section, type the password twice and accept. You can also reach it with <kbd>Alt</kbd>+<kbd>F3</kbd> → <b>Change TallyVault</b>.</li>
+    <li>Shut and reopen the company: TallyBook asks for the TallyVault password first.</li>
+    <li>Take a fresh backup, so your latest backup is protected by the same password.</li>
+  </ol>
+  <p>The same screen changes or removes the password. Each company's TallyVault is separate, so you can protect only the companies that need it.</p>
+  <div class="warn"><b>A lost TallyVault password cannot be recovered.</b> It never leaves your computer, and there is no reset or back door, so neither you nor we can open the company or its encrypted backups without it. Write it down and keep it somewhere safe, away from the computer.</div>
+
+  <h2>TallyVault or user passwords?</h2>
+  <table>
+    <tr><th></th><th>TallyVault password</th><th>Users and passwords (Security Control)</th></tr>
+    <tr><td>Protects against</td><td>Someone copying the data file or a backup</td><td>Someone at the keyboard doing more than their role allows</td></tr>
+    <tr><td>Encrypts data</td><td class="y">Yes, data and backups</td><td>No</td></tr>
+    <tr><td>Who knows it</td><td>The owner</td><td>Each user has their own</td></tr>
+    <tr><td>If forgotten</td><td class="n">Cannot be recovered</td><td>The administrator can reset other users</td></tr>
+  </table>
+  <p>Most businesses with staff use both. See <a href="/blog/users-roles-and-passwords/">users, roles and passwords</a>.</p>
+
+  <h2>Limits today</h2>
+  <ul>
+    <li>Only <b>one company is open at a time</b>. TallyPrime can load several together; in TallyBook you switch with <kbd>F3</kbd>.</li>
+    <li>No group companies (consolidated reports across companies) and no split company yet.</li>
+    <li>TallyBook is single-user: one person works in a company on one computer at a time.</li>
+  </ul>
+
+<h2>Frequently asked questions</h2><h3>Can I open two companies at the same time?</h3><p>No. TallyBook opens one company at a time. Press F3 to change company or Alt+F3 for Company Info.</p><h3>I forgot my TallyVault password. Can it be reset?</h3><p>No. A lost TallyVault password cannot be recovered by you or by Techardent Labs, and the company and its encrypted backups cannot be opened without it. Keep the password written down somewhere safe.</p><h3>Are backups encrypted too?</h3><p>Yes. Backups of a company with a TallyVault password are encrypted. Take a fresh backup after you set or change the password.</p><h3>I upgraded from an older version. Where is my data?</h3><p>Your existing data opens as the first company. It is not moved, so nothing needs to be migrated.</p><h3>Does TallyVault replace users and passwords?</h3><p>No. TallyVault encrypts the data file and backups; users and roles control what each person at the keyboard may do. Many businesses use both.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/backup-restore-and-data-safety/">Backup and restore</a> · <a href="/blog/users-roles-and-passwords/">Users, roles and passwords</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

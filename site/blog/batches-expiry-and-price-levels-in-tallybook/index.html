@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batch-wise stock, expiry and price levels in TallyBook</title>
+<meta name="description" content="Track stock by batch in invoices, notes and stock journals, keep expiring stock under control, and bill each customer at their own price level with rates and discounts filled in.">
+<link rel="canonical" href="https://tallybook.online/blog/batches-expiry-and-price-levels-in-tallybook/">
+<meta property="og:title" content="Batch-wise stock, expiry and price levels in TallyBook">
+<meta property="og:description" content="Track stock by batch in invoices, notes and stock journals, keep expiring stock under control, and bill each customer at their own price level with rates and discounts filled in.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tallybook.online/blog/batches-expiry-and-price-levels-in-tallybook/">
+<meta property="og:image" content="https://tallybook.online/assets/shots/stock-item-creation.png">
+<meta property="og:site_name" content="TallyBook">
+<meta property="article:published_time" content="2026-11-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Batch-wise stock, expiry and price levels in TallyBook">
+<meta name="twitter:description" content="Track stock by batch in invoices, notes and stock journals, keep expiring stock under control, and bill each customer at their own price level with rates and discounts filled in.">
+<meta name="twitter:image" content="https://tallybook.online/assets/shots/stock-item-creation.png">
+<link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Batch-wise stock, expiry and price levels in TallyBook", "description": "Track stock by batch in invoices, notes and stock journals, keep expiring stock under control, and bill each customer at their own price level with rates and discounts filled in.", "image": "https://tallybook.online/assets/shots/stock-item-creation.png", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "author": {"@type": "Organization", "name": "Techardent Labs"}, "publisher": {"@type": "Organization", "name": "Techardent Labs"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/batches-expiry-and-price-levels-in-tallybook/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Batch-wise stock, expiry and price levels in TallyBook", "item": "https://tallybook.online/blog/batches-expiry-and-price-levels-in-tallybook/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to use batches for every item?", "acceptedAnswer": {"@type": "Answer", "text": "No. Turn on Maintain batches in F11, then set Maintain in batches to Yes only on the items you want to track by batch."}}, {"@type": "Question", "name": "Which vouchers ask for batches?", "acceptedAnswer": {"@type": "Answer", "text": "Sales and Purchase invoices, Delivery and Receipt Notes, Rejections In and Out, and Stock Journals, for items kept in batches."}}, {"@type": "Question", "name": "Does TallyBook warn me before a batch expires?", "acceptedAnswer": {"@type": "Answer", "text": "This guide does not rely on automatic expiry alerts. Put the expiry in the batch name and review the Batch Summary every month."}}, {"@type": "Question", "name": "Can I change the rate that a price level fills in?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The rate and discount from the price level are filled in after the quantity, and you can overwrite them on the invoice."}}, {"@type": "Question", "name": "Can I use batches in the Manufacturing Journal?", "acceptedAnswer": {"@type": "Answer", "text": "Not yet. Batches and alternate units are not available on manufacturing lines."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Set up batches and price levels in TallyBook", "description": "Track stock by batch in invoices, notes and stock journals, keep expiring stock under control, and bill each customer at their own price level with rates and discounts filled in.", "step": [{"@type": "HowToStep", "position": 1, "name": "Turn on batches", "text": "Press F11 and set Maintain batches to Yes."}, {"@type": "HowToStep", "position": 2, "name": "Mark batch-wise items", "text": "Alter each stock item and set Maintain in batches to Yes."}, {"@type": "HowToStep", "position": 3, "name": "Allocate batches", "text": "On purchases and receipt notes, enter the batch, quantity and rate in the batch allocation."}, {"@type": "HowToStep", "position": 4, "name": "Turn on price levels", "text": "Press F11 and set Enable multiple price levels to Yes, then set up the price lists."}, {"@type": "HowToStep", "position": 5, "name": "Assign levels to customers", "text": "Set Price level applicable on each customer ledger."}, {"@type": "HowToStep", "position": 6, "name": "Invoice", "text": "On a Sales invoice, type the quantity and TallyBook fills the rate and discount from the price level."}]}</script>
+<meta name="theme-color" content="#2a62ad">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="TallyBook Blog" href="/blog/feed.xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><nav class="bar">
+    <a class="brand" href="/"><img src="/assets/icon.png" alt="">Tally<span>Book</span></a>
+    <div class="links"><a class="hide" href="/#features">Features</a><a class="hide" href="/blog/tallyprime-vs-tallybook/">Compare</a><a class="hide" href="/blog/">Blog</a><a class="cta" href="/download/">Download</a></div>
+  </nav></div>
+  <div class="strip"><div class="wrap">Blog · Inventory</div></div>
+</header>
+
+<section><div class="wrap narrow"><article>
+  <h1>Batch-wise stock, expiry and price levels in TallyBook</h1>
+  <div class="byline">Techardent Labs · 3 November 2026 · 5 min read</div>
+  <div class="note"><b>Quick answer:</b> Turn on <b>Maintain batches</b> in <kbd>F11</kbd> and set <b>Maintain in batches</b> on the items you track. Invoices, delivery and receipt notes, rejections and stock journals then ask for a batch allocation. For different prices per customer, turn on <b>Enable multiple price levels</b>, set up the price lists and set <b>Price level applicable</b> on each customer ledger; invoices fill in the rate and discount after you type the quantity.</div>
+
+  <p>Medicines, packaged food, paints, chemicals and cosmetics are bought and sold in <b>batches</b>, each with its own manufacturing and expiry dates. Wholesalers also sell the same item at different prices to retailers, dealers and walk-in buyers. Since version 0.2.0 TallyBook asks for batches in vouchers and fills invoice rates from <b>price levels</b>. This guide covers both, and is clear about what to handle yourself.</p>
+
+  <h2>Part 1: batch-wise stock</h2>
+<figure style="margin:24px 0"><svg role="img" aria-label="Turn on batches in F11, mark the item batch-wise, allocate a batch on purchase, pick the batch on sale, and review the Batch Summary" viewBox="0 0 640 416" width="640" height="416" style="max-width:100%;height:auto;display:block" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif"><title>Batches from purchase to sale</title><rect x="0" y="0" width="640" height="416" rx="10" fill="white" stroke="#dfeefa" stroke-width="2"/><text x="320.0" y="32" font-size="17" fill="#10212b" text-anchor="middle" font-weight="bold">Batches from purchase to sale</text><rect x="40" y="50" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="75.0" r="15" fill="#2a62ad"/><text x="70" y="80.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">1</text><text x="98" y="80.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">F11: Maintain batches = Yes</text><path d="M320.0 102 L320.0 118" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 112 L320.0 119 L326.0 112" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="122" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="147.0" r="15" fill="#2a62ad"/><text x="70" y="152.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">2</text><text x="98" y="152.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Stock item: Maintain in batches = Yes</text><path d="M320.0 174 L320.0 190" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 184 L320.0 191 L326.0 184" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="194" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="219.0" r="15" fill="#2a62ad"/><text x="70" y="224.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">3</text><text x="98" y="224.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Purchase or Receipt Note: give each lot a batch</text><path d="M320.0 246 L320.0 262" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 256 L320.0 263 L326.0 256" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="266" width="560" height="50" rx="8" fill="#dfeefa" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="291.0" r="15" fill="#2a62ad"/><text x="70" y="296.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">4</text><text x="98" y="296.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Sales or Delivery Note: pick the batch going out</text><path d="M320.0 318 L320.0 334" stroke="#2a62ad" stroke-width="2"/><path d="M314.0 328 L320.0 335 L326.0 328" fill="none" stroke="#2a62ad" stroke-width="2"/><rect x="40" y="338" width="560" height="50" rx="8" fill="#ffc32b" stroke="#2a62ad" stroke-width="1.5"/><circle cx="70" cy="363.0" r="15" fill="#2a62ad"/><text x="70" y="368.0" font-size="14" fill="white" text-anchor="middle" font-weight="bold">5</text><text x="98" y="368.0" font-size="15" fill="#10212b" text-anchor="start" font-weight="normal">Batch Summary: what is left in each batch</text></svg></figure>
+  <ol class="steps">
+    <li>Press <kbd>F11</kbd> and set <b>Maintain batches</b> to Yes (inventory must be on).</li>
+    <li>For each item you track by batch, open the stock item and set <b>Maintain in batches</b> to Yes. Items you do not track by batch stay as they are.</li>
+    <li>When you enter a Purchase invoice or Receipt Note for that item, TallyBook asks for the <b>batch allocation</b>: which batch, how many and at what rate.</li>
+    <li>When you sell, the Sales invoice or Delivery Note asks which batch the goods come from. Rejections and Stock Journals ask too.</li>
+  </ol>
+<figure style="margin:24px 0"><img src="/assets/shots/stock-item-creation.png" alt="TallyBook Stock Item Creation form with Units, Costing method and the Maintain in batches field" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #8bb9e0;border-radius:6px"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">Stock Item Creation. Set Maintain in batches to Yes for items you track by batch.</figcaption></figure>
+  <p>Open the <b>Batch Summary</b> (<kbd>Alt</kbd>+<kbd>G</kbd>, then type "Batch") to see the quantity and value left in each batch. Each batch is valued by its own share of the voucher line.</p>
+
+  <h2>Expiry: selling the oldest stock first</h2>
+  <p>For goods that expire, the safe habit is <b>first expiry, first out</b>: always sell from the batch that expires soonest, and check regularly for batches close to expiry so you can return, discount or write them off in time.</p>
+  <ul>
+    <li><b>Name batches so the expiry is visible</b> when you pick them, for example <code>B2417 EXP 03-2027</code>. You then see the expiry in the batch list on every invoice.</li>
+    <li><b>Review the Batch Summary every month</b> and note batches that expire within the next 60 or 90 days.</li>
+    <li><b>Write off expired stock</b> with a Stock Journal (or Physical Stock entry) so your closing stock value stays honest, after checking the accounting and GST treatment with your CA.</li>
+  </ul>
+  <div class="warn">This guide does not rely on automatic expiry alerts or expiry-based batch selection. Pick the batch yourself on each invoice, and check the rules that apply to your trade (for example, what must be printed on invoices for medicines) with your CA or trade body.</div>
+
+  <h2>Part 2: price levels</h2>
+  <p>A <b>price level</b> is a named price list, such as Wholesale, Retail or Dealer. You attach one to each customer, and TallyBook uses it when you bill that customer.</p>
+  <ol class="steps">
+    <li>Press <kbd>F11</kbd> and set <b>Enable multiple price levels</b> to Yes.</li>
+    <li>Set up the price lists for each level: the rate and any discount for each item.</li>
+    <li>On each customer ledger, set <b>Price level applicable</b> to the right level.</li>
+    <li>On a Sales invoice to that customer, choose the item and type the quantity. TallyBook fills in the <b>rate and discount</b> from that customer's price level. You can still overwrite them for a one-off deal.</li>
+  </ol>
+  <table>
+    <tr><th>Customer</th><th>Price level</th><th>Item: Paint 1 L (example)</th></tr>
+    <tr><td>Walk-in buyer</td><td>Retail</td><td>₹420, no discount</td></tr>
+    <tr><td>Kumar Hardware</td><td>Wholesale</td><td>₹380, 2% discount</td></tr>
+    <tr><td>Shree Dealers</td><td>Dealer</td><td>₹360, 5% discount</td></tr>
+  </table>
+  <p>The amounts are only an illustration. GST is worked out on the discounted value as usual; see <a href="/blog/create-gst-invoice-in-tallybook/">creating a GST invoice</a>.</p>
+
+  <h2>Good habits</h2>
+  <ul>
+    <li>Update price lists on the day prices change, not when the first complaint arrives.</li>
+    <li>Keep the number of levels small; three or four are usually enough.</li>
+    <li>Use the same batch numbers as the supplier's invoice, so a recall or complaint can be traced quickly.</li>
+  </ul>
+  <p>Batches are not available on manufacturing lines yet; see <a href="/blog/manufacturing-bill-of-materials-in-tallybook/">manufacturing in TallyBook</a>.</p>
+
+<h2>Frequently asked questions</h2><h3>Do I have to use batches for every item?</h3><p>No. Turn on Maintain batches in F11, then set Maintain in batches to Yes only on the items you want to track by batch.</p><h3>Which vouchers ask for batches?</h3><p>Sales and Purchase invoices, Delivery and Receipt Notes, Rejections In and Out, and Stock Journals, for items kept in batches.</p><h3>Does TallyBook warn me before a batch expires?</h3><p>This guide does not rely on automatic expiry alerts. Put the expiry in the batch name and review the Batch Summary every month.</p><h3>Can I change the rate that a price level fills in?</h3><p>Yes. The rate and discount from the price level are filled in after the quantity, and you can overwrite them on the invoice.</p><h3>Can I use batches in the Manufacturing Journal?</h3><p>Not yet. Batches and alternate units are not available on manufacturing lines.</p>
+<div class="note" style="margin-top:32px"><b>Try TallyBook free.</b> <a href="/download/">Download TallyBook</a> for Windows, Mac or Linux. No registration and no licence fee. Coming from Tally? Start with <a href="/blog/switch-from-tally-to-tallybook/">Switching from Tally to TallyBook</a> and read <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a>.<br><span style="font-size:14px">Related: <a href="/blog/stock-journal-delivery-note-receipt-note/">Inventory vouchers</a> · <a href="/blog/create-gst-invoice-in-tallybook/">GST invoices</a></span></div>
+<p style="font-size:14px;color:var(--muted)">TallyBook is an independent product made by Techardent Labs and is not affiliated with, endorsed by or connected to Tally Solutions Pvt. Ltd. TallyPrime and Tally are trademarks of their owner. Tax rules change often; confirm current rates, limits and due dates on the official portals or with your Chartered Accountant.</p>
+</article></div></section>
+<footer class="bottom"><div class="wrap">
+  <p><a href="/">Home</a> · <a href="/download/">Download</a> · <a href="/blog/">Blog</a> · <a href="/blog/tallyprime-vs-tallybook/">TallyPrime vs TallyBook</a> · <a href="/blog/switch-from-tally-to-tallybook/">Switch from Tally</a> · <a href="https://github.com/techardentlabs/tallybook">Source code</a></p>
+  <p>© 2026 Techardent Internet Pvt. Ltd. · <a href="https://www.techardentlabs.com">techardentlabs.com</a></p>
+  <p>TallyBook is an independent product. It is not affiliated with, endorsed by, or connected to Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners and are used here only to describe compatibility.</p>
+</div></footer>
+
+</body>
+</html>

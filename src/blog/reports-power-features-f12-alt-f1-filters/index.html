@@ -14,7 +14,7 @@
 <link rel="icon" href="/assets/icon.png"><link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Report power features in TallyBook: F12, Alt+F1, Ctrl+F, Alt+F2 and drill-down", "description": "Get more from every TallyBook report: F12 configure, Alt+F1 detailed view, Ctrl+F filter, Alt+F2 period, Enter drill-down and the Display More Reports menu.", "datePublished": "2026-11-03", "dateModified": "2026-11-03", "image": "https://tallybook.online/assets/shots/trial-balance.png", "author": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "publisher": {"@type": "Organization", "name": "Techardent Labs", "url": "https://tallybook.online"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tallybook.online/blog/reports-power-features-f12-alt-f1-filters/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tallybook.online/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://tallybook.online/blog/"}, {"@type": "ListItem", "position": 3, "name": "Report power features in TallyBook: F12, Alt+F1, Ctrl+F, Alt+F2 and drill-down", "item": "https://tallybook.online/blog/reports-power-features-f12-alt-f1-filters/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does changing the period in one report change it everywhere?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The period is shared by all reports, as in TallyPrime. The current period is shown at the top right; press Alt+F2 again to change it."}}, {"@type": "Question", "name": "Are my F12 settings saved?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for each report, on the computer you set them on. They stay until you change them again in F12."}}, {"@type": "Question", "name": "Why does F12 do nothing on the Balance Sheet?", "acceptedAnswer": {"@type": "Answer", "text": "F12, Ctrl+F and Alt+F1 are not available on the Balance Sheet, P&L and Bills Receivable or Payable yet. Drill into a group with Enter and use them in the Group Summary."}}, {"@type": "Question", "name": "How do I jump straight to one ledger?", "acceptedAnswer": {"@type": "Answer", "text": "Press Alt+G and start typing the ledger name. Go To lists every ledger as “Ledger: name” alongside the common reports."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does changing the period in one report change it everywhere?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The period is shared by all reports, as in TallyPrime. The current period is shown at the top right; press Alt+F2 again to change it."}}, {"@type": "Question", "name": "Are my F12 settings saved?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for each report, on the computer you set them on. They stay until you change them again in F12."}}, {"@type": "Question", "name": "Does F12 work on the Balance Sheet?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, since version 0.1.5. On the Balance Sheet and P&L, F12 offers a vertical layout, percentages, working capital, a gross profit section and hiding zero balances; Alt+F1 gives the detailed view and Ctrl+F filters. On Bills Receivable and Payable, F12 adds ageing columns."}}, {"@type": "Question", "name": "How do I jump straight to one ledger?", "acceptedAnswer": {"@type": "Answer", "text": "Press Alt+G and start typing the ledger name. Go To lists every ledger as “Ledger: name” alongside the common reports."}}]}</script>
 </head>
 <body>
 @@HEADER:Blog · Reports@@
@@ -43,6 +43,8 @@
   <table>
     <tr><th>Report</th><th>F12 options</th></tr>
     <tr><td>Trial Balance and Group Summary</td><td>Show opening balances; show transactions (Debit / Credit); show closing balances; hide ledgers and groups with zero balances; show detailed format</td></tr>
+    <tr><td>Balance Sheet and Profit &amp; Loss A/c</td><td>Vertical layout; percentages; working capital; gross profit section; hide zero balances (plus <kbd>Alt</kbd>+<kbd>F1</kbd> detailed view and <kbd>Ctrl</kbd>+<kbd>F</kbd> filter)</td></tr>
+    <tr><td>Bills Receivable and Bills Payable</td><td>Ageing columns: 0–30, 30–60, 60–90 and over 90 days</td></tr>
     <tr><td>Day Book</td><td>Show cancelled vouchers; show voucher type; show voucher number</td></tr>
     <tr><td>Ledger Vouchers</td><td>Show running balance; show voucher type; show voucher number</td></tr>
     <tr><td>Cost Centre Summary, Budget Variance, Group Interest</td><td>Hide rows with no transactions, budget or interest; show closing balances where relevant</td></tr>
@@ -50,7 +52,7 @@
   <p>Many inventory, banking, payroll and statutory reports have their own F12 options too. Look for <b>F12: Configure</b> at the bottom of the button bar on the right.</p>
 
   <h2>Alt+F1: detailed and condensed</h2>
-  <p>On the Trial Balance and any Group Summary, the condensed view lists only the top-level groups. <kbd>Alt</kbd>+<kbd>F1</kbd> expands every sub-group and ledger in place, indented under its parent, so you can read the whole chart of accounts with balances on one screen. Press it again to collapse. To always open detailed, turn on “Show detailed format” in <kbd>F12</kbd>.</p>
+  <p>On the Trial Balance, the Balance Sheet, the P&amp;L and any Group Summary, the condensed view lists only the top-level groups. <kbd>Alt</kbd>+<kbd>F1</kbd> expands every sub-group and ledger in place, indented under its parent, so you can read the whole chart of accounts with balances on one screen. Press it again to collapse. To always open detailed, turn on “Show detailed format” in <kbd>F12</kbd>.</p>
   <figure style="margin:22px 0"><img src="/assets/shots/trial-balance.png" alt="TallyBook Trial Balance in condensed view with primary groups, the Alt+F1 Detailed, Filter, Export and F12 Configure buttons on the right" loading="lazy" width="1280" height="720" style="max-width:100%;height:auto;border:1px solid #dfeefa"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">The Trial Balance in condensed view. The buttons on the right show Alt+F1: Detailed, Filter, Export (CSV) and F12: Configure.</figcaption></figure>
 
   <h2>Ctrl+F: filter</h2>
@@ -98,7 +100,7 @@
 
   <h2>Not yet available</h2>
   <ul>
-    <li>F12, Ctrl+F and Alt+F1 on the Balance Sheet, P&amp;L and outstanding reports.</li>
+    <li>Ctrl+F and Alt+F1 on the outstanding reports (Bills Receivable and Payable have F12 ageing columns).</li>
     <li>Ctrl+H change view, Ctrl+B basis of values and Alt+C new column on the Trial Balance; Alt+F1 detail on registers.</li>
     <li>Saved report views.</li>
   </ul>
@@ -109,8 +111,8 @@
   <p>Yes. The period is shared by all reports, as in TallyPrime. The current period is shown at the top right; press Alt+F2 again to change it.</p>
   <h3>Are my F12 settings saved?</h3>
   <p>Yes, for each report, on the computer you set them on. They stay until you change them again in F12.</p>
-  <h3>Why does F12 do nothing on the Balance Sheet?</h3>
-  <p>F12, Ctrl+F and Alt+F1 are not available on the Balance Sheet, P&amp;L and Bills Receivable or Payable yet. Drill into a group with Enter and use them in the Group Summary.</p>
+  <h3>Does F12 work on the Balance Sheet?</h3>
+  <p>Yes, since version 0.1.5. On the Balance Sheet and P&amp;L, F12 offers a vertical layout, percentages, working capital, a gross profit section and hiding zero balances; Alt+F1 gives the detailed view and Ctrl+F filters. On Bills Receivable and Payable, F12 adds ageing columns.</p>
   <h3>How do I jump straight to one ledger?</h3>
   <p>Press Alt+G and start typing the ledger name. Go To lists every ledger as “Ledger: name” alongside the common reports.</p>
 
