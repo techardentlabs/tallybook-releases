@@ -1,4 +1,4 @@
-# TallyBook releases
+# TallyBook website
 
 Downloads and automatic-update files for **TallyBook**, keyboard-first desktop accounting for Indian businesses (GST, inventory, payroll, TDS, banking, Tally XML import).
 
@@ -10,8 +10,8 @@ Downloads and automatic-update files for **TallyBook**, keyboard-first desktop a
 | Windows | `-setup.exe` or `.msi` |
 | Linux | `.AppImage`, `.deb`, `.rpm` |
 
-Installed copies update themselves from this repository. Early builds are not code-signed: on macOS right-click the app and choose Open the first time; on Windows choose More info, then Run anyway.
+Installed copies update themselves from the releases of [techardentlabs/tallybook](https://github.com/techardentlabs/tallybook). Early builds are not code-signed: on macOS right-click the app and choose Open the first time; on Windows choose More info, then Run anyway.
 
-This repository holds release files and the tallybook.online website only.
+This repository holds the tallybook.online website.
 
 TallyBook is an independent product by Techardent Internet Pvt. Ltd. and is not affiliated with Tally Solutions Pvt. Ltd. "Tally" and "TallyPrime" are trademarks of their respective owners.
