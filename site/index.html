@@ -43,15 +43,15 @@
 <body>
 <header>
   <div class="wrap">
-    <nav><b>Tally<span>Book</span></b><div><a class="hide" href="#features">Features</a><a class="hide" href="#switch">Switch</a><a href="https://github.com/techardentlabs/tallybook-releases/releases">Releases</a></div></nav>
+    <nav><b>Tally<span>Book</span></b><div><a class="hide" href="#features">Features</a><a class="hide" href="#switch">Switch</a><a href="https://github.com/techardentlabs/tallybook">GitHub</a></div></nav>
   </div>
   <div class="strip"><div class="wrap">Gateway of TallyBook</div></div>
   <div class="wrap hero">
     <h1>Accounting at the speed of your keyboard.</h1>
     <p>TallyBook is a free desktop accounting app for Indian businesses. GST, inventory, payroll, banking and TDS, with the keyboard workflow accountants already know. Bring your data across from Tally with XML import.</p>
     <div class="dl" id="downloads">
-      <a class="btn" id="primary" href="https://github.com/techardentlabs/tallybook-releases/releases/latest">Download <small id="primary-os">latest release</small></a>
-      <a class="btn alt" href="https://github.com/techardentlabs/tallybook-releases/releases/latest">All downloads</a>
+      <a class="btn" id="primary" href="https://github.com/techardentlabs/tallybook/releases/latest">Download <small id="primary-os">latest release</small></a>
+      <a class="btn alt" href="https://github.com/techardentlabs/tallybook/releases/latest">All downloads</a>
     </div>
     <div class="meta" id="version">macOS · Windows · Linux</div>
   </div>
@@ -99,7 +99,7 @@
   document.getElementById('y').textContent = new Date().getFullYear();
   (async () => {
     try {
-      const r = await fetch('https://api.github.com/repos/techardentlabs/tallybook-releases/releases/latest');
+      const r = await fetch('https://api.github.com/repos/techardentlabs/tallybook/releases/latest');
       if (!r.ok) return;
       const rel = await r.json();
       const assets = rel.assets || [];

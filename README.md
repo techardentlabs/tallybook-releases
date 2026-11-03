@@ -2,7 +2,7 @@
 
 Downloads and automatic-update files for **TallyBook**, keyboard-first desktop accounting for Indian businesses (GST, inventory, payroll, TDS, banking, Tally XML import).
 
-**Download:** [tallybook.online](https://tallybook.online) · [Latest release](https://github.com/techardentlabs/tallybook-releases/releases/latest)
+**Download:** [tallybook.online](https://tallybook.online) · [Latest release](https://github.com/techardentlabs/tallybook/releases/latest)
 
 | Platform | File |
 |---|---|
